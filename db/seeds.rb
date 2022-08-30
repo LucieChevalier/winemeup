@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
 require "open-uri"
 
 puts "Destroying existing seeds"
@@ -15,7 +14,6 @@ Bottle.destroy_all
 Booking.destroy_all
 Event.destroy_all
 User.destroy_all
-
 
 puts "Creating users..."
 
@@ -43,16 +41,9 @@ user3 = User.create!(
   address: '12 rue Paul Bellamy, Nantes 44000',
 )
 
-
-
-
-
-
 puts "Creating events..."
 
-
 loire = Event.create!(
-
   name: 'descente de la loire en pinard',
   description: "Je vous invite dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du côte roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
@@ -68,7 +59,6 @@ loire = Event.create!(
 
 
 champagne = Event.create!(
-
   name: "Saint-Sylvestre aux 12 champagnes",
   description:'',
   address:'49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -80,11 +70,9 @@ champagne = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 alsace_lorraine = Event.create!(
-
   name: "retour de route des vins alsaciens",
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -96,11 +84,9 @@ alsace_lorraine = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 bourgogne = Event.create!(
-
   name: 'nuit blanche au côte de nuits',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -112,11 +98,9 @@ bourgogne = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 jura_savoie_bugey = Event.create!(
-
   name: 'dégustation des vins de nos montagnes',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -128,11 +112,9 @@ jura_savoie_bugey = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 beaujolais = Event.create!(
-
   name: 'soirée beaujolais pas nouveau',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -144,11 +126,9 @@ beaujolais = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 vallée_du_rhône = Event.create!(
-
   name: 'vallée du rhône méridonale et charcuterie',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -160,11 +140,9 @@ vallée_du_rhône = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 corse = Event.create!(
-
   name: 'vins corsés et fromages qui puent',
   description:  '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -176,11 +154,9 @@ corse = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 provence = Event.create!(
-
   name: 'pic-nique arrosé aux vins de provence',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -192,11 +168,9 @@ provence = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 languedoc_roussillon = Event.create!(
-
   name: 'dégustation de nos vins du Roussillon',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -208,11 +182,9 @@ languedoc_roussillon = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 sud_ouest = Event.create!(
-
   name: 'garden party et vins de notre pays basque',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -224,11 +196,9 @@ sud_ouest = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
 
 bordeaux = Event.create!(
-
   name: "dégustation premium d'entre-deux-mers",
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
@@ -240,24 +210,11 @@ bordeaux = Event.create!(
   min_price: 8,
   max_price: 12,
   host: user1
-
 )
-
-
-
-
-
-
-
-
-
-
-
 
 puts "Creating bottles..."
 
 cote_roannaise = Bottle.create!(
-
   name:'',
   country: 'France',
   region: 'Loire',
@@ -274,7 +231,6 @@ cote_roannaise = Bottle.create!(
 
 
 sancerre = Bottle.create!(
-
   name:'',
   country: 'France',
   region: 'Loire',
@@ -287,11 +243,9 @@ sancerre = Bottle.create!(
   price: '',
   event: loire,
   user: user2
-
 )
 
 quincy = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -307,7 +261,6 @@ quincy = Bottle.create!(
 )
 
 pouilly_fumé = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -323,7 +276,6 @@ pouilly_fumé = Bottle.create!(
 )
 
 menetou_salon = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -339,7 +291,6 @@ menetou_salon = Bottle.create!(
 )
 
 vouvray = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -355,7 +306,6 @@ vouvray = Bottle.create!(
 )
 
 chinon = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -371,7 +321,6 @@ chinon = Bottle.create!(
 )
 
 bourgueil = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -387,7 +336,6 @@ bourgueil = Bottle.create!(
 )
 
 savenières_coulée_de_serrant = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -403,7 +351,6 @@ savenières_coulée_de_serrant = Bottle.create!(
 )
 
 saumur_champigny = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -419,7 +366,6 @@ saumur_champigny = Bottle.create!(
 )
 
 coteaux_du_layon_grand_cru_quarts_de_chaume = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -435,7 +381,6 @@ coteaux_du_layon_grand_cru_quarts_de_chaume = Bottle.create!(
 )
 
 muscadet_sèvre_et_maine = Bottle.create!(
-
   name: '',
   country: 'France',
   region: 'Loire',
@@ -450,64 +395,48 @@ muscadet_sèvre_et_maine = Bottle.create!(
   user: user2
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 puts "Creating bookings..."
 
-booking_1 = Booking.new(
+booking_1 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user3,
-  event: loire,
-  )
+  event: loire
+)
 
-  booking_2 = Booking.new(
-
+booking_2 = Booking.create!(
   status: 'Upcoming',
   comment: '',
-  guest:  user3,
-  event: loire,
-  )
+  guest: user3,
+  event: loire
+)
 
-  booking_3 = Booking.new(
-
+booking_3 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user2,
-  event: loire,
-  )
-
-  booking_4 = Booking.new(
-  status: 'Upcoming',
-  comment: '',
-  guest:  user3,
-  event: loire,
-  )
-
-  booking_5 = Booking.new(
-  status: 'Upcoming',
-  comment: '',
-  guest:  user2,
   event: loire
-  )
+)
 
-  booking_6 = Booking.new(
+booking_4 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user3,
+  event: loire
+)
+
+  booking_5 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user2,
+  event: loire
+)
+
+booking_6 = Booking.create!(
   status: 'Past',
   comment: '',
-  guest:  user2,
+  guest: user2,
   event: loire
-  )
+)
 
 puts "Finished"
