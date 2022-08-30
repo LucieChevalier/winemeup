@@ -13,4 +13,7 @@ class User < ApplicationRecord
 
   # User
   has_many :bottles
+
+  # Validation
+  # validates :name, presence: true
 end
