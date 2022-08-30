@@ -1,0 +1,24 @@
+<h1>Événements</h1>
+<p>Découvrez les événements</p>
+
+<%# Iteration on all events %>
+<% @events.each do |event| %>
+
+  <%# Displaying one event: %>
+
+  <%# Event photo from Cloudinary %>
+  <%= cl_image_tag event.photo.key, height: 300, width: 400, crop: :fill %>
+
+  <%# Event infos %>
+  <%= event.name %>
+  <%= event.category %> <%# [Sud-Ouest Bordeaux Loire Champagne Alsace-Lorraine Bourgogne Jura-Bugey-Savoie Beaujolais Rhône Corse Provence Languedoc-Roussillon]  %>
+  <%= event.level %> <%# [Comfirmé Intermédiaire Débutant] %>
+  <%= event.date %>
+  <%= event.address %>
+  <%= event.description %>
+  <%= event.min_price %> - <%= event.max_price %>
+  <%= event.max_number_guest %>
+  <%= event.host_request %>
+
+
+<% end %>

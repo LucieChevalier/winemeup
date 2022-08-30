@@ -5,5 +5,6 @@ class Event < ApplicationRecord
 
   # Validations
   validates :name, :address, :date, :level, presence: true
-  validates :level, inclusion: { in: %w[Comfirmé Intermidiaire Débutant] }
+  validates :level, inclusion: { in: %w[Comfirmé Intermédiaire Débutant] }
+  validates :category, inclusion: { in: %w[Sud-Ouest Bordeaux Loire Champagne Alsace-Lorraine Bourgogne Jura-Bugey-Savoie Beaujolais Rhône Corse Provence Languedoc-Roussillon] }
 end
