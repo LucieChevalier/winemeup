@@ -7,5 +7,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :events, only: %i[index show]
+
   resources :bottles, only: %i[create]
+
+
+  namespace :host do
+    resources :events, only: %i[index new create edit update]
+  end
+
 end
