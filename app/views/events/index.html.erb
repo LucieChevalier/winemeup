@@ -20,7 +20,11 @@
   <%# Displaying one event: %>
 
   <%# Event photo from Cloudinary %>
-  <%= cl_image_tag event.photo.key, height: 300, width: 400, crop: :fill %>
+  <% if event.photo.key.nil? %>
+    <img src="https://res.cloudinary.com/dlwjol4qx/image/upload/w_50,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1660911420/cld-sample-5.jpg" alt="">
+  <% else %>
+    <%= cl_image_tag event.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
 
   <%# Event infos %>
   <%= event.name %>
