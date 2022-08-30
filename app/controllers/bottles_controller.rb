@@ -8,7 +8,7 @@ class BottlesController < ApplicationController
     @bottle = Bottle.new(bottle_params)
     @bottle.save
 
-    redirect_to restaurants_path
+    redirect_to event_path(@event)
   end
 
   private
