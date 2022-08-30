@@ -1,0 +1,37 @@
+<h1>Événements</h1>
+<p>Découvrez les événements</p>
+
+<%# Search bar  %>
+<%= form_with url: events_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Rechercher un événement"
+  %>
+  <%= submit_tag "Rechercher", class: "btn btn-primary" %>
+<% end %>
+
+<%# Filters %>
+
+
+<%# Iteration on all events %>
+<% @events.each do |event| %>
+
+  <%# Displaying one event: %>
+
+  <%# Event photo from Cloudinary %>
+  <%= cl_image_tag event.photo.key, height: 300, width: 400, crop: :fill %>
+
+  <%# Event infos %>
+  <%= event.name %>
+  <%= event.category %> <%# [Sud-Ouest Bordeaux Loire Champagne Alsace-Lorraine Bourgogne Jura-Bugey-Savoie Beaujolais Rhône Corse Provence Languedoc-Roussillon]  %>
+  <%= event.level %> <%# [Comfirmé Intermédiaire Débutant] %>
+  <%= event.date %>
+  <%= event.address %> <%# Ici on voudra la ville : trouver un moyen d'extraire la ville %>
+  <%= event.description %>
+  <%= event.min_price %> - <%= event.max_price %>
+  <%= event.max_number_guest %>
+  <%= event.host_request %>
+
+
+<% end %>
