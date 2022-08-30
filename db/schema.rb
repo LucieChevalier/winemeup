@@ -10,9 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_29_132905) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_30_091404) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.string "comment"
+    t.string "status"
+    t.bigint "event_id"
+    t.bigint "guest_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_bookings_on_event_id"
+    t.index ["guest_id"], name: "index_bookings_on_guest_id"
+  end
+
+  create_table "bottles", force: :cascade do |t|
+    t.string "name"
+    t.string "country"
+    t.string "region"
+    t.string "appelation"
+    t.string "domaine_name"
+    t.string "producer"
+    t.string "color"
+    t.string "comment"
+    t.integer "vintage"
+    t.integer "price"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bottles_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "address"
+    t.date "date"
+    t.string "category"
+    t.string "level"
+    t.string "host_request"
+    t.integer "max_number_guest"
+    t.integer "price_range"
+    t.bigint "host_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["host_id"], name: "index_events_on_host_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +70,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_132905) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "users", column: "guest_id"
+  add_foreign_key "events", "users", column: "host_id"
 end
