@@ -24,7 +24,7 @@ user1 = User.create!(
   last_name: 'Bardy',
   email: 'julien.bardy@gmail.com',
   password: 'JulienB',
-  address: '12 rue Paul Bellamy, Nantes 44000'
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
 )
 
 user2 = User.create!(
@@ -32,7 +32,7 @@ user2 = User.create!(
   last_name: 'Cabrero',
   email: 'maria.cabrero@gmail.com',
   password: 'MariaC',
-  address: '8 passage de la Poule Noire, Nantes 44000'
+  address: '8 passage de la Poule Noire, Nantes 44000',
 )
 
 user3 = User.create!(
@@ -40,231 +40,398 @@ user3 = User.create!(
   last_name: 'Dupont',
   email: 'jean.dupont@gmail.com',
   password: 'JeanDu',
-  address: '9 avenue d’Italie, Paris 75013'
+  address: '12 rue Paul Bellamy, Nantes 44000',
 )
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 puts "Creating bottles..."
 
-champagne = Bottle.create!(
+côte_roannaise = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name:'',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Côte_roannaise',
+  domaine_name: '',
+  producer: '',
+  color: 'rouge',
+  comment:,
+  vintage: '',
+  price: '',
+  pic_url:'',
 )
 
 
-alsace = Bottle.create!(
+sancerre = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name:'',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Sancerre',
+  domaine_name: '',
+  producer: '',
+  color: 'blanc',
+  comment: '',
+  vintage: '',
+  price: '',
+  pic_url: '',
 )
 
-bourgogne = Bottle.create!(
+quincy = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Quincy',
+  domaine_name: '',
+  producer: '',
+  color: 'blanc',
+  comment: '',
+  vintage: '',
+  price: '',
+  pic_url: '',
 )
 
-jura = Bottle.create!(
+pouilly_fumé = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Pouilly-Fumé',
+  domaine_name: '',
+  producer: '',
+  color: 'blanc',
+  comment: '',
+  vintage: '',
+  price: '',
+  pic_url: '',
 )
 
-beaujolais = Bottle.create!(
+menetou_salon = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Menetou-Salon',
+  domaine_name: '',
+  producer: '',
+  color: 'blanc',
+  comment: '',
+  vintage: '',
+  price: '',
+  pic_url: '',
 )
 
-rhône = Bottle.create!(
+vouvray = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Vouvray',
+  domaine_name: '',
+  producer: '',
+  color: '',
+  comment: '',
+  vintage: '',
+  price: 'pétillant',
+  pic_url: '',
 )
 
-corse = Bottle.create!(
+chinon = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Chinon',
+  domaine_name: '',
+  producer: '',
+  color: 'rouge',
+  comment: '',
+  vintage: '',
+  price: '',
+  pic_url: '',
 )
 
-provence = Bottle.create!(
+bourgueil = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Bourgueil',
+  domaine_name: '',
+  producer: '',
+  color: 'rouge',
+  comment: '',
+  vintage: '',
+  price: '',
+  pic_url: '',
 )
 
-languedoc = Bottle.create!(
+savenières_coulée_de_serrant = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Savenières-Coulée_de_Serrant ',
+  domaine_name: '',
+  producer: '',
+  color: 'blanc',
+  comment: '',
+  vintage: '',
+  price: '',
+  pic_url: '',
 )
 
-sudouest = Bottle.create!(
+saumur_champigny = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Saumur-Champigny',
+  domaine_name: '',
+  producer: '',
+  color: 'rouge',
+  comment: '',
+  vintage: '',
+  price: '',
+  pic_url: '',
 )
 
-bordeaux = Bottle.create!(
+coteaux_du_layon grand cru quarts_de_chaume = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Coteaux-du-layon grand cru Quarts de Chaume',
+  domaine_name: '',
+  producer: '',
+  color: 'white',
+  comment: '',
+  vintage: '',
+  price: '',
+  pic_url: '',
 )
 
-loire = Bottle.create!(
+muscadet_sèvre_et_maine = Bottle.create!(
 
-  name:
-  country: 'France'
-  region: 'Beaujolais'
-  appelation: 'Saint-Amour'
-  domaine_name: 'Domaine à la folie'
-  producer: 'Olivier Terrier'
-  color: 'Rouge'
-  comment:
-  vintage: '2021'
-  price: '6,79'
-  pic_url:
+  name: '',
+  country: 'France',
+  region: 'Loire',
+  appelation: 'Muscadet Sèvre-et-Maine',
+  domaine_name: '',
+  producer: '',
+  color: 'blanc',
+  comment:,
+  vintage: '',
+  price: '',
+  pic_url:'',
 )
+
+
+
+
+
+
+
+
+
 
 
 puts "Creating events..."
 
 
+loire = Event.create!(
 
-event 1 = Event.create!(
-
-  name:
-  description:
-  address:
-  date:
-  category:
-  level:
-  host_request:
-  max_number_gues:
-  price_range:
+  name: 'descente de la loire en pinard',
+  description: "Je vous invite dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du côte roannaise en Auvergne jusqu'à notre Muscadet local",
+  address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
+  date: '10 septembre 2022 à 18:00',
+  category: 'loire',
+  level: 'débutant, intermédiare, confirmé',
+  host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
+  max_number_guest: 12,
+  price_range: 'min_price (8) et max_price (12)',
   pic_url:
 )
 
-puts "Creating bookings..."
 
-event 1 = Booking.create!(
+champagne = Event.create!(
 
-  comment:
-  status:
+  name: "Saint-Sylvestre aux 12 champagnes",
+  description:'',
+  address:'',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+alsace_lorraine = Event.create!(
+
+  name: "retour de route des vins alsaciens",
+  description: '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+bourgogne = Event.create!(
+
+  name: 'nuit blanche au côte de nuits',
+  description: '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+jura_savoie_bugey = Event.create!(
+
+  name: 'dégustation des vins de nos montagnes',
+  description: '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+beaujolais = Event.create!(
+
+  name: 'soirée beaujolais pas nouveau',
+  description: '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+vallée_du_rhône = Event.create!(
+
+  name: 'vallée du rhône méridonale et charcuterie',
+  description: '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+corse = Event.create!(
+
+  name: 'vins corsés et fromages qui puent',
+  description:  '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+provence = Event.create!(
+
+  name: 'pic-nique arrosé aux vins de provence',
+  description: '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+languedoc_roussillon = Event.create!(
+
+  name: 'dégustation de nos vins du Roussillon',
+  description: '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+sud_ouest = Event.create!(
+
+  name: 'garden party et vins de notre pays basque',
+  description: '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
+)
+
+bordeaux = Event.create!(
+
+  name: "dégustation premium d'entre-deux-mers",
+  description: '',
+  address: '',
+  date: '',
+  category: '',
+  level: '',
+  host_request: '',
+  max_number_gues: '',
+  price_range: '',
+  pic_url: '',
 )
 
 
 
 
 
-create_table "bookings", force: :cascade do |t|
-  t.string "comment"
-  t.string "status"
-  t.bigint "event_id"
-  t.bigint "guest_id"
-  t.datetime "created_at", null: false
-  t.datetime "updated_at", null: false
-  t.index ["event_id"], name: "index_bookings_on_event_id"
-  t.index ["guest_id"], name: "index_bookings_on_guest_id"
-end
+
+
+
+puts "Creating bookings..."
+
+event = Booking.create!(
+
+  comment: '',
+  status:'',
+)
