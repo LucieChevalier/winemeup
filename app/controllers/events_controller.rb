@@ -6,8 +6,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:event_id])
-    @current_user = current_user
+    @event = Event.find(params[:id])
+    @bookings = Booking.all.where(event_id: params[:id])
   end
 
   private

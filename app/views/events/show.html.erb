@@ -1,0 +1,35 @@
+<h1> <%= @event.name %></h1>
+
+  <%# Event infos %>
+  <%= event.category %> <%# [Sud-Ouest Bordeaux Loire Champagne Alsace-Lorraine Bourgogne Jura-Bugey-Savoie Beaujolais Rhône Corse Provence Languedoc-Roussillon]  %>
+  <%= event.level %> <%# [Comfirmé Intermédiaire Débutant] %>
+  <%= event.date %>
+  <%= event.address %> <%# Ici on voudra la ville : trouver un moyen d'extraire la ville %>
+  <%= event.description %>
+  <%= event.min_price %> - <%= event.max_price %>
+  <%= event.max_number_guest %>
+  <%= event.host_request %>
+
+  <%# Event's host details  %>
+  <%= event.host_id.first_name %>
+  <%= event.host_id.last_name %>
+  <%= booking.guest.level %>
+
+
+  <%# Integration des differents participants %>
+  <% @bookings.each do | booking | %>
+    <%= booking.guest.first_name %>
+    <%= booking.guest.last_name %>
+    <%= booking.guest.level %>
+  <% end %>
+
+  <%# Integration map %>
+
+
+  <%# Integration chat %>
+
+
+  <%# Liste des bouteilles %>
+
+
+  <%# Formulaire d'inscription %>
