@@ -3,5 +3,5 @@ class Bottle < ApplicationRecord
   belongs_to :user
 
   # Validations
-  validates :name, :country, :region, :appelation, :vintage, presence: true
+  validates :country, :region, :appelation, :vintage, presence: true
 end

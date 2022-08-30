@@ -11,10 +11,10 @@ require "open-uri"
 
 puts "Destroying existing seeds"
 
-User.destroy_all
 Bottle.destroy_all
-Event.destroy_all
 Booking.destroy_all
+Event.destroy_all
+User.destroy_all
 
 
 puts "Creating users..."
@@ -48,6 +48,204 @@ user3 = User.create!(
 
 
 
+puts "Creating events..."
+
+
+loire = Event.create!(
+
+  name: 'descente de la loire en pinard',
+  description: "Je vous invite dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du côte roannaise en Auvergne jusqu'à notre Muscadet local",
+  address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
+  max_number_guest: 12,
+  min_price: 8,
+  max_price: 12,
+  host: user1
+)
+
+
+champagne = Event.create!(
+
+  name: "Saint-Sylvestre aux 12 champagnes",
+  description:'',
+  address:'49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+alsace_lorraine = Event.create!(
+
+  name: "retour de route des vins alsaciens",
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+bourgogne = Event.create!(
+
+  name: 'nuit blanche au côte de nuits',
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+jura_savoie_bugey = Event.create!(
+
+  name: 'dégustation des vins de nos montagnes',
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+beaujolais = Event.create!(
+
+  name: 'soirée beaujolais pas nouveau',
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+vallée_du_rhône = Event.create!(
+
+  name: 'vallée du rhône méridonale et charcuterie',
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+corse = Event.create!(
+
+  name: 'vins corsés et fromages qui puent',
+  description:  '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+provence = Event.create!(
+
+  name: 'pic-nique arrosé aux vins de provence',
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+languedoc_roussillon = Event.create!(
+
+  name: 'dégustation de nos vins du Roussillon',
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+sud_ouest = Event.create!(
+
+  name: 'garden party et vins de notre pays basque',
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Débutant',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+bordeaux = Event.create!(
+
+  name: "dégustation premium d'entre-deux-mers",
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: '10 septembre 2022',
+  category: 'Loire',
+  level: 'Confirmé',
+  host_request: '',
+  max_number_guest: '',
+  min_price: 8,
+  max_price: 12,
+  host: user1
+
+)
+
+
+
+
 
 
 
@@ -58,7 +256,7 @@ user3 = User.create!(
 
 puts "Creating bottles..."
 
-côte_roannaise = Bottle.create!(
+cote_roannaise = Bottle.create!(
 
   name:'',
   country: 'France',
@@ -67,10 +265,11 @@ côte_roannaise = Bottle.create!(
   domaine_name: '',
   producer: '',
   color: 'rouge',
-  comment:,
-  vintage: '',
+  comment: '',
+  vintage: 2008,
   price: '',
-  pic_url:'',
+  event: loire,
+  user: user2
 )
 
 
@@ -84,9 +283,11 @@ sancerre = Bottle.create!(
   producer: '',
   color: 'blanc',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: '',
-  pic_url: '',
+  event: loire,
+  user: user2
+
 )
 
 quincy = Bottle.create!(
@@ -99,9 +300,10 @@ quincy = Bottle.create!(
   producer: '',
   color: 'blanc',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: '',
-  pic_url: '',
+  event: loire,
+  user: user2
 )
 
 pouilly_fumé = Bottle.create!(
@@ -114,9 +316,10 @@ pouilly_fumé = Bottle.create!(
   producer: '',
   color: 'blanc',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: '',
-  pic_url: '',
+  event: loire,
+  user: user2
 )
 
 menetou_salon = Bottle.create!(
@@ -129,9 +332,10 @@ menetou_salon = Bottle.create!(
   producer: '',
   color: 'blanc',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: '',
-  pic_url: '',
+  event: loire,
+  user: user2
 )
 
 vouvray = Bottle.create!(
@@ -144,9 +348,10 @@ vouvray = Bottle.create!(
   producer: '',
   color: '',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: 'pétillant',
-  pic_url: '',
+  event: loire,
+  user: user2
 )
 
 chinon = Bottle.create!(
@@ -159,9 +364,10 @@ chinon = Bottle.create!(
   producer: '',
   color: 'rouge',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: '',
-  pic_url: '',
+  event: loire,
+  user: user2
 )
 
 bourgueil = Bottle.create!(
@@ -174,9 +380,10 @@ bourgueil = Bottle.create!(
   producer: '',
   color: 'rouge',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: '',
-  pic_url: '',
+  event: loire,
+  user: user2
 )
 
 savenières_coulée_de_serrant = Bottle.create!(
@@ -189,9 +396,10 @@ savenières_coulée_de_serrant = Bottle.create!(
   producer: '',
   color: 'blanc',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: '',
-  pic_url: '',
+  event: loire,
+  user: user2
 )
 
 saumur_champigny = Bottle.create!(
@@ -204,12 +412,13 @@ saumur_champigny = Bottle.create!(
   producer: '',
   color: 'rouge',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: '',
-  pic_url: '',
+  event: loire,
+  user: user2
 )
 
-coteaux_du_layon grand cru quarts_de_chaume = Bottle.create!(
+coteaux_du_layon_grand_cru_quarts_de_chaume = Bottle.create!(
 
   name: '',
   country: 'France',
@@ -219,9 +428,10 @@ coteaux_du_layon grand cru quarts_de_chaume = Bottle.create!(
   producer: '',
   color: 'white',
   comment: '',
-  vintage: '',
+  vintage: 2008,
   price: '',
-  pic_url: '',
+  event: loire,
+  user: user2
 )
 
 muscadet_sèvre_et_maine = Bottle.create!(
@@ -233,10 +443,11 @@ muscadet_sèvre_et_maine = Bottle.create!(
   domaine_name: '',
   producer: '',
   color: 'blanc',
-  comment:,
-  vintage: '',
+  comment: '',
+  vintage: 2008,
   price: '',
-  pic_url:'',
+  event: loire,
+  user: user2
 )
 
 
@@ -245,181 +456,6 @@ muscadet_sèvre_et_maine = Bottle.create!(
 
 
 
-
-
-
-
-puts "Creating events..."
-
-
-loire = Event.create!(
-
-  name: 'descente de la loire en pinard',
-  description: "Je vous invite dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du côte roannaise en Auvergne jusqu'à notre Muscadet local",
-  address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
-  date: '10 septembre 2022 à 18:00',
-  category: 'loire',
-  level: 'débutant, intermédiare, confirmé',
-  host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
-  max_number_guest: 12,
-  price_range: 'min_price (8) et max_price (12)',
-  pic_url:
-)
-
-
-champagne = Event.create!(
-
-  name: "Saint-Sylvestre aux 12 champagnes",
-  description:'',
-  address:'',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-alsace_lorraine = Event.create!(
-
-  name: "retour de route des vins alsaciens",
-  description: '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-bourgogne = Event.create!(
-
-  name: 'nuit blanche au côte de nuits',
-  description: '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-jura_savoie_bugey = Event.create!(
-
-  name: 'dégustation des vins de nos montagnes',
-  description: '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-beaujolais = Event.create!(
-
-  name: 'soirée beaujolais pas nouveau',
-  description: '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-vallée_du_rhône = Event.create!(
-
-  name: 'vallée du rhône méridonale et charcuterie',
-  description: '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-corse = Event.create!(
-
-  name: 'vins corsés et fromages qui puent',
-  description:  '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-provence = Event.create!(
-
-  name: 'pic-nique arrosé aux vins de provence',
-  description: '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-languedoc_roussillon = Event.create!(
-
-  name: 'dégustation de nos vins du Roussillon',
-  description: '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-sud_ouest = Event.create!(
-
-  name: 'garden party et vins de notre pays basque',
-  description: '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
-
-bordeaux = Event.create!(
-
-  name: "dégustation premium d'entre-deux-mers",
-  description: '',
-  address: '',
-  date: '',
-  category: '',
-  level: '',
-  host_request: '',
-  max_number_gues: '',
-  price_range: '',
-  pic_url: '',
-)
 
 
 
@@ -430,8 +466,48 @@ bordeaux = Event.create!(
 
 puts "Creating bookings..."
 
-event = Booking.create!(
-
+booking_1 = Booking.new(
+  status: 'Upcoming',
   comment: '',
-  status:'',
-)
+  guest: user3,
+  event: loire,
+  )
+
+  booking_2 = Booking.new(
+
+  status: 'Upcoming',
+  comment: '',
+  guest:  user3,
+  event: loire,
+  )
+
+  booking_3 = Booking.new(
+
+  status: 'Upcoming',
+  comment: '',
+  guest: user2,
+  event: loire,
+  )
+
+  booking_4 = Booking.new(
+  status: 'Upcoming',
+  comment: '',
+  guest:  user3,
+  event: loire,
+  )
+
+  booking_5 = Booking.new(
+  status: 'Upcoming',
+  comment: '',
+  guest:  user2,
+  event: loire
+  )
+
+  booking_6 = Booking.new(
+  status: 'Past',
+  comment: '',
+  guest:  user2,
+  event: loire
+  )
+
+puts "Finished"
