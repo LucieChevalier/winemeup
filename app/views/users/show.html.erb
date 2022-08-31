@@ -1,6 +1,10 @@
 <div>
   <strong><p>Prénom</p></strong>
-  <%= current_user.first_name %>
+  <%= @user.first_name %>
+
+  <%= link_to edit_user_path do %>
+    <i class="fa-solid fa-pen"></i>
+  <% end %>
 </div>
 
 <br>
@@ -8,7 +12,11 @@
 
 <div>
   <strong><p>Noms de Famille</p></strong>
-  <%= current_user.last_name %>
+  <%= @user.last_name %>
+
+  <%= link_to edit_user_path do %>
+    <i class="fa-solid fa-pen"></i>
+  <% end %>
 </div>
 
 <br>
@@ -16,7 +24,11 @@
 
 <div>
   <strong><p>Rue</p></strong>
-  <%= current_user.address %>
+  <%= @user.address %>
+
+  <%= link_to edit_user_path do %>
+    <i class="fa-solid fa-pen"></i>
+  <% end %>
 </div>
 
 <br>
@@ -24,7 +36,11 @@
 
 <div>
   <strong><p>Code Postal</p></strong>
-  <%= current_user.address %>
+  <%= @user.postal_code %>
+
+  <%= link_to edit_user_path do %>
+    <i class="fa-solid fa-pen"></i>
+  <% end %>
 </div>
 
 <br>
@@ -32,7 +48,11 @@
 
 <div>
   <strong><p>Ville</p></strong>
-  <%= current_user.address %>
+  <%= @user.city %>
+
+  <%= link_to edit_user_path do %>
+    <i class="fa-solid fa-pen"></i>
+  <% end %>
 </div>
 
 <br>
@@ -40,5 +60,9 @@
 
 <div>
   <strong><p>Niveau actuel</p></strong>
-  <%= current_user.level %>
+  <%= @user.level %>
+
+  <%= link_to edit_user_path do %>
+    <i class="fa-solid fa-pen"></i>
+  <% end %>
 </div>

@@ -22,7 +22,9 @@ user1 = User.create!(
   last_name: 'Bardy',
   email: 'julien.bardy@gmail.com',
   password: 'JulienB',
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address: '49 quai Émile Cormerais',
+  postal_code: 44_800,
+  city: 'Saint-Herblain'
 )
 
 user2 = User.create!(
@@ -30,7 +32,9 @@ user2 = User.create!(
   last_name: 'Cabrero',
   email: 'maria.cabrero@gmail.com',
   password: 'MariaC',
-  address: '8 passage de la Poule Noire, Nantes 44000',
+  address: '8 passage de la Poule Noire',
+  postal_code: 44_000,
+  city: 'Nantes'
 )
 
 user3 = User.create!(
@@ -38,7 +42,9 @@ user3 = User.create!(
   last_name: 'Dupont',
   email: 'jean.dupont@gmail.com',
   password: 'JeanDu',
-  address: '12 rue Paul Bellamy, Nantes 44000',
+  address: '12 rue Paul Bellamy',
+  postal_code: 44_000,
+  city: 'Nantes'
 )
 
 puts "Creating events..."
