@@ -5,10 +5,15 @@ class Host::EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @event.host = current_user
     @event.save
 
     # Redirect to host dashboard after creating the event
-    redirect_to host_events_path
+    redirect_to events_path
+  end
+
+  def update
+
   end
 
   private

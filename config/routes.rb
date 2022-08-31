@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   # As a visitor, I can see all the events
   # As a visitor, I can access the event page with limited information
   # As a user, I can access the event page with all information
-  resources :events, only: %i[index show] do
+  resources :events, only: %i[index show]  do
+    # As a host or participant, after an event is created, I can add bottles
+    resources :bottles, only: %i[new create]
     # As a user, I can join an event
     resources :bookings, only: %i[new create] # => TODO: Delete NEW if not needed
   end
@@ -27,23 +29,19 @@ Rails.application.routes.draw do
 
   # As a user, I can bring a bottle that wasn’t requested by the host and upload its details on the event page
   # As a user, I can claim one of the bottles requested by the host on the event page
-  resources :bottles, only: %i[new create edit update] # => TODO: Delete NEW and EDIT if not needed + check if EVENT nesting is needed
+  resources :bottles, only: %i[edit update]
 
   # As a user, I can discuss via the chat with others attendees
-  resources :chatrooms, only: %i[show] do
-    resources :messages, only: %i[index new create]
-  end
+  # resources :chatrooms, only: %i[show] do
+  #   resources :messages, only: %i[index new create]
+  # end
 
   # As a user, I can bookmark an event
-  resources :bookmarks, only: %i[index new create]
+  # resources :bookmarks, only: %i[index new create]
   # As a host, I can create an event
   # As a host, I can update an event
   # As a host, I can see all the events I created
   namespace :host do
-    resources :events, only: %i[index new create edit update] do
-      # As a host, after an event is created, I can add bottles
-      resources :bottles, only: %i[new create]
-    end
+    resources :events, only: %i[new create edit update]
   end
-
 end
