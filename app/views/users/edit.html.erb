@@ -1,0 +1,17 @@
+<h1>Users#edit</h1>
+<p>Find me in app/views/users/edit.html.erb</p>
+
+<%= form_for(@user, data: { turbo: false }) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, :value => @user.first_name %>
+  </div>
+
+  <div>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+
+  <%= f.submit %>
+<% end %>

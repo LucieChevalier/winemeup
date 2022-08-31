@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/edit'
   get 'bookings/join'
   # Components
   get '/components', to: 'pages#components'
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   # As a user, I can sharpen my profile with feedback (feedback de l’event / a few more questions to answer)
-  resources :users, only: %i[edit update]
+  resources :users, only: %i[show edit update]
 
   # As a visitor, I can see all the events
   # As a visitor, I can access the event page with limited information
