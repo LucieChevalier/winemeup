@@ -1,0 +1,18 @@
+<div>
+  <div>
+    <%= cl_image_tag current_user.photo.key, height: 88, width: 88, crop: :fill %>
+  </div>
+  <div>
+    <h2>Julien Bardy</h2>
+    <h3>Novice</h3>
+  </div>
+</div>
+--------------------------------------------
+<div>
+  <% link_to "Évènements", dashboard_path %>
+  <% link_to "Profil", user_path %>
+</div>
+
+<h2>Évènements à venir</h2>
+
+<% current_user. %>

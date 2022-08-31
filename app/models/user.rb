@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   # Guest
   has_many :bookings, foreign_key: :guest_id
+  has_many :events, through: :bookings # Rajout Lucie
 
   # Host
   has_many :events, foreign_key: :host_id
@@ -13,4 +14,6 @@ class User < ApplicationRecord
 
   # User
   has_many :bottles
+  has_one :dashboard # Rajout Lucie
+  has_one_attached :photo # Rajout Lucie
 end
