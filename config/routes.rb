@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'bookings/join'
   # Components
   get '/components', to: 'pages#components'
 

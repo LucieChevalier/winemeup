@@ -1,26 +1,41 @@
 <h1> <%= @event.name %></h1>
 
   <%# Event infos %>
-  <%= event.category %> <%# [Sud-Ouest Bordeaux Loire Champagne Alsace-Lorraine Bourgogne Jura-Bugey-Savoie Beaujolais Rhône Corse Provence Languedoc-Roussillon]  %>
-  <%= event.level %> <%# [Comfirmé Intermédiaire Débutant] %>
-  <%= event.date %>
-  <%= event.address %> <%# Ici on voudra la ville : trouver un moyen d'extraire la ville %>
-  <%= event.description %>
-  <%= event.min_price %> - <%= event.max_price %>
-  <%= event.max_number_guest %>
-  <%= event.host_request %>
+  <%= @event.category %> <%# [Sud-Ouest Bordeaux Loire Champagne Alsace-Lorraine Bourgogne Jura-Bugey-Savoie Beaujolais Rhône Corse Provence Languedoc-Roussillon]  %>
+  <%= @event.level %> <%# [Comfirmé Intermédiaire Débutant] %>
+  <%= @event.date %>
+  <%= @event.address %> <%# Ici on voudra la ville : trouver un moyen d'extraire la ville %>
+  <%= @event.description %>
+  <%= @event.min_price %> - <%= @event.max_price %>
+  <%= @event.max_number_guest %>
+  <%= @event.host_request %>
 
-  <%# Event's host details  %>
-  <%= event.host_id.first_name %>
-  <%= event.host_id.last_name %>
-  <%= event.host_id.level %>
+  <%= @event.host.first_name %>
+  <%= @event.host.last_name %>
+  <%= @event.host.level %>
 
 
+  <%# S'inscrire %>
+  <h2> S'inscrire </h2>
+  <% if user_signed_in? %>
+    <%# Form to create a booking %>
+    <%= simple_form_for [@event, @booking] do |f| %>
+    <%= f.input :guest_id, as: :hidden, input_html: { value: current_user.id} %>
+    <%= f.input :comment %>
+    <%= f.button :submit %>
+    <% end %>
+  <% else %>
+    <%= link_to "Se connecter", new_user_session_path %>
+  <% end %>
+
+
+  <h2> Liste des participants </h2>
   <%# Integration des differents participants %>
   <% @bookings.each do | booking | %>
     <%= booking.guest.first_name %>
     <%= booking.guest.last_name %>
     <%= booking.guest.level %>
+    <%= booking.guest.email %>
   <% end %>
 
   <%# Integration map %>
