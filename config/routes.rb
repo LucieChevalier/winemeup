@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Components
-  get 'pages/components'
+  get '/components'
 
   # As a visitor, I can access the landing page
   root to: "pages#home"
