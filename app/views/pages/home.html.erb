@@ -1,9 +1,13 @@
 <div class="container">
   <h1>WineMeUp</h1>
 
-  <a href="">Commencez maintenant</a>
-  <a href="">Plus d'information</a>
+  <%= link_to "commencez maintenant", new_user_session_path %>
+
+  <%# TODO: Button Scroll Down %>
+  <%= link_to "Plus d'information" %>
 </div>
+
+
 
 <div class="container">
   <h2>Rejoignez-nous dès maintenant</h2>
@@ -14,9 +18,12 @@
     <li>Le reste n'est que magie</li>
   </ul>
 
-  <a href="">S'inscrire</a>
-  <a href="">Prochains évènements</a>
+  <%= link_to "S'inscrire", new_user_registration_path %>
+  
+  <%= link_to "Prochains évènements", events_path%>
 </div>
+
+
 
 <div class="container">
   <h2>Les étapes pour rejoindre votre premier évènement</h2>
@@ -30,5 +37,9 @@
     <li>Partagez avec nous vos retours d'expérience afin d'affiner votre profile</li>
   </ul>
 
-    <a href="">Commencez maintenant</a>
+    <% unless user_signed_in? == true %>
+      <%= link_to "commencez maintenant", new_user_session_path %>
+    <% else %>
+      <%= link_to events_path %>
+    <% end %>
 </div>
