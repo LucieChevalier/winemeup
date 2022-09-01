@@ -7,7 +7,9 @@
       <h3><%= current_user.level %></h3>
     </div>
   </div>
-  --------------------------------------------
+
+<hr class="mb-4 mt-4">
+
   <div>
     <%= link_to "Évènements", dashboard_path %>
     <%= link_to "Profil", user_path(current_user) %>
@@ -15,34 +17,82 @@
 
   <h2>Évènements à venir</h2>
 
-  <%# Display events (host) %>
-  <% @hosted_events.each do |event| %>
-  <%= event.name %>
-  <% end %>
-
-
-<%# Display events (host) %>
-<% @hosted_events.each do |event| %>
+<%# Display future events (host) %>
+<% @future_hosted_events.each do |event| %>
   <div class="card-dashboard-2">
     <%= cl_image_tag event.photo.key %>
     <div class="card-dashboard-2-infos">
-      <h3><%= event.date %> <%= event.time %></h3>
+      <div class= "d-flex justify-content-between">
+        <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
+        <% if event.host == current_user %>
+          <%= link_to 'host_event_path' do %>
+            <i class='fa-regular fa-pen-to-square'></i>
+          <% end  %>
+        <% end %>
+      </div>
       <p><%= event.name %></p>
-      <p><%= event.category %></p>
+        <p class="bluenight"><%= event.category%></p>
     </div>
   </div>
 <% end %>
 
-<%# Display bookings (guest) %>
-<% @attended_events.each do |event| %>
-
-
-
+<%# Display future bookings (guest) %>
+<% @future_attended_events.each do |event| %>
+ <div class="card-dashboard-2">
+    <%= cl_image_tag event.photo.key %>
+    <div class="card-dashboard-2-infos">
+      <div class= "d-flex justify-content-between">
+        <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
+        <% if event.host == current_user %>
+          <%= link_to 'host_event_path' do %>
+            <i class='fa-regular fa-pen-to-square'></i>
+          <% end  %>
+        <% end %>
+      </div>
+      <p><%= event.name %></p>
+        <p class="bluenight"><%= event.category%></p>
+    </div>
+  </div>
 <% end %>
 
+<hr class="mb-4 mt-4">
 
-  ---------------------------------------------
+<h2>Évènements passés</h2>
 
-  <h2>Profil œnologique</h2>
+<%# Display past events (host) %>
+<% @past_hosted_events.each do |event| %>
+  <div class="card-dashboard-2">
+    <%= cl_image_tag event.photo.key %>
+    <div class="card-dashboard-2-infos">
+      <div class= "d-flex justify-content-between">
+        <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
+        <% if event.host == current_user %>
+          <%= link_to 'host_event_path' do %>
+            <i class='fa-regular fa-pen-to-square'></i>
+          <% end  %>
+        <% end %>
+      </div>
+      <p><%= event.name %></p>
+        <p class="bluenight"><%= event.category%></p>
+    </div>
+  </div>
+<% end %>
 
-</div>
+<%# Display past bookings (guest) %>
+<% @past_attended_events.each do |event| %>
+ <div class="card-dashboard-2">
+    <%= cl_image_tag event.photo.key %>
+    <div class="card-dashboard-2-infos">
+      <div class= "d-flex justify-content-between">
+        <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
+        <% if event.host == current_user %>
+          <%= link_to 'host_event_path' do %>
+            <i class='fa-regular fa-pen-to-square'></i>
+          <% end  %>
+        <% end %>
+      </div>
+      <p><%= event.name %></p>
+        <p class="bluenight"><%= event.category%></p>
+    </div>
+  </div>
+<% end %>

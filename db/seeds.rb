@@ -68,7 +68,8 @@ loire = Event.create!(
   name: 'descente de la loire en pinard',
   description: "Je vous invite dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du côte roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Feb 2022'),
+  time: Time.parse('08:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
@@ -87,7 +88,8 @@ champagne = Event.create!(
   name: "Saint-Sylvestre aux 12 champagnes",
   description:'',
   address:'49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Nov 2022'),
+  time: Time.parse('08:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
@@ -105,14 +107,15 @@ alsace_lorraine = Event.create!(
   name: "retour de route des vins alsaciens",
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Nov 2022'),
+  time: Time.parse('08:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
   max_number_guest: '',
   min_price: 8,
   max_price: 12,
-  host: user1
+  host: user3
 )
 file = URI.open("https://cdn.aveine.paris/blog/wp-content/uploads/2021/06/09142030/Tour-de-France-regions-viticoles-Route-des-vins-Alsace.jpg")
 alsace_lorraine.photo.attach(io: file, filename: "alsace-lorraine.png", content_type: "image/png")
@@ -122,7 +125,8 @@ bourgogne = Event.create!(
   name: 'nuit blanche au côte de nuits',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Nov 2022'),
+  time: Time.parse('17:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
@@ -139,7 +143,8 @@ jura_savoie_bugey = Event.create!(
   name: 'dégustation des vins de nos montagnes',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Nov 2022'),
+  time: Time.parse('17:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
@@ -156,7 +161,8 @@ beaujolais = Event.create!(
   name: 'soirée beaujolais pas nouveau',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Nov 2022'),
+  time: Time.parse('17:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
@@ -173,7 +179,8 @@ vallee_du_rhone = Event.create!(
   name: 'vallée du rhône méridonale et charcuterie',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Feb 2022'),
+  time: Time.parse('17:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
@@ -190,7 +197,8 @@ corse = Event.create!(
   name: 'vins corsés et fromages qui puent',
   description:  '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Feb 2022'),
+  time: Time.parse('08:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
@@ -207,7 +215,8 @@ provence = Event.create!(
   name: 'pic-nique arrosé aux vins de provence',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Feb 2022'),
+  time: Time.parse('08:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
@@ -224,7 +233,8 @@ languedoc_roussillon = Event.create!(
   name: 'dégustation de nos vins du Roussillon',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Feb 2022'),
+  time: Time.parse('08:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
@@ -241,7 +251,8 @@ sud_ouest = Event.create!(
   name: 'garden party et vins de notre pays basque',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Feb 2022'),
+  time: Time.parse('08:30'),
   category: 'Loire',
   level: 'Débutant',
   host_request: '',
@@ -258,7 +269,8 @@ bordeaux = Event.create!(
   name: "dégustation premium d'entre-deux-mers",
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: '10 septembre 2022',
+  date: Date.parse('3rd Feb 2022'),
+  time: Time.parse('08:30'),
   category: 'Loire',
   level: 'Confirmé',
   host_request: '',
@@ -467,7 +479,7 @@ booking_2 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user3,
-  event: loire
+  event: bourgogne
 )
 
 booking_3 = Booking.create!(
@@ -481,21 +493,21 @@ booking_4 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user3,
-  event: loire
+  event: champagne
 )
 
   booking_5 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user2,
-  event: loire
+  event: champagne
 )
 
 booking_6 = Booking.create!(
   status: 'Past',
   comment: '',
   guest: user2,
-  event: loire
+  event: bourgogne
 )
 
 puts "Finished"
