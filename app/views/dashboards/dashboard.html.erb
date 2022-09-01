@@ -1,8 +1,8 @@
 <div class="container">
 
-  <div class="card-dashboard-1">
+  <div class="card-dashboard-1 d-flex align-items-center justify-content-between">
     <%= cl_image_tag current_user.photo.key %>
-    <div class="card-dashboard-1-infos">
+    <div class="card-dashboard-1-infos d-flex flex-column align-items-center">
       <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
       <h3><%= current_user.level %></h3>
     </div>
@@ -10,11 +10,18 @@
 
 <hr class="mb-4 mt-4">
 
-  <div>
-    <%= link_to "Évènements", dashboard_path %>
-    <%= link_to "Profil", user_path(current_user) %>
+<div>
+  <%#= link_to "Évènements", dashboard_path %>
+  <%#= link_to "Profil", user_path(current_user) %>
+</div>
+
+  <div class="switch-button" >
+    <input class="switch-button-checkbox" type="checkbox"/>
+    <label class="switch-button-label" for=""><span class="switch-button-label-span">Évènements</span></label>
   </div>
 
+<%# EVENTS %>
+<div id="events">
   <h2>Évènements à venir</h2>
 
 <%# Display future events (host) %>
@@ -96,3 +103,117 @@
     </div>
   </div>
 <% end %>
+
+</div>
+
+<%# PROFILE %>
+
+<div id="profile" class="toggle-active">
+    <div data-controller="edit">
+    <strong><p>Prénom</p></strong>
+    <%= current_user.first_name %>
+
+    <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
+
+    <span class="d-none" data-edit-target="content">
+      <%= form_for(current_user, data: { turbo: false }) do |f| %>
+      <%= f.text_field :first_name, :value => current_user.first_name %>
+      <% end %>
+    </span>
+  </div>
+
+  <br>
+  <br>
+
+  <div data-controller="edit">
+    <strong><p>Nom de Famille</p></strong>
+    <%= current_user.last_name %>
+
+    <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
+
+    <span class="d-none" data-edit-target="content">
+      <%= form_for(current_user, data: { turbo: false }) do |f| %>
+      <%= f.text_field :last_name, :value => current_user.last_name %>
+      <% end %>
+    </span>
+  </div>
+
+  <br>
+  <br>
+
+  <div data-controller="edit">
+    <strong><p>Rue</p></strong>
+    <%= current_user.address %>
+
+    <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
+
+    <span class="d-none" data-edit-target="content">
+      <%= form_for(current_user, data: { turbo: false }) do |f| %>
+      <%= f.text_field :address, :value => current_user.address %>
+      <% end %>
+    </span>
+  </div>
+
+  <br>
+  <br>
+
+  <div data-controller="edit">
+    <strong><p>Code Postal</p></strong>
+    <%= current_user.postal_code %>
+
+    <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
+
+    <span class="d-none" data-edit-target="content">
+      <%= form_for(current_user, data: { turbo: false }) do |f| %>
+      <%= f.text_field :postal_code, :value => current_user.postal_code %>
+      <% end %>
+    </span>
+  </div>
+
+  <br>
+  <br>
+
+  <div data-controller="edit">
+    <strong><p>Ville</p></strong>
+    <%= current_user.city %>
+
+    <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
+
+    <span class="d-none" data-edit-target="content">
+      <%= form_for(current_user, data: { turbo: false }) do |f| %>
+      <%= f.text_field :city, :value => current_user.city %>
+      <% end %>
+    </span>
+  </div>
+
+  <br>
+  <br>
+
+  <div data-controller="edit">
+    <strong><p>Niveau actuel</p></strong>
+    <%= current_user.level %>
+
+    <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
+
+    <span class="d-none" data-edit-target="content">
+      <%= form_for(current_user, data: { turbo: false }) do |f| %>
+      <%= f.text_field :level, :value => current_user.level %>
+      <% end %>
+    </span>
+  </div>
+
+</div>
+
+
+
+
+<%# JAVASCRIPT %>
+<script>
+  const toggle = document.querySelector('.switch-button-checkbox');
+  toggle.addEventListener("click", (event) => {
+    const events = document.querySelector("#events");
+    const profile = document.querySelector("#profile");
+    events.classList.toggle("toggle-active");
+    profile.classList.toggle("toggle-active");
+    })
+</script>
