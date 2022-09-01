@@ -3,15 +3,35 @@
 
 <%= form_for(@user, data: { turbo: false }) do |f| %>
   <div>
-    <%= f.label :name %>
-    <%= f.text_field :name, :value => @user.first_name %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, :value => @user.first_name %>
+  </div>
+
+  <div>
+    <%= f.label :last_name %>
+    <%= f.text_field :first_name, :value => @user.last_name %>
   </div>
 
   <div>
     <%= f.label :address %>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :value => @user.address %>
   </div>
 
+  <div>
+    <%= f.label :postal_code %>
+    <%= f.text_field :postal_code, :value => @user.postal_code %>
+  </div>
+
+  <div>
+    <%= f.label :city %>
+    <%= f.text_field :city, :valu => @user.city %>
+  </div>
+
+
+  <div>
+    <%= f.label :level %>
+    <%= f.text_field :level, :value => @user.level %>
+  </div>
 
   <%= f.submit %>
 <% end %>

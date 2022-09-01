@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # As a visitor, I can see all the events
   # As a visitor, I can access the event page with limited information
   # As a user, I can access the event page with all information
-  resources :events, only: %i[index show]  do
+  resources :events, only: %i[index show] do
     # As a host or participant, after an event is created, I can add bottles
     resources :bottles, only: %i[new create]
     # As a user, I can join an event

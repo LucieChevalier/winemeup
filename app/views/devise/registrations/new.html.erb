@@ -8,23 +8,31 @@
     <%= f.input :first_name,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "firstname" }%>
+                input_html: { autocomplete: "Prénom" }%>
     <%= f.input :last_name,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "Nom de Famille" }%>
     <%= f.input :address,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "firstname" }%>
+                input_html: { autocomplete: "Adresse" }%>
+    <%= f.input :postal_code,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Code Postal" }%>
+    <%= f.input :city,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Ville" }%>
     <%= f.input :level,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "Niveau" }%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "Email" }%>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
