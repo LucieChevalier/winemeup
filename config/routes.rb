@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'bookings/join'
   # Components
   get '/components', to: 'pages#components'
+  # Dashboard
+  get '/dashboard', to: 'dashboards#dashboard'
 
   # As a visitor, I can access the landing page
   root to: "pages#home"
