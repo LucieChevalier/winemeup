@@ -2,6 +2,8 @@ class Event < ApplicationRecord
   belongs_to :host, class_name: "User"
   has_many :bookings
   has_many :bottles
+  has_many :guests, through: :bookings, class_name: "User" # Rajout Lucie
+
   has_one_attached :photo
 
 

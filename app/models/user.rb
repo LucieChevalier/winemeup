@@ -13,4 +13,6 @@ class User < ApplicationRecord
 
   # User
   has_many :bottles
+  has_one :dashboard # Rajout Lucie
+  has_one_attached :photo # Rajout Lucie
 end
