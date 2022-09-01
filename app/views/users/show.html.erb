@@ -1,12 +1,12 @@
 <div data-controller="edit">
   <strong><p>Prénom</p></strong>
-  <%= @user.first_name %>
+  <%= current_user.first_name %>
 
   <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
 
   <span class="d-none" data-edit-target="content">
-    <%= form_for(@user, data: { turbo: false }) do |f| %>
-    <%= f.text_field :first_name, :value => @user.first_name %>
+    <%= form_for(current_user, data: { turbo: false }) do |f| %>
+    <%= f.text_field :first_name, :value => current_user.first_name %>
     <% end %>
   </span>
 </div>
@@ -16,13 +16,13 @@
 
 <div data-controller="edit">
   <strong><p>Nom de Famille</p></strong>
-  <%= @user.last_name %>
+  <%= current_user.last_name %>
 
   <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
 
   <span class="d-none" data-edit-target="content">
-    <%= form_for(@user, data: { turbo: false }) do |f| %>
-    <%= f.text_field :last_name, :value => @user.last_name %>
+    <%= form_for(current_user, data: { turbo: false }) do |f| %>
+    <%= f.text_field :last_name, :value => current_user.last_name %>
     <% end %>
   </span>
 </div>
@@ -32,13 +32,13 @@
 
 <div data-controller="edit">
   <strong><p>Rue</p></strong>
-  <%= @user.address %>
+  <%= current_user.address %>
 
   <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
 
   <span class="d-none" data-edit-target="content">
-    <%= form_for(@user, data: { turbo: false }) do |f| %>
-    <%= f.text_field :address, :value => @user.address %>
+    <%= form_for(current_user, data: { turbo: false }) do |f| %>
+    <%= f.text_field :address, :value => current_user.address %>
     <% end %>
   </span>
 </div>
@@ -48,13 +48,13 @@
 
 <div data-controller="edit">
   <strong><p>Code Postal</p></strong>
-  <%= @user.postal_code %>
+  <%= current_user.postal_code %>
 
   <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
 
   <span class="d-none" data-edit-target="content">
-    <%= form_for(@user, data: { turbo: false }) do |f| %>
-    <%= f.text_field :postal_code, :value => @user.postal_code %>
+    <%= form_for(current_user, data: { turbo: false }) do |f| %>
+    <%= f.text_field :postal_code, :value => current_user.postal_code %>
     <% end %>
   </span>
 </div>
@@ -64,13 +64,13 @@
 
 <div data-controller="edit">
   <strong><p>Ville</p></strong>
-  <%= @user.city %>
+  <%= current_user.city %>
 
   <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
 
   <span class="d-none" data-edit-target="content">
-    <%= form_for(@user, data: { turbo: false }) do |f| %>
-    <%= f.text_field :city, :value => @user.city %>
+    <%= form_for(current_user, data: { turbo: false }) do |f| %>
+    <%= f.text_field :city, :value => current_user.city %>
     <% end %>
   </span>
 </div>
@@ -80,13 +80,18 @@
 
 <div data-controller="edit">
   <strong><p>Niveau actuel</p></strong>
-  <%= @user.level %>
+  <%= current_user.level %>
 
   <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
 
   <span class="d-none" data-edit-target="content">
-    <%= form_for(@user, data: { turbo: false }) do |f| %>
-    <%= f.text_field :level, :value => @user.level %>
+    <%= form_for(current_user, data: { turbo: false }) do |f| %>
+    <%= f.text_field :level, :value => current_user.level %>
     <% end %>
   </span>
+</div>
+
+<div>
+  <%= link_to "Évènements", dashboard_path %>
+  <%= link_to "Profil", user_path(current_user) %>
 </div>
