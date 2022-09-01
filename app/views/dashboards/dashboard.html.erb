@@ -1,34 +1,36 @@
-<div>
-  <div>
-    <%= cl_image_tag current_user.photo.key, height: 88, width: 88, crop: :fill %>
+<div class="container">
+
+  <div class="card-dashboard-1">
+    <%= cl_image_tag current_user.photo.key %>
+    <div class="card-dashboard-1-infos">
+      <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+      <h3><%= current_user.level %></h3>
+    </div>
   </div>
+  --------------------------------------------
   <div>
-    <h2>Julien Bardy</h2>
-    <h3>Novice</h3>
+    <%= link_to "Évènements", dashboard_path %>
+    <%= link_to "Profil", user_path(current_user) %>
   </div>
+
+  <h2>Évènements à venir</h2>
+
+  <%# Display events (host) %>
+  <% @hosted_events.each do |event| %>
+  <%= event.name %>
+  <% end %>
+
+  <%# Display bookings (guest) %>
+  <% @attended_events.each do |event| %>
+  <%= event.name %>
+  <% end %>
+
+  ----------------------------------------------
+
+  <h2>Évènements passés</h2>
+
+  ---------------------------------------------
+
+  <h2>Profil œnologique</h2>
+
 </div>
---------------------------------------------
-<div>
-  <%= link_to "Évènements", dashboard_path %>
-  <%= link_to "Profil", user_path(current_user) %>
-</div>
-
-<h2>Évènements à venir</h2>
-
-<%# Display events (host) %>
-<% @hosted_events.each do |event| %>
-<%= event.name %>
-<% end %>
-
-<%# Display bookings (guest) %>
-<% @attended_events.each do |event| %>
-<%= event.name %>
-<% end %>
-
-----------------------------------------------
-
-<h2>Évènements passés</h2>
-
----------------------------------------------
-
-<h2>Profil œnologique</h2>
