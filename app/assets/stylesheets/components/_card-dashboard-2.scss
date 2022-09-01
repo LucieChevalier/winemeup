@@ -2,31 +2,33 @@
   height: 101px;
   width: 367px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .card-dashboard-2 {
   img{
-  height: 88px;
-  width: 88px;
-  border-radius: 50%;
+  height: 81px;
+  width: 81px;
+  border-radius: 12px;
   }
-}
-
-.card-dashboard-2 h2 {
-  font-size: 32px;
-  font-weight: bold;
-  color: $bluenight;
 }
 
 .card-dashboard-2 h3 {
   font-size: 20px;
   font-weight: bold;
-  color:$taup;
+  color:$redwine;
+  margin:0px;
+}
+
+.card-dashboard-2 p {
+  font-family: $font-family;
+  margin:0px;
+}
+.bluenight{
+ color: $bluenight;
 }
 
 .card-dashboard-2 .card-dashboard-2-infos {
   padding-left: 30px;
-  text-align: center;
+  text-align: left;
 }
+
