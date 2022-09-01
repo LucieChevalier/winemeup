@@ -1,7 +1,54 @@
+<div class="form-login">
+  <div class="firstname-form">
+    <div class="fullname-item1">
+      <%= f.input :first_name,
+                  required: true,
+                  autofocus: true,
+                  label: false,
+                  input_html: { autocomplete: "Prénom", value: "Prénom" }%>
+    </div>
+    <div class="fullname-item2">
+      <%= f.input :last_name,
+                  required: true,
+                  autofocus: true,
+                  label: false,
+                  input_html: { autocomplete: "Nom de Famille", value: "Nom de Famille" }%>
+    </div>
+  </div>
 
-  <%= f.input :name, required: true %>
-  <%= f.input :description, required: true %>
-  <%= f.input :address, required: true %>
+  <div class="description-form">
+    <%= f.input :description, required: true,
+                required: true,
+                autofocus: true,
+                label: false,
+                input_html: { autocomplete: "Description", value: "Description" }%>
+  </div>
+
+    <div class="address-form">
+      <div class="address-item1">
+        <%= f.input :address,
+                    required: true,
+                    autofocus: true,
+                    label: false,
+                    input_html: { autocomplete: "Adresse", value: "Adresse", class: "fulladdress" }%>
+      </div>
+
+      <div class="address-item2">
+        <%= f.input :postal_code,
+                    required: true,
+                    autofocus: true,
+                    label: false,
+                    input_html: { autocomplete: "Code Postal", value: "Code Postal", class: "fulladdress" }%>
+      </div>
+      <div class="address-item3">
+        <%= f.input :city,
+                    required: true,
+                    autofocus: true,
+                    label: false,
+                    input_html: { autocomplete: "Ville", value: "Ville", class: "fulladdress" }%>
+      </div>
+  </div>
+
   <%= f.input :date, as: :date, html5: true, required: true %>
 
   <%= f.input :level, as: :radio_buttons, collection: [
@@ -23,3 +70,4 @@
   </div>
 
   <%= f.submit "Créer" %>
+</div>
