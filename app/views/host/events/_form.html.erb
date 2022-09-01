@@ -47,26 +47,62 @@
                     label: false,
                     input_html: { autocomplete: "Ville", value: "Ville", class: "fulladdress" }%>
       </div>
+    </div>
+
+        <%= f.input :date, as: :date, html5: true, required: true,
+                    required: true,
+                    autofocus: true,
+                    label: false %>
+
+    <div class="date-level-form">
+      <div class="date-level-form-item1">
+        <%= f.input :level, as: :radio_buttons, collection: [
+          ['Novice'],
+          ['Intermédiaire'],
+          ['Expert']
+          ], value_method: :first, required: true %>
+      </div>
+
+      <div class="date-level-form-item2">
+        <%= f.input :category, collection: %w[Alsace-Lorraine Beaujolais Bordeaux Bourgogne Champagne Corse Jura-Bugey-Savoie Languedoc-Roussillon Loire Provence Rhône Sud-Ouest], required: true %>
+      </div>
+    </div>
+
+
+  <div class="host-form">
+    <div class="host-form-item1">
+      <%= f.input :host_request, required: true,
+                  required: true,
+                  autofocus: true,
+                  label: false,
+                  input_html: { autocomplete: "Demande de l'hôte", value: "Demande de l'hôte" }%>
+    </div>
+
+    <div class="host-form-item2">
+      <%= f.input :max_number_guest, required: true,
+                  required: true,
+                  autofocus: true,
+                  label: false,
+                  input_html: { autocomplete: "Nombre maximum de participant", value: "Nombre maximum de participant" }%>
+    </div>
   </div>
 
-  <%= f.input :date, as: :date, html5: true, required: true %>
+  <div class="price-form">
+    <div class="price-form-item1">
+      <%= f.input :min_price, required: true,
+                  required: true,
+                  autofocus: true,
+                  label: false,
+                  input_html: { autocomplete: "Prix minimum / bouteille", value: "Prix minimum / bouteille" }%>
+    </div>
 
-  <%= f.input :level, as: :radio_buttons, collection: [
-    ['Novice'],
-    ['Intermédiaire'],
-    ['Expert']
-    ], value_method: :first, required: true %>
-
-  <%= f.input :category, collection: %w[Alsace-Lorraine Beaujolais Bordeaux Bourgogne Champagne Corse Jura-Bugey-Savoie Languedoc-Roussillon Loire Provence Rhône Sud-Ouest], required: true %>
-
-
-
-  <%= f.input :host_request, required: true %>
-  <%= f.input :max_number_guest, required: true %>
-
-  <div class="d-flex">
-    <%= f.input :min_price, required: true %>
-    <%= f.input :max_price, required: true %>
+    <div class="price-form-item1">
+    <%= f.input :max_price, required: true,
+                required: true,
+                autofocus: true,
+                label: false,
+                input_html: { autocomplete: "Prix maximum / bouteille", value: "Prix maximum / bouteille" }%>
+    </div>
   </div>
 
   <%= f.submit "Créer" %>
