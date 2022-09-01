@@ -20,14 +20,26 @@
   <%= event.name %>
   <% end %>
 
-  <%# Display bookings (guest) %>
-  <% @attended_events.each do |event| %>
-  <%= event.name %>
-  <% end %>
 
-  ----------------------------------------------
+<%# Display events (host) %>
+<% @hosted_events.each do |event| %>
+  <div class="card-dashboard-2">
+    <%= cl_image_tag event.photo.key %>
+    <div class="card-dashboard-2-infos">
+      <h3><%= event.date %> <%= event.time %></h3>
+      <p><%= event.name %></p>
+      <p><%= event.category %></p>
+    </div>
+  </div>
+<% end %>
 
-  <h2>Évènements passés</h2>
+<%# Display bookings (guest) %>
+<% @attended_events.each do |event| %>
+
+
+
+<% end %>
+
 
   ---------------------------------------------
 
