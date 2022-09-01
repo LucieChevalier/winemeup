@@ -1,0 +1,101 @@
+.form {
+  background-color: white
+}
+
+.form-login {
+  input {
+    color: #757575;
+    background-color: #F4F4F4;
+    border: solid 1.5px;
+    border-radius: 12px;
+    border-color: #D9D9D9;
+  }
+
+  :focus {
+    border-color: #FF6163;
+    box-shadow: 0px 0px 0px 4px rgba(255, 97, 100, .65);
+  }
+
+  .form-label {
+    color: #757575;
+  }
+}
+
+.firstname-form {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    margin: 6px;
+  }
+
+  .fullname-item1 {
+    flex-grow: 1;
+  }
+
+  .fullname-item2 {
+    flex-grow: 1;
+  }
+}
+
+
+.address-form {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    margin: 6px;
+  }
+
+  .address-item1 {
+    flex-grow: 1;
+  }
+
+  .address-item2 {
+    flex-grow: 1;
+  }
+
+  .address-item3 {
+    flex-grow: 1;
+  }
+}
+
+.password-form {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    margin: 6px;
+  }
+
+  .password-item1 {
+    flex-grow: 1;
+  }
+
+  .password-item2 {
+    flex-grow: 1;
+  }
+}
+
+.level-email {
+  > div {
+    margin: 6px;
+  }
+}
+
+.form-check-input:checked {
+    background-color: #FF6163;
+    border-color: #FF6163
+}
+
+  .form-check-input:focus {
+    border-color: #FF6163;
+    box-shadow: 0px 0px 0px 4px rgba(255, 97, 100, .65);
+}
+
+.description-form {
+
+  > div {
+    margin: 6px;
+  }
+}
