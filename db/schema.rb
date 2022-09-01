@@ -93,6 +93,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_124445) do
     t.datetime "updated_at", null: false
     t.integer "min_price"
     t.integer "max_price"
+    t.time "time"
     t.index ["host_id"], name: "index_events_on_host_id"
   end
 
