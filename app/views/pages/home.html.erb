@@ -19,7 +19,7 @@
   </ul>
 
   <%= link_to "S'inscrire", new_user_registration_path %>
-  
+
   <%= link_to "Prochains évènements", events_path%>
 </div>
 
@@ -40,6 +40,6 @@
     <% unless user_signed_in? == true %>
       <%= link_to "commencez maintenant", new_user_session_path %>
     <% else %>
-      <%= link_to events_path %>
+      <%= link_to "Rejoins un évènement", events_path %>
     <% end %>
 </div>
