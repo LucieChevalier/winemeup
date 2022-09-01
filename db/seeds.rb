@@ -23,7 +23,7 @@ user1 = User.create!(
   email: 'julien.bardy@gmail.com',
   password: 'JulienB',
   address: '49 quai Émile Cormerais',
-  postal_code: 44_800,
+  postal_code: '44800',
   city: 'Saint-Herblain'
 )
 
@@ -33,7 +33,7 @@ user2 = User.create!(
   email: 'maria.cabrero@gmail.com',
   password: 'MariaC',
   address: '8 passage de la Poule Noire',
-  postal_code: 44_000,
+  postal_code: '44000',
   city: 'Nantes'
 )
 
@@ -43,7 +43,7 @@ user3 = User.create!(
   email: 'jean.dupont@gmail.com',
   password: 'JeanDu',
   address: '12 rue Paul Bellamy',
-  postal_code: 44_000,
+  postal_code: '44000',
   city: 'Nantes'
 )
 
