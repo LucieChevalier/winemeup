@@ -23,9 +23,14 @@ user1 = User.create!(
   email: 'julien.bardy@gmail.com',
   password: 'JulienB',
   address: '49 quai Émile Cormerais',
+  level: 'Novice'
   postal_code: '44800',
   city: 'Saint-Herblain'
 )
+
+file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+user1.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user1.save
 
 user2 = User.create!(
   first_name: 'Maria',
@@ -33,9 +38,14 @@ user2 = User.create!(
   email: 'maria.cabrero@gmail.com',
   password: 'MariaC',
   address: '8 passage de la Poule Noire',
+  level: 'Intermédiaire'
   postal_code: '44000',
   city: 'Nantes'
+
 )
+file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+user2.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user2.save
 
 user3 = User.create!(
   first_name: 'Jean',
@@ -43,9 +53,14 @@ user3 = User.create!(
   email: 'jean.dupont@gmail.com',
   password: 'JeanDu',
   address: '12 rue Paul Bellamy',
+  level: 'Expert'
   postal_code: '44000',
   city: 'Nantes'
+
 )
+file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+user3.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user3.save
 
 puts "Creating events..."
 

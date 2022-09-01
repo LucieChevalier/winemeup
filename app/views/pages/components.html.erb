@@ -1,0 +1,10 @@
+<%# Carte - Profil de l'utilisateur avec son avatar tout en haut du dashboard %>
+<%# _card-dashboard-1.scss %>
+
+  <div class="card-dashboard-1">
+    <%= cl_image_tag current_user.photo.key %>
+    <div class="card-dashboard-1-infos">
+      <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+      <h3><%= current_user.level %></h3>
+    </div>
+  </div>
