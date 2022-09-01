@@ -1,12 +1,56 @@
+<div class="components">
+  <%# BTN %>
+  <%# boutons rouges %>
 
-<div class=container>
   <div class="button">
-    <a href="#" class="bouton-rouge"><h3>Sign Up</h3></a>
+    <a href="#" class="bouton-rouge">Prochains évènements</a>
   </div>
-</div>
-<%# Carte - Profil de l'utilisateur avec son avatar tout en haut du dashboard %>
-<%# _card-dashboard-1.scss %>
 
+  <br>
+
+  <div class="button">
+    <a href="#" class="bouton-rouge">Connexion</a>
+  </div>
+
+  <br>
+
+  <div class="button">
+    <a href="#" class="bouton-rouge">Inscription</a>
+  </div>
+
+  <br>
+
+  <div class="button">
+    <a href="#" class="bouton-rouge">Envoyer</a>
+  </div>
+
+  <br>
+
+  <div class="button">
+    <a href="#" class="bouton-rouge">Participer</a>
+  </div>
+
+  <br>
+
+  <div class="button">
+    <a href="#" class="bouton-rouge">Modifier</a>
+  </div>
+
+  <br>
+
+  <div class="button">
+    <a href="#" class="bouton-rouge">Enregistrer</a>
+  </div>
+
+  <br>
+  <%# boutons blancs %>
+
+  <div class="button">
+    <a href="#" class="bouton-blanc">Connexion</a>
+  </div>
+
+  <%# Carte - Profil de l'utilisateur avec son avatar tout en haut du dashboard %>
+  <%# _card-dashboard-1.scss %>
   <div class="card-dashboard-1">
     <%= cl_image_tag current_user.photo.key %>
     <div class="card-dashboard-1-infos">
@@ -14,4 +58,4 @@
       <h3><%= current_user.level %></h3>
     </div>
   </div>
-
+</div>
