@@ -4,9 +4,7 @@
     <div class="card-beg">
 
       <div class="photo-card">
-
-       <%= cl_image_tag @event.photo.key, class: 'image-show' %>
-
+        <%= image_tag "#{event.category}.jpg" %>
         <div class="avatar-show">
           <ul>
             <%= @event.host.first_name %>
