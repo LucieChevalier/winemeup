@@ -3,19 +3,13 @@
 
     <div class="unique-card">
       <div class="card-image-index">
-        <% if event.photo.key.nil? %>
-        <img src="https://res.cloudinary.com/dlwjol4qx/image/upload/w_50,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1660911420/cld-sample-5.jpg" alt="">
-        <% else %>
-          <%= cl_image_tag event.photo.key%>
-        <% end %>
+        <%= image_tag "#{event.category}.jpg" %>
       </div>
 
       <div class="card-text-index">
 
-        <div class="icon-date">
-          <i class="fa-solid fa-calendar"></i>
-          <p class="text-date-index"><%= event.date %></p>
-        </div>
+        <p class="text-date-index"><%= event.date %></p>
+        <p class="text-date-index"><%= t(event.category) %></p>
 
         <p class="text-name-event-index"><%= event.name.capitalize %></p>
 

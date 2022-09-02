@@ -6,10 +6,12 @@ class Host::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.host = current_user
-    @event.save
-
-    # Redirect to host dashboard after creating the event
-    redirect_to events_path
+   
+    if @event.save
+      redirect_to events_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -21,6 +23,8 @@ class Host::EventsController < ApplicationController
   def event_params
     params.require(:event).permit(
       :name,
+      :city,
+      :postal_code,
       :description,
       :address,
       :date,
