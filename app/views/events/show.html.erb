@@ -4,8 +4,7 @@
     <div class="card-beg">
 
       <div class="photo-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwCyAX1OfLensC6oAcpRQMFIBaqYSTOjqJg&usqp=CAU" alt="" class="image-show">
-
+        <%= image_tag "#{event.category}.jpg" %>
         <div class="avatar-show">
           <ul>
             <%= @event.host.first_name %>
