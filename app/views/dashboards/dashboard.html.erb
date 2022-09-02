@@ -1,7 +1,11 @@
 <div class="container">
 
   <div class="card-dashboard-1 d-flex align-items-center justify-content-between">
-    <%= cl_image_tag current_user.photo.key %>
+    <% if current_user.photo.key %>
+      <%= cl_image_tag current_user.photo.key %>
+    <% else %>
+      <%= image_tag "pikachu.jpg" %>
+    <% end %>
     <div class="card-dashboard-1-infos d-flex flex-column align-items-center">
       <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
       <h3><%= current_user.level %></h3>
