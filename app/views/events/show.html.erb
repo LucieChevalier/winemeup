@@ -1,49 +1,95 @@
-<h1> <%= @event.name %></h1>
+<body class="body-show">
 
-  <%# Event infos %>
-  <%= @event.category %> <%# [Sud-Ouest Bordeaux Loire Champagne Alsace-Lorraine Bourgogne Jura-Bugey-Savoie Beaujolais Rhône Corse Provence Languedoc-Roussillon]  %>
-  <%= @event.level %> <%# [Comfirmé Intermédiaire Débutant] %>
-  <%= @event.date %>
-  <%= @event.address %> <%# Ici on voudra la ville : trouver un moyen d'extraire la ville %>
-  <%= @event.description %>
-  <%= @event.min_price %> - <%= @event.max_price %>
-  <%= @event.max_number_guest %>
-  <%= @event.host_request %>
+  <div class="container-show">
+    <div class="card-beg">
 
-  <%= @event.host.first_name %>
-  <%= @event.host.last_name %>
-  <%= @event.host.level %>
+      <div class="photo-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwCyAX1OfLensC6oAcpRQMFIBaqYSTOjqJg&usqp=CAU" alt="" class="image-show">
+
+        <div class="avatar-show">
+          <ul>
+            <%= @event.host.first_name %>
+            <%= @event.host.last_name %> |
+            <div class="pink">
+              <i class="fa-solid fa-bullseye"></i> <%= @event.host.level %>
+            </div>
+          </ul>
+        </div>
+        <img src="https://www.level.fr/wp-content/uploads/2021/01/fond-vert.jpg" alt="" class="image-avatar-show">
+      </div>
+      <%# <%= cl_image_tag @event.photo.key, height: 500, width: 500, crop: :fit %>
+
+      <div class="photo-card-text">
+
+        <div class="header-show">
+          <p class= "pink"><%= @event.date %></p>
+          <p class= "bold"><%= @event.name %></p>
+          <%# <p><%= @event.city %></p>
+          <%# <p><%= @event.area %></p>
+        </div>
+
+        <div class="footer-show">
+          <div class="left">
+            <div class="left-in-left">
+              <div class="icon-participants"><i class="fa-solid fa-user-group"></i></div>
+              <div class="text-participant"><p><%= @event.bookings.count %></p> <p> &nbsp participants</p></div>
+            </div>
+
+            <div class="right-in-left">
+              <div class="icon-price"><i class="fa-solid fa-wine-bottle"></i></div>
+              <div class="price-text"><p><%= @event.min_price %>€ à <%= @event.max_price %>€</p></div>
+            </div>
+          </div>
+          <div class="right"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="border-bottom"></div>
+
+    <div class="description">
+      <p class="bold">Description</p>
+      <p><%= @event.description %></p>
+    </div>
+
+    <div class="border-bottom"></div>
+
+    <p class="titre-participant-bold">Les Participants</p>
+
+    <div class="card-index-list">
+      <% @bookings.each do | booking | %>
+        <div class="single-card">
+          <img src="https://www.level.fr/wp-content/uploads/2021/01/fond-vert.jpg" alt="" class="image-avatar-show">
+          <div class="card-index-list-text">
+            <ul>
+              <%= booking.guest.first_name %>
+              <%= booking.guest.last_name %> |
+              <div class="pink"><i class="fa-solid fa-bullseye"></i> <%= booking.guest.level %></div>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="border-bottom"></div>
 
 
-  <%# S'inscrire %>
-  <h2> S'inscrire </h2>
-  <% if user_signed_in? %>
-    <%# Form to create a booking %>
-    <%= simple_form_for [@event, @booking] do |f| %>
-    <%= f.input :guest_id, as: :hidden, input_html: { value: current_user.id} %>
-    <%= f.input :comment %>
-    <%= f.button :submit %>
-    <% end %>
-  <% else %>
-    <%= link_to "Se connecter", new_user_session_path %>
-  <% end %>
+    <div class="map">
+      <div class="map-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwCyAX1OfLensC6oAcpRQMFIBaqYSTOjqJg&usqp=CAU" alt="" class="image-show">
+      </div>
+    </div>
 
+    <div class="btn-card-show">
+      <%= link_to "Participez" %>
+    </div>
 
-  <h2> Liste des participants </h2>
-  <%# Integration des differents participants %>
-  <% @bookings.each do | booking | %>
-    <%= booking.guest.first_name %>
-    <%= booking.guest.last_name %>
-    <%= booking.guest.level %>
-    <%= booking.guest.email %>
-  <% end %>
+    <div class="border-bottom"></div>
 
-  <%# Integration map %>
-
-  <%# Integration chat %>
-
-
-  <%# Liste des bouteilles %>
-
-
-  <%# Formulaire d'inscription %>
+    <div class="chat">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwCyAX1OfLensC6oAcpRQMFIBaqYSTOjqJg&usqp=CAU" alt="" class="image-show">
+    </div>
+  </div>
+</body>

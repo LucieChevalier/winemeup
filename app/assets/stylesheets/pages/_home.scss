@@ -13,6 +13,8 @@
 
 .block {
   padding: 42px;
+
+
 }
 
 .titre-landing {
@@ -26,7 +28,36 @@
 .sous-titre-landing {
   font-size: 48px;
   color: $beige;
+  font-weight: 300;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.block-button {
+  display: flex;
+  padding-top: 16px;
+
+    > div {
+      margin: 6px;
+    }
+
+    .block-button-primary {
+      flex-grow: 0.37;
+      background-color: $redwine;
+      border-radius: 16px;
+      text-align: center;
+      padding: 8px;
+
+        a {
+          font-family: poppins, sans-serif;
+          text-decoration: none;
+          color: white;
+          font-weight: 200;
+        }
+    }
+
+    .block-button-empty {
+      flex-grow: 1;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -35,13 +66,14 @@
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
-    opacity: 0.9;
+    // opacity: 0.85;
   }
 
   .block {
     display: flex;
     flex-direction: column;
     padding-top: 290px;
+    z-index: 100;
   }
 
   .slogan {
@@ -56,20 +88,51 @@
     font-weight: 700;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     animation: slideInFromLeft 2s;
-    animation-timing-function: cubic-bezier(.42,.97,.52,0)
+    animation-timing-function: cubic-bezier(.42,.97,.52,0);
   }
 
 
   .sous-titre-landing {
     font-size: 32px;
+    font-weight: 300;
     color: $beige;
     letter-spacing: -2px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
   }
 
+  .block-button {
+    display: flex;
+    padding-top: 16px;
+
+      > div {
+        margin: 6px;
+      }
+
+      .block-button-primary {
+        flex-grow: 1;
+        background-color: $redwine;
+        border-radius: 16px;
+        text-align: center;
+        padding: 8px;
+
+        a {
+          font-family: poppins, sans-serif;
+          text-decoration: none;
+          color: white;
+          font-weight: 200;
+        }
+      }
+
+      .block-button-empty {
+        flex-grow: 0;
+      }
+  }
+
 }
 
-  /* animation */
+
+
+  /* animation first screen*/
 
 @keyframes slideInFromLeft {
 	0% {
@@ -80,3 +143,20 @@
 		transform: translateY(0px);
 	}
 }
+
+
+  /* second screen */
+
+  .container-second {
+    margin: 0;
+  }
+
+  .screen-second {
+    height: 50vh;
+    background: $redwine;
+  }
+
+  .titre-second-screen {
+    color: $white;
+    text-shadow: none;
+  }

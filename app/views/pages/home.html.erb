@@ -7,34 +7,40 @@
         <h2 class="sous-titre-landing">Vous aussi.</h2>
         <h2 class="sous-titre-landing">Partager un moment convivial.</h2>
       </div>
-      <%= link_to "commencez maintenant", new_user_session_path %>
 
-      <%# TODO: Button Scroll Down %>
-      <%= link_to "Plus d'information" %>
+      <div class="block-button">
+        <div class="block-button-primary">
+          <%= link_to "Commencez maintenant", new_user_session_path, class: "btn-landing"%>
+        </div>
+        <div class="block-button-empty"></div>
+      </div>
+
     </div>
   </div>
 </div>
 
 
 
-<div class="container">
-  <h2>Rejoignez-nous dès maintenant</h2>
+<div class="container-second">
+  <div class="screen-second">
 
-  <ul>
-    <li>Profitez-en pour ameliorer vos connaissances viticoles</li>
-    <li>Rencontrez les épicuriens prêt de chez-vous</li>
-    <li>Le reste n'est que magie</li>
-  </ul>
 
-  <%= link_to "S'inscrire", new_user_registration_path %>
+    <ul>
+      <li>Profitez-en pour ameliorer vos connaissances viticoles</li>
+      <li>Rencontrez les épicuriens prêt de chez-vous</li>
+      <li>Le reste n'est que magie</li>
+    </ul>
 
-  <%= link_to "Prochains évènements", events_path%>
+    <%= link_to "S'inscrire", new_user_registration_path %>
+
+    <%= link_to "Prochains évènements", events_path%>
+  </div>
 </div>
 
 
 
 <div class="container">
-  <h2>Les étapes pour rejoindre votre premier évènement</h2>
+  <h2 class="sous-titre-landing titre-second-screen">Les étapes pour rejoindre votre premier évènement</h2>
 
   <ul>
     <li>S'inscrire</li>
