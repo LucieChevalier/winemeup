@@ -7,11 +7,22 @@
       </div>
 
       <div class="card-text-index">
+
         <p class="text-date-index"><%= event.date %></p>
         <p class="text-date-index"><%= t(event.category) %></p>
+
         <p class="text-name-event-index"><%= event.name.capitalize %></p>
-        <p class="text-city-index"><%= event.address.capitalize %></p>
-        <p class="text-price-index"><%= event.min_price %> - <%= event.max_price %>€ la bouteille</p>
+
+        <div class="icon-address">
+          <i class="fa-solid fa-house"></i>
+          <p class="text-city-index"><%= event.address.capitalize %></p>
+        </div>
+
+        <div class="icon-price">
+          <i class="fa-solid fa-wine-bottle"></i>
+          <p class="text-price-index"><%= event.min_price %>€ à <%= event.max_price %>€</p>
+        </div>
+
       </div>
     </div>
   <% end %>
