@@ -1,27 +1,20 @@
 <div class="form-login">
   <div class="firstname-form">
     <div class="fullname-item1">
-      <%= f.input :first_name,
+      <%= f.input :name,
                   required: true,
                   autofocus: true,
                   label: false,
-                  input_html: { autocomplete: "Prénom", value: "Prénom" }%>
+                  input_html: { placeholder: "Prénom" }%>
     </div>
-    <div class="fullname-item2">
-      <%= f.input :last_name,
-                  required: true,
-                  autofocus: true,
-                  label: false,
-                  input_html: { autocomplete: "Nom de Famille", value: "Nom de Famille" }%>
-    </div>
-  </div>
+
 
   <div class="description-form">
     <%= f.input :description, required: true,
                 required: true,
                 autofocus: true,
                 label: false,
-                input_html: { autocomplete: "Description", value: "Description" }%>
+                input_html: { placeholder: "Description" }%>
   </div>
 
     <div class="address-form">
@@ -30,7 +23,7 @@
                     required: true,
                     autofocus: true,
                     label: false,
-                    input_html: { autocomplete: "Adresse", value: "Adresse", class: "fulladdress" }%>
+                    input_html: { placeholder: "Adresse", class: "fulladdress" }%>
       </div>
 
       <div class="address-item2">
@@ -38,14 +31,14 @@
                     required: true,
                     autofocus: true,
                     label: false,
-                    input_html: { autocomplete: "Code Postal", value: "Code Postal", class: "fulladdress" }%>
+                    input_html: { placeholder: "Code Postal", class: "fulladdress" }%>
       </div>
       <div class="address-item3">
         <%= f.input :city,
                     required: true,
                     autofocus: true,
                     label: false,
-                    input_html: { autocomplete: "Ville", value: "Ville", class: "fulladdress" }%>
+                    input_html: { placeholder: "Ville", class: "fulladdress" }%>
       </div>
     </div>
 
@@ -75,7 +68,7 @@
                   required: true,
                   autofocus: true,
                   label: false,
-                  input_html: { autocomplete: "Demande de l'hôte", value: "Demande de l'hôte" }%>
+                  input_html: { placeholder: "Demande de l'hôte" }%>
     </div>
 
     <div class="host-form-item2">
@@ -83,7 +76,7 @@
                   required: true,
                   autofocus: true,
                   label: false,
-                  input_html: { autocomplete: "Nombre maximum de participant", value: "Nombre maximum de participant" }%>
+                  input_html: { placeholder: "Nombre maximum de participant" }%>
     </div>
   </div>
 
@@ -93,7 +86,7 @@
                   required: true,
                   autofocus: true,
                   label: false,
-                  input_html: { autocomplete: "Prix minimum / bouteille", value: "Prix minimum / bouteille" }%>
+                  input_html: { placeholder: "Prix minimum / bouteille" }%>
     </div>
 
     <div class="price-form-item1">
@@ -101,9 +94,11 @@
                 required: true,
                 autofocus: true,
                 label: false,
-                input_html: { autocomplete: "Prix maximum / bouteille", value: "Prix maximum / bouteille" }%>
+                input_html: { placeholder: "Prix maximum / bouteille" }%>
     </div>
   </div>
 
-  <%= f.submit "Créer" %>
+  <div class="form-actions">
+    <%= f.submit "Créer", class: "btn"%>
+  </div>
 </div>

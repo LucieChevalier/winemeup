@@ -4,11 +4,16 @@
     <div class="unique-card">
       <div class="card-image-index">
         <% if event.photo.key.nil? %>
-        <img src="https://res.cloudinary.com/dlwjol4qx/image/upload/w_50,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1660911420/cld-sample-5.jpg" alt="">
+          <%= link_to event_path(@event) do %>
+          <%= image_tag "https://res.cloudinary.com/dlwjol4qx/image/upload/w_50,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1660911420/cld-sample-5.jpg" %>
+        <% end %>
+
         <% else %>
           <%= cl_image_tag event.photo.key%>
         <% end %>
       </div>
+
+
 
       <div class="card-text-index">
 
@@ -33,3 +38,4 @@
     </div>
   <% end %>
 </div>
+
