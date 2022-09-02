@@ -1,11 +1,15 @@
 <div class="cards-index2">
     <% @events.each do |event| %>
 
+
     <div class="unique-card">
+      <%= link_to event_path(event) do %>
       <div class="card-image-index">
+
         <%= image_tag "#{event.category}.jpg" %>
       </div>
 
+      <% end %>
 
 
       <div class="card-text-index">
@@ -29,4 +33,3 @@
     </div>
   <% end %>
 </div>
-
