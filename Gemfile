@@ -49,6 +49,7 @@ gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 
 gem "cloudinary"
+gem 'rails-i18n', '~> 7.0.0'
 
 
 gem "devise"
