@@ -1,0 +1,9 @@
+fr:
+  activerecord:
+    models:
+      event: Evenement
+    attributes:
+      event:
+        name: Nom
+        level: Niveau
+        category: Catégorie
