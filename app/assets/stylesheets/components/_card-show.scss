@@ -1,0 +1,208 @@
+.body-show {
+  background: white;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+
+  .image-show {
+    height: 300px;
+    flex-grow: 1;
+    border-radius: 16px;
+    position: relative;
+  }
+
+  .avatar-show {
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 60px;
+    background: white;
+    border-radius: 16px;
+    padding-right: 25px;
+    display: flex;
+
+    ul {
+      margin-bottom: 0px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      font-family: poppins;
+      font-size: 12px;
+      font-weight: 300;
+      display: flex;
+
+      .pink {
+        color: $redwine;
+        margin-left: 4px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .image-avatar-show {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 5px white;
+    position: relative;
+    margin-top: -61px;
+    margin-left: 32px;
+  }
+}
+.card-beg {
+
+  .photo-card-text {
+    display: flex;
+    position: relative;
+    margin-top: 24px;
+    flex-direction: column;
+    padding: 16px;
+    padding-left: 34px;
+    padding-bottom: 0px;
+
+    .header-show {
+      .pink {
+        color: $redwine;
+        font-weight: 500;
+      }
+
+      .bold {
+        color: $bluenight;
+        font-weight: 500;
+      }
+    }
+
+    .footer-show {
+      display: flex;
+
+      .left {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+
+        .left-in-left {
+          display: flex;
+
+          .icon-participants {
+            margin-top: 2px;
+          }
+
+          .text-participant {
+            display: flex;
+            margin: 6px;
+          }
+        }
+
+        .right-in-left {
+          display: flex;
+
+          > div {
+            margin: 6px;
+          }
+
+          .icon-price {
+            margin-top: 2px;
+          }
+        }
+      }
+
+      .right {
+        flex-grow: 3;
+      }
+    }
+  }
+}
+
+.description {
+  padding: 16px;
+  padding-left: 34px;
+  padding-bottom: 0px;
+
+  .bold {
+    color: $bluenight;
+    font-weight: 500;
+  }
+}
+
+.titre-participant-bold {
+  color: $bluenight;
+  font-weight: 500;
+  padding: 16px;
+  padding-left: 34px;
+  padding-bottom: 0;
+}
+
+.card-index-list {
+  padding-top: 4px;
+
+  .single-card {
+    position: relative;
+    padding: 16px;
+    padding-left: 34px;
+
+    > div {
+      margin-bottom: 8px;
+    }
+
+    .image-avatar-show {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: solid 5px #FFF5F3;
+      margin-top: -11px;
+    }
+
+    .card-index-list-text {
+      display: flex;
+
+      ul {
+        margin-bottom: 0px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-family: poppins;
+        font-size: 12px;
+        font-weight: 300;
+        background: #FFF5F3;
+        border-radius: 16px;
+        padding-right: 25px;
+        display: flex;
+        margin-left: 24px;
+      }
+
+      .pink {
+        color: $redwine;
+        margin-left: 4px;
+        font-weight: 500;
+      }
+    }
+  }
+
+}
+
+.map-card {
+  display: flex;
+  padding-top: 16px;
+
+  .image-show {
+    height: 300px;
+    flex-grow: 1;
+    border-radius: 16px
+  }
+}
+
+.btn-card-show {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.chat {
+  margin-top: 16px;
+  display: flex;
+
+  .image-show {
+    height: 300px;
+    flex-grow: 1;
+    border-radius: 16px
+  }
+}

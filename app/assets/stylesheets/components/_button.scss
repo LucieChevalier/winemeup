@@ -35,3 +35,17 @@
 
 
 }
+
+.btn-card-show {
+  background-color: $redwine;
+  border-radius: 16px;
+  text-align: center;
+  padding: 8px;
+
+  a {
+      font-family: poppins, sans-serif;
+      text-decoration: none;
+      color: white;
+      font-weight: 200;
+  }
+}
