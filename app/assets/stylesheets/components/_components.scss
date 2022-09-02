@@ -10,32 +10,36 @@
 
 // /*Media Queries* qui fonctionne/
 
-/*Smallest device*/
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards-index {
-    grid-template-columns: 1fr;
-  }
-}
+// /*Smallest device*/
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .cards-index {
+//     grid-template-columns: 1fr;
+//   }
+// }
 
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-  .cards-index {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+// /*Small devices (landscape phones, 576px and up)*/
+// @media (min-width: 576px) {
+//   .cards-index {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
 
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 1200px) {
-  .cards-index {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
+// /*Medium devices (tablets, 768px and up)*/
+// @media (min-width: 1200px) {
+//   .cards-index {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }
 
 .cards-index2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-color: white;
+
+  > div {
+    margin: 6px;
+  }
 }
 
 .unique-card {
@@ -59,6 +63,68 @@
       flex-grow: 1;
       display: flex;
       justify-content: space-evenly;
+    }
+  }
+
+  .card-text-index {
+    padding-top: 10px;
+    margin-bottom: 36px;
+
+    .text-date-index {
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    .text-name-event-index {
+      color: $bluenight;
+      font-weight: 500;
+      padding-bottom: 6px;
+      margin-left: 5px;
+    }
+
+    .text-city-index {
+      font-family: poppins;
+      font-size: 12px;
+      font-weight: 300;
+      margin-left: 5px;
+    }
+
+    .text-price-index {
+      margin-top: 2px;
+      color: $redwine;
+      font-weight: 600;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+  }
+
+  .icon-date {
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 10px;
+      color: $redwine;
+    }
+  }
+
+  .icon-address {
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 10px;
+      color:$bluenight;
+    }
+  }
+
+  .icon-price {
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 10px;
+      color: $redwine;
     }
   }
 }
