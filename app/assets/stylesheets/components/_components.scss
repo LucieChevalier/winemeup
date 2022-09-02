@@ -79,13 +79,12 @@
       color: $bluenight;
       font-weight: 500;
       padding-bottom: 6px;
-      margin-left: 5px;
     }
 
     .text-city-index {
       font-family: poppins;
       font-size: 12px;
-      font-weight: 300;
+      font-weight: 500;
       margin-left: 5px;
     }
 
@@ -114,13 +113,21 @@
 
     i {
       font-size: 10px;
-      color:$bluenight;
+      color:$grey;
     }
+  }
+
+  .complement-address {
+    font-family: poppins;
+    font-size: 12px;
+    font-weight: 300;
+    color: $grey;
   }
 
   .icon-price {
     display: flex;
     align-items: center;
+    margin-top: 6px;
 
     i {
       font-size: 10px;

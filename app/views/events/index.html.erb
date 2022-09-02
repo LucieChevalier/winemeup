@@ -24,6 +24,10 @@
           <p class="text-city-index"><%= event.address.capitalize %></p>
         </div>
 
+        <div class="complement-address">
+          <%= event.city %> <%= event.region %>
+        </div>
+
         <div class="icon-price">
           <i class="fa-solid fa-wine-bottle"></i>
           <p class="text-price-index"><%= event.min_price %>€ à <%= event.max_price %>€</p>
