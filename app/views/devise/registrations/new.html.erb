@@ -1,6 +1,6 @@
 <body class="form">
   <div class="container">
-    <h2 class="h2">S'inscrire'</h2>
+    <h2 class="h2">S'inscrire</h2>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
 
       <%= f.error_notification %>
@@ -12,14 +12,14 @@
                         required: true,
                         autofocus: true,
                         label: false,
-                        input_html: { autocomplete: "Prénom", value: "Prénom" }%>
+                        input_html: { placeholder: "Prénom" }%>
           </div>
           <div class="fullname-item2">
             <%= f.input :last_name,
                         required: true,
                         autofocus: true,
                         label: false,
-                        input_html: { autocomplete: "Nom de Famille", value: "Nom de Famille" }%>
+                        input_html: { placeholder: "Nom de Famille" }%>
           </div>
         </div>
 
@@ -29,7 +29,7 @@
                         required: true,
                         autofocus: true,
                         label: false,
-                        input_html: { autocomplete: "Adresse", value: "Adresse", class: "fulladdress" }%>
+                        input_html: { placeholder: "Adresse" }%>
           </div>
 
           <div class="address-item2">
@@ -37,14 +37,14 @@
                         required: true,
                         autofocus: true,
                         label: false,
-                        input_html: { autocomplete: "Code Postal", value: "Code Postal", class: "fulladdress" }%>
+                        input_html: { placeholder: "Code Postal" }%>
           </div>
           <div class="address-item3">
             <%= f.input :city,
                         required: true,
                         autofocus: true,
                         label: false,
-                        input_html: { autocomplete: "Ville", value: "Ville", class: "fulladdress" }%>
+                        input_html: { placeholder: "Ville" }%>
           </div>
         </div>
 
@@ -53,12 +53,12 @@
                       required: true,
                       autofocus: true,
                       label: false,
-                      input_html: { autocomplete: "Niveau", value: "Niveau" }%>
+                      input_html: { placeholder: "Niveau" }%>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
                       label: false,
-                      input_html: { autocomplete: "Email", value: "Email" }%>
+                      input_html: { placeholder: "Email" }%>
         </div>
 
         <div class="password-form">
@@ -66,21 +66,21 @@
             <%= f.input :password,
                         required: true,
                         hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                        input_html: { autocomplete: "new-password", value: "Mot de passe", class: "password-label" } %>
+                        input_html: { autocomplete: "new-password", placeholder: "Mot de passe" } %>
           </div>
           <div class="password-item2">
             <%= f.input :password_confirmation,
                         required: true,
-                        input_html: { autocomplete: "new-password", value: "Nouveau mot de passe", class: "password-label" } %>
+                        input_html: { autocomplete: "new-password", placeholder: "Nouveau mot de passe" } %>
           </div>
         </div>
       </div>
 
       <div class="form-actions">
         <%= f.button :submit, "Sign up" %>
+        <%= render "devise/shared/links" %>
       </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
   </div>`
 </body>

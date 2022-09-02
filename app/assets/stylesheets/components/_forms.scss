@@ -6,6 +6,8 @@
   .h2 {
     text-align: center;
     padding: 36px;
+    font-weight: 700;
+    font-family: roboto;
   }
 }
 
@@ -169,5 +171,37 @@
 
   .price-form-item2 {
     flex-grow: 1;
+  }
+}
+
+.form-actions {
+  .btn{
+    border-radius: 16px;
+    color: $redwine;
+    margin-right: 24px;
+    background: white;
+    border: none;
+  }
+
+  input:hover {
+      border: solid 1px $redwine;
+  }
+
+  a {
+    text-decoration: none;
+    color: $grey;
+    border-radius: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+  }
+
+  a:hover {
+    border: solid 1px $grey;
+  }
+
+  .forget-btn-div {
+    margin-top: 12px;
   }
 }
