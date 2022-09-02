@@ -6,7 +6,7 @@ class Event < ApplicationRecord
 
   has_one_attached :photo
 
-  CATEGORIES = %i[alsace beaujolais bordeaux bourgogne champagne corse jura lanquedoc loire provence rhone sud]
+  CATEGORIES = %w[alsace beaujolais bordeaux bourgogne champagne corse jura lanquedoc loire provence rhone sud]
 
   # Validations
   # validates :name, :address, :date, :level, presence: true
