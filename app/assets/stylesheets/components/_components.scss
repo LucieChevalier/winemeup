@@ -1,0 +1,64 @@
+
+/* TODO: Build layout for campuses page */
+// CSS des cards reprise du wagon
+
+
+
+
+// responsive code CSS card-index
+
+
+// /*Media Queries* qui fonctionne/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-index {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .cards-index {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .cards-index {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.cards-index2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+}
+
+.unique-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .card-image-index {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+      border-radius: 16px;
+      justify-self: center;
+      width: 331px;
+      height: 313px;
+    }
+
+    .card-text-index {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}

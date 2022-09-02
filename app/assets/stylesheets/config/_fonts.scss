@@ -18,6 +18,79 @@ $font-family: 'Poppins', "sans-serif" 'Roboto', "sans-serif";
 // $my-font: "Font Name";
 
 
+<<<<<<< HEAD
+// Specific CSS for your home-page
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background: #F4F4F4;
+}
+
+a {
+  text-decoration: none;
+}
+p {
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 16px;
+}
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-weight: 900;
+  color: $redwine;
+  font-size: 56px;
+}
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  // margin-bottom: 20px;
+}
+h3 {
+  font-weight: 700;
+  font-size: 23px;
+}
+.text-center {
+  text-align: center;
+}
+
+// css text index
+.text-date-index {
+  color: $redwine;
+  font-weight: 600;
+  margin: 0px;
+  font-size: 20px;
+}
+
+.text-name-event-index {
+  color: $gray;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.text-city-index {
+  color: $grey;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.text-price-index {
+  color: $redwine;
+  font-weight: 300;
+  margin: 0px;
+}
+
+
+
+// .padded {
+//   padding: 30px 0;
+// }
+
+// Poppins : = 0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400
+// Roboto = 100;300;400;500;700;900
+=======
 // h1 {
 //   font-family: roboto, sans-serif;
 //   font-weight: 900;
@@ -37,3 +110,4 @@ p {
   font-size: 12px;
   font-weight: 300;
 }
+>>>>>>> 5f04bb814e0fad85c577ada6a69c7910d1adbb84
