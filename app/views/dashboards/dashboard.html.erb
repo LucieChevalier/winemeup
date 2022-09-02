@@ -32,7 +32,7 @@
       <div class= "d-flex justify-content-between">
         <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
         <% if event.host == current_user %>
-          <%= link_to 'host_event_path' do %>
+          <%= link_to edit_host_event_path(event) do %>
             <i class='fa-regular fa-pen-to-square'></i>
           <% end  %>
         <% end %>
@@ -51,7 +51,7 @@
       <div class= "d-flex justify-content-between">
         <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
         <% if event.host == current_user %>
-          <%= link_to 'host_event_path' do %>
+          <%= link_to edit_host_event_path(event) do %>
             <i class='fa-regular fa-pen-to-square'></i>
           <% end  %>
         <% end %>
@@ -72,12 +72,7 @@
     <%= cl_image_tag event.photo.key %>
     <div class="card-dashboard-2-infos">
       <div class= "d-flex justify-content-between">
-        <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
-        <% if event.host == current_user %>
-          <%= link_to 'host_event_path' do %>
-            <i class='fa-regular fa-pen-to-square'></i>
-          <% end  %>
-        <% end %>
+
       </div>
       <p><%= event.name %></p>
         <p class="bluenight"><%= event.category%></p>
@@ -91,12 +86,7 @@
     <%= cl_image_tag event.photo.key %>
     <div class="card-dashboard-2-infos">
       <div class= "d-flex justify-content-between">
-        <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
-        <% if event.host == current_user %>
-          <%= link_to 'host_event_path' do %>
-            <i class='fa-regular fa-pen-to-square'></i>
-          <% end  %>
-        <% end %>
+
       </div>
       <p><%= event.name %></p>
         <p class="bluenight"><%= event.category%></p>
