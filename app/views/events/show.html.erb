@@ -85,8 +85,14 @@
     </div>
 
     <div class="btn-card-show">
-      <%= link_to "Participez" %>
+      <%#= link_to "Participez" %>
+      <%= simple_form_for [@event, @booking], html: { novalidate: false } do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :comment %>
+        <%= f.submit "Participer", class: "btn btn-primary" %>
+      <% end %>
     </div>
+
 
     <div class="border-bottom"></div>
 
