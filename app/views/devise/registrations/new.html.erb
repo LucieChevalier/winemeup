@@ -23,6 +23,7 @@
           </div>
         </div>
 
+
         <div class="address-form">
           <div class="address-item1">
             <%= f.input :address,
@@ -48,12 +49,17 @@
           </div>
         </div>
 
-        <div class="level-email">
-          <%= f.input :level,
-                      required: true,
-                      autofocus: true,
-                      label: false,
-                      input_html: { placeholder: "Niveau" }%>
+        <div class="level-photo-email">
+            <%= f.input :level,
+                        required: true,
+                        autofocus: true,
+                        label: false,
+                        input_html: { placeholder: "Niveau" }%>
+
+            <%= f.input :photo, as: :file,
+                        label: false,
+                        input_html: { placeholder: "Photo de profile" }%>
+
           <%= f.input :email,
                       required: true,
                       autofocus: true,

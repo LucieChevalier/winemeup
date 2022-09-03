@@ -37,6 +37,7 @@
 .firstname-form {
   display: flex;
   justify-content: space-between;
+  margin: 0px;
 
   > div {
     margin: 6px;
@@ -90,7 +91,8 @@
   }
 }
 
-.level-email {
+.level-photo-email {
+
   > div {
     margin: 6px;
   }
@@ -202,6 +204,7 @@
     font-size: 12px;
     border: solid 1px $redwine;
     flex-grow: 1;
+    margin: 1px 0px 1px 0;
   }
 
   input:hover {

@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @events = Event.all
+    @events = Event.all.order(:date).order(:time).select { |event| event.date >= Date.today }
   end
 
   def show
