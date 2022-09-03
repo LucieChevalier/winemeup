@@ -65,14 +65,14 @@ user3.save
 puts "Creating events..."
 
 loire_test = Event.create!(
-  name: 'test',
-  description: "test",
-  address: "test",
+  name: 'Le Lorem Ipsum est',
+  description: "Le Lorem Ipsum est simplement du",
+  address: "Le Lorem Ipsum est simplement ",
   date: Date.parse('3rd Feb 2022'),
   time: Time.parse('08:30'),
   category: 'Loire',
   level: 'Novice',
-  host_request: 'test',
+  host_request: 'Le Lorem Ipsum est simplement du faux texte la mise en page avant impression.',
   max_number_guest: 12,
   min_price: 8,
   max_price: 12,
@@ -80,8 +80,8 @@ loire_test = Event.create!(
 )
 
 loire = Event.create!(
-  name: 'descente de la loire en pinard',
-  description: "Je vous invite dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du côte roannaise en Auvergne jusqu'à notre Muscadet local",
+  name: 'Le Lorem Ipsum est simplement',
+  description: "Le Lorem Ipsum est simplement du faux",
   address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
   date: Date.parse('3rd Feb 2022'),
   time: Time.parse('08:30'),

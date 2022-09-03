@@ -11,6 +11,14 @@ class EventsController < ApplicationController
     @booking = Booking.new
   end
 
+  # def longuedescription(description)
+  #   if description.to_s.count >= 20
+  #     puts "[...]"
+  #   else
+  #     description
+  #   end
+  # end
+
   private
 
   def event_params

@@ -1,3 +1,5 @@
+<h2 class="titre-index">Prochains évènements</h2>
+
 <div class="cards-index2">
     <% @events.each do |event| %>
 
@@ -13,9 +15,10 @@
 
       <div class="card-text-index">
 
-        <p class="text-date-index"><%= event.date %></p>
-        <p class="text-date-index"><%= event.category%></p>
-
+        <div class="text-box-show">
+          <p class="text-category-index">Vin de <%= event.category%></p>
+          <p class="text-date-index"><%= event.date.to_fs(:rfc822) %></p>
+        </div>
         <p class="text-name-event-index"><%= event.name.capitalize %></p>
 
         <div class="icon-address">
