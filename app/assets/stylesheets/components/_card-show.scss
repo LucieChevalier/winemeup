@@ -54,12 +54,11 @@
 
   .photo-card-text {
     display: flex;
-    position: relative;
-    margin-top: 24px;
+    margin-top: 16px;
     flex-direction: column;
     padding: 16px;
     padding-left: 34px;
-    padding-bottom: 0px;
+    padding-bottom: 16px;
 
     .header-show {
       .pink {
@@ -67,30 +66,43 @@
         font-weight: 500;
       }
 
+      .date-show{
+        margin-bottom: 6px;
+        font-size: 14px;
+      }
+
       .bold {
         color: $bluenight;
         font-weight: 500;
+        font-size: 14px;
       }
     }
 
-    .footer-show {
+    .header-show {
       display: flex;
+      justify-content: space-between;
+      margin-right: 24px;
 
-      .left {
+      .left-header-show {
         display: flex;
-        flex-grow: 1;
-        justify-content: space-between;
+        flex-direction: column;
 
         .left-in-left {
           display: flex;
+          margin-top: -3px;
 
           .icon-participants {
-            margin-top: 2px;
+            color: $redwine;
+
           }
 
-          .text-participant {
-            display: flex;
-            margin: 6px;
+          p {
+            margin: 3px;
+            margin-right: 1px;
+            font-size: 12px;
+            font-weight: 500;
+            color: $redwine;
+            font-size: 14px;
           }
         }
 
@@ -102,7 +114,13 @@
           }
 
           .icon-price {
-            margin-top: 2px;
+            color: $bluenight;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 500;
+            color: $bluenight;
           }
         }
       }
@@ -115,22 +133,36 @@
 }
 
 .description {
-  padding: 16px;
+  padding: 32px;
   padding-left: 34px;
-  padding-bottom: 0px;
+  padding-bottom: 16px;
+
 
   .bold {
     color: $bluenight;
     font-weight: 500;
+    font-size: 14px;
+  }
+
+  .event-name {
+    font-weight: 500;
+    font-size: 13px;
+    color: $grey;
+  }
+
+  p {
+    font-size: 13px;
+    color: $grey;
   }
 }
 
 .titre-participant-bold {
   color: $bluenight;
   font-weight: 500;
-  padding: 16px;
+  padding: 32px;
   padding-left: 34px;
   padding-bottom: 0;
+  font-size: 14px;
 }
 
 .card-index-list {
@@ -138,7 +170,7 @@
 
   .single-card {
     position: relative;
-    padding: 16px;
+    padding: 9px;
     padding-left: 34px;
 
     > div {

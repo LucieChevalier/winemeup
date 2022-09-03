@@ -25,17 +25,10 @@
       <div class="photo-card-text">
 
         <div class="header-show">
-          <p class= "pink"><%= @event.date %></p>
-          <p class= "bold"><%= @event.name %></p>
-          <%# <p><%= @event.city %></p>
-          <%# <p><%= @event.area %></p>
-        </div>
-
-        <div class="footer-show">
-          <div class="left">
+          <div class="left-header-show">
             <div class="left-in-left">
               <div class="icon-participants"><i class="fa-solid fa-user-group"></i></div>
-              <div class="text-participant"><p><%= @event.bookings.count %></p> <p> &nbsp participants</p></div>
+              <div class="text-participant"><p><%= @event.bookings.count %> participants</p></div>
             </div>
 
             <div class="right-in-left">
@@ -43,9 +36,18 @@
               <div class="price-text"><p><%= @event.min_price %>€ à <%= @event.max_price %>€</p></div>
             </div>
           </div>
-          <div class="right"></div>
+
+          <div class="right-header-show">
+            <p class= "pink date-show"><%= @event.date.to_fs(:rfc822)  %></p>
+            <p class="bold ">Vin de <%= @event.category%></p>
+          </div>
         </div>
 
+          <%# <div class="address-event">
+            <i class="fa-solid fa-location-dot"></i>
+            <p><%= @event.city %>
+            <%# <p><%= @event.region %>
+          <%# </div> %>
       </div>
 
     </div>
@@ -54,6 +56,8 @@
 
     <div class="description">
       <p class="bold">Description</p>
+      <p class= "event-name"><%= @event.name %></p>
+      <p><%= @event.city %><p><%= @event.region %>
       <p><%= @event.description %></p>
     </div>
 
