@@ -2,6 +2,15 @@
   background-color: white
 }
 
+.container {
+  .h2 {
+    text-align: center;
+    padding: 36px;
+    font-weight: 700;
+    font-family: roboto;
+  }
+}
+
 .form-login {
   input {
     color: #757575;
@@ -97,5 +106,102 @@
 
   > div {
     margin: 6px;
+  }
+}
+
+.date-level-form {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    margin: 6px;
+  }
+
+  .date-level-form-item1 {
+    flex-grow: 1;
+
+    legend {
+      color: #757575;
+    }
+
+    .form-check {
+      label {
+        color: #757575;
+
+        &:hover {
+          color: #FF6163;
+        }
+      }
+    }
+  }
+
+  .date-level-form-item2 {
+    flex-grow: 1;
+  }
+}
+
+.host-form {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    margin: 6px;
+  }
+
+  .host-form-item1 {
+    flex-grow: 1;
+  }
+
+  .host-form-item2 {
+    flex-grow: 1;
+  }
+}
+
+.price-form {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    margin: 6px;
+  }
+
+  .price-form-item1 {
+    flex-grow: 1;
+  }
+
+  .price-form-item2 {
+    flex-grow: 1;
+  }
+}
+
+.form-actions {
+  .btn{
+    border-radius: 16px;
+    color: $redwine;
+    margin-right: 24px;
+    background: white;
+    border: none;
+  }
+
+  input:hover {
+      border: solid 1px $redwine;
+  }
+
+  a {
+    text-decoration: none;
+    color: $grey;
+    border-radius: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+  }
+
+  a:hover {
+    border: solid 1px $grey;
+  }
+
+  .forget-btn-div {
+    margin-top: 12px;
   }
 }

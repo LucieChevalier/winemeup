@@ -1,44 +1,34 @@
-<h1>Événements</h1>
-<p>Découvrez les événements</p>
-
-<%# Search bar  %>
-<%= form_with url: host_events_path, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Rechercher un événement"
-  %>
-  <%= submit_tag "Rechercher", class: "btn btn-primary" %>
-<% end %>
-
-<%# Filters %>
+<div class="cards-index2">
+    <% @events.each do |event| %>
 
 
-<%# Iteration on all events %>
-<% @events.each do |event| %>
+    <div class="unique-card">
+      <%= link_to event_path(event) do %>
+      <div class="card-image-index">
+        <%= image_tag "#{event.photo}" %>
+      </div>
 
-  <%# Displaying one event: %>
-<%= link_to event_path(event) do %>
+      <% end %>
 
-  <div>
-    <%# Event photo from Cloudinary %>
-    <% if event.photo.key.nil? %>
-      <img src="https://res.cloudinary.com/dlwjol4qx/image/upload/w_50,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1660911420/cld-sample-5.jpg" alt="">
-    <% else %>
-      <%= cl_image_tag event.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
 
-    <%# Event infos %>
-    <%= event.name %>
-    <%= event.category %> <%# [Sud-Ouest Bordeaux Loire Champagne Alsace-Lorraine Bourgogne Jura-Bugey-Savoie Beaujolais Rhône Corse Provence Languedoc-Roussillon]  %>
-    <%= event.level %> <%# [Comfirmé Intermédiaire Débutant] %>
-    <%= event.date %>
-    <%= event.address %> <%# Ici on voudra la ville : trouver un moyen d'extraire la ville %>
-    <%= event.description %>
-    <%= event.min_price %> - <%= event.max_price %>
-    <%= event.max_number_guest %>
-    <%= event.host_request %>
+      <div class="card-text-index">
 
-  </div>
-<% end %>
-<% end %>
+        <p class="text-date-index"><%= event.date %></p>
+        <p class="text-date-index"><%= event.category%></p>
+
+        <p class="text-name-event-index"><%= event.name.capitalize %></p>
+
+        <div class="icon-address">
+          <i class="fa-solid fa-house"></i>
+          <p class="text-city-index"><%= event.address.capitalize %></p>
+        </div>
+
+        <div class="icon-price">
+          <i class="fa-solid fa-wine-bottle"></i>
+          <p class="text-price-index"><%= event.min_price %>€ à <%= event.max_price %>€</p>
+        </div>
+
+      </div>
+    </div>
+  <% end %>
+</div>
