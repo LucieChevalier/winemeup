@@ -90,7 +90,7 @@
         <%= link_to "Modifier", edit_host_event_path(@event) %>
 
       <%# Si on est pas host, mais qu'on est déjà un guest, on voit un bouton "Je ne viens plus" %>
-      <% elsif %>
+      <% elsif @event.guests.include?(current_user) %>
         <%= link_to "Je ne viens plus" %>
 
       <%# Si on n'est ni host ni guest, on voit un bouton Participer %>
