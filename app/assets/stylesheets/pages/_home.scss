@@ -195,3 +195,17 @@
     color: $white;
     text-shadow: none;
   }
+
+
+
+
+
+// Css pr remplacer le carousel
+
+@media only screen and (max-width: 600px) {
+  .main-chiffres {
+  top: 100px;
+  grid-template-columns: 1fr;
+  }
+
+}
