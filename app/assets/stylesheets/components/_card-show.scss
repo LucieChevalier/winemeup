@@ -14,13 +14,9 @@
   }
 
   .avatar-show {
-    position: absolute;
-    margin-top: 250px;
-    margin-left: 60px;
-    background: white;
-    border-radius: 16px;
-    padding-right: 25px;
+    position: relative;
     display: flex;
+
 
     ul {
       margin-bottom: 0px;
@@ -30,6 +26,11 @@
       font-size: 12px;
       font-weight: 300;
       display: flex;
+      margin-top: -66px;
+      margin-left: 56px;
+      background: white;
+      border-radius: 16px;
+      padding-right: 34px;
 
       .pink {
         color: $redwine;
@@ -44,9 +45,9 @@
     height: 50px;
     border-radius: 50%;
     border: solid 5px white;
-    position: relative;
-    margin-top: -61px;
-    margin-left: 32px;
+    position: absolute;
+    margin-top: -76px;
+    margin-left: 26px;
   }
 }
 .card-beg {

@@ -5,17 +5,20 @@
 
       <div class="photo-card">
         <%= image_tag "#{@event.photo}" %>
-        <div class="avatar-show">
-          <ul>
-            <%= @event.host.first_name %>
-            <%= @event.host.last_name %> |
-            <div class="pink">
-              <i class="fa-solid fa-bullseye"></i> <%= @event.host.level %>
-            </div>
-          </ul>
-        </div>
 
-        <%= cl_image_tag @event.host.photo.key, class: 'image-avatar-show' %>
+        <div class="avatar-show">
+          <%= cl_image_tag @event.host.photo.key, class: 'image-avatar-show' %>
+
+          <div class="profile-show-card">
+            <ul>
+              <%= @event.host.first_name %>
+              <%= @event.host.last_name %> |
+              <div class="pink">
+                <i class="fa-solid fa-bullseye"></i> <%= @event.host.level %>
+              </div>
+            </ul>
+          </div>
+        </div>
 
       </div>
 
