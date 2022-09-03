@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'users/edit'
-  get 'bookings/join'
   # Components
   get '/components', to: 'pages#components'
   # Dashboard
