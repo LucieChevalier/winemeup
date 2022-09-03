@@ -1,11 +1,20 @@
 <div class="footer">
-    <div class="home-nav">
-      <a href=""><i class="fa-solid fa-house"></i>accueil</a>
+    <div class="accueil-nav">
+      <%= link_to root_path do %>
+        <i class="fa-solid fa-house"></i>
+        <p>Accueil</p>
+      <% end %>
     </div>
-    <div class="explore">
-      <a href=""><i class="fa-solid fa-magnifying-glass"></i>découvrir</a>
+    <div class="explore-nav">
+      <%= link_to events_path do %>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <p>Découvrir</p>
+      <% end %>
     </div>
-    <div class="user">
-      <a href=""><i class="fa-solid fa-user"></i>user</a>
+    <div class="user-nav">
+      <%= link_to dashboard_path do %>
+        <i class="fa-solid fa-user"></i>
+        <p>Profile</p>
+      <% end %>
     </div>
 </div>
