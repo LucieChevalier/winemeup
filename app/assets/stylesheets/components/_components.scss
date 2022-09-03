@@ -30,12 +30,17 @@
 //     grid-template-columns: 1fr 1fr 1fr;
 //   }
 // }
+.titre-index {
+  padding: 32px;
+  color: $bluenight;
+}
 
 .cards-index2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-color: white;
+  margin-top: 8px;
 
   > div {
     margin: 6px;
@@ -70,22 +75,38 @@
     padding-top: 10px;
     margin-bottom: 36px;
 
-    .text-date-index {
-      font-size: 14px;
-      margin-left: 5px;
+    .text-box-show {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: -6px;
+
+      .text-date-index {
+        font-size: 14px;
+        margin-right: 5px;
+        color: $bluenight
+      }
+
+      .text-category-index {
+        font-size: 14px;
+        margin-left: 5px;
+        color: $bluenight;
+        font-weight: 600;
+      }
     }
 
+
     .text-name-event-index {
-      color: $bluenight;
-      font-weight: 500;
+      color: $redwine;
+      font-weight: 600;
       padding-bottom: 6px;
       margin-left: 5px;
+      font-size: 14px;
     }
 
     .text-city-index {
       font-family: poppins;
       font-size: 12px;
-      font-weight: 300;
+      font-weight: 500;
       margin-left: 5px;
     }
 
@@ -111,16 +132,18 @@
   .icon-address {
     display: flex;
     align-items: center;
+    margin-left: 6px;
 
     i {
       font-size: 10px;
-      color:$bluenight;
+      color:$grey;
     }
   }
 
   .icon-price {
     display: flex;
     align-items: center;
+    margin-left: 6px;
 
     i {
       font-size: 10px;

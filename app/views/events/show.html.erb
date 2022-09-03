@@ -4,7 +4,7 @@
     <div class="card-beg">
 
       <div class="photo-card">
-        <%= image_tag "#{@event.category}.jpg" %>
+        <%= image_tag "#{@event.photo}" %>
         <div class="avatar-show">
           <ul>
             <%= @event.host.first_name %>
@@ -15,7 +15,12 @@
           </ul>
         </div>
 
-        <%= cl_image_tag @event.host.photo.key, class: 'image-avatar-show' %>
+        <%# Displaying avatar or default avatar %>
+        <% if @event.host.photo.key %>
+          <%= cl_image_tag @event.host.photo.key, class: 'image-avatar-show' %>
+        <% else %>
+          <%= image_tag "kitten.jpg", class: 'image-avatar-show' %>
+        <% end %>
 
       </div>
 
@@ -61,7 +66,13 @@
     <div class="card-index-list">
       <% @bookings.each do | booking | %>
         <div class="single-card">
-          <%= cl_image_tag booking.guest.photo.key, class: 'image-avatar-show' %>
+
+          <%# Displaying avatar or default avatar %>
+          <% if booking.guest.photo.key %>
+            <%= cl_image_tag booking.guest.photo.key, class: 'image-avatar-show' %>
+          <% else %>
+            <%= image_tag "kitten.jpg", class: 'image-avatar-show' %>
+          <% end %>
 
 
           <div class="card-index-list-text">
@@ -85,8 +96,14 @@
     </div>
 
     <div class="btn-card-show">
-      <%= link_to "Participez" %>
+      <%#= link_to "Participez" %>
+      <%= simple_form_for [@event, @booking], html: { novalidate: false } do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :comment %>
+        <%= f.submit "Participer", class: "btn btn-primary" %>
+      <% end %>
     </div>
+
 
     <div class="border-bottom"></div>
 
