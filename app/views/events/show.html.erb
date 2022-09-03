@@ -85,11 +85,22 @@
     </div>
 
     <div class="btn-card-show">
-      <%#= link_to "Participez" %>
-      <%= simple_form_for [@event, @booking], html: { novalidate: false } do |f| %>
-        <%= f.error_notification %>
-        <%= f.input :comment %>
-        <%= f.submit "Participer", class: "btn btn-primary" %>
+    <%# Si on est host, on voit un bouton Modifier %>
+      <% if @event.host == current_user %>
+        <%= link_to "Modifier", edit_host_event_path(@event) %>
+
+      <%# Si on est pas host, mais qu'on est déjà un guest, on voit un bouton "Je ne viens plus" %>
+      <% elsif %>
+        <%= link_to "Je ne viens plus" %>
+
+      <%# Si on n'est ni host ni guest, on voit un bouton Participer %>
+      <% else %>
+        <%= simple_form_for [@event, @booking], html: { novalidate: false } do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :comment %>
+          <%= f.submit "Participer", class: "btn btn-primary" %>
+        <% end %>
+
       <% end %>
     </div>
 

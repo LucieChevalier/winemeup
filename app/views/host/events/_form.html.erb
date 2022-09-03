@@ -98,6 +98,10 @@
   </div>
 
   <div class="form-actions">
+  <% if @event %>
+    <%= f.submit "Modifier", class: "btn"%>
+  <% else %>
     <%= f.submit "Créer", class: "btn"%>
+  <% end %>
   </div>
 </div>
