@@ -4,4 +4,13 @@
   <% else %>
     <h2><%= events.count %> <%= 'resultat'.pluralize %> pour <code><%= params[:query] %></code></h2>
   <% end %>
+
+
+  <div class="cards-index2">
+    <% @events.each do |event| %>
+
+      <%= render 'event_info', event: event %>
+
+    <% end %>
+  </div>
 </div>

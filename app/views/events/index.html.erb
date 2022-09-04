@@ -13,39 +13,3 @@
 
   <%= render 'search', events: @events %>
 </div>
-
-<div class="cards-index2">
-    <% @events.each do |event| %>
-
-
-    <div class="unique-card">
-      <%= link_to event_path(event) do %>
-      <div class="card-image-index">
-        <%= image_tag "#{event.photo}" %>
-      </div>
-
-      <% end %>
-
-
-      <div class="card-text-index">
-
-        <div class="text-box-show">
-          <p class="text-category-index">Vin de <%= event.category%></p>
-          <p class="text-date-index"><%= event.date.to_fs(:rfc822) %></p>
-        </div>
-        <p class="text-name-event-index"><%= event.name.capitalize %></p>
-
-        <div class="icon-address">
-          <i class="fa-solid fa-house"></i>
-          <p class="text-city-index"><%= event.address.capitalize %></p>
-        </div>
-
-        <div class="icon-price">
-          <i class="fa-solid fa-wine-bottle"></i>
-          <p class="text-price-index"><%= event.min_price %>€ à <%= event.max_price %>€</p>
-        </div>
-
-      </div>
-    </div>
-  <% end %>
-</div>
