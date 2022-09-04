@@ -1,19 +1,21 @@
 <div class="form-login">
-  <div class="firstname-form">
-    <div class="fullname-item1">
-      <%= f.input :name,
+  <div class="nom-description">
+    <div class="titre">
+        <%= f.input :name,
+                    required: true,
+                    autofocus: true,
+                    label: false,
+                    input_html: { placeholder: "Nom de l'évènement" }%>
+    </div>
+
+
+    <div class="description-form">
+      <%= f.input :description, required: true,
                   required: true,
                   autofocus: true,
                   label: false,
-                  input_html: { placeholder: "Prénom" }%>
+                  input_html: { placeholder: "Description de l'évènement" }%>
     </div>
-
-  <div class="description-form">
-    <%= f.input :description, required: true,
-                required: true,
-                autofocus: true,
-                label: false,
-                input_html: { placeholder: "Description" }%>
   </div>
 
     <div class="address-form">
@@ -67,7 +69,7 @@
                   required: true,
                   autofocus: true,
                   label: false,
-                  input_html: { placeholder: "Demande de l'hôte" }%>
+                  input_html: { placeholder: "Une demande spéciale?" }%>
     </div>
 
     <div class="host-form-item2">
@@ -97,7 +99,13 @@
     </div>
   </div>
 
-  <div class="form-actions">
+
+  <div class="form-actions btn-create">
+
+  <% if @event %>
+    <%= f.submit "Modifier", class: "btn"%>
+  <% else %>
     <%= f.submit "Créer", class: "btn"%>
+  <% end %>
   </div>
 </div>

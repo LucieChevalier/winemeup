@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @events = Event.all
+    @events = Event.all.order(:date).order(:time).select { |event| event.date >= Date.today }
   end
 
   def show
@@ -10,6 +10,14 @@ class EventsController < ApplicationController
     @bookings = Booking.all.where(event_id: params[:id])
     @booking = Booking.new
   end
+
+  # def longuedescription(description)
+  #   if description.to_s.count >= 20
+  #     puts "[...]"
+  #   else
+  #     description
+  #   end
+  # end
 
   private
 

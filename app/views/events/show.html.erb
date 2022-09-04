@@ -3,36 +3,38 @@
   <div class="container-show">
     <div class="card-beg">
 
-      <div class="photo-card">
-        <%= image_tag "#{@event.category}.jpg" %>
-        <div class="avatar-show">
-          <ul>
-            <%= @event.host.first_name %>
-            <%= @event.host.last_name %> |
-            <div class="pink">
-              <i class="fa-solid fa-bullseye"></i> <%= @event.host.level %>
-            </div>
-          </ul>
-        </div>
+     <div class="photo-card">
+        <%= image_tag "#{@event.photo}" %>
 
-        <%= cl_image_tag @event.host.photo.key, class: 'image-avatar-show' %>
+        <div class="avatar-show">
+        <%# Displaying avatar or default avatar %>
+          <% if @event.host.photo.key %>
+            <%= cl_image_tag @event.host.photo.key, class: 'image-avatar-show' %>
+          <% else %>
+            <%= image_tag "kitten.jpg", class: 'image-avatar-show' %>
+          <% end %>
+
+
+          <div class="profile-show-card">
+            <ul>
+              <%= @event.host.first_name %>
+              <%= @event.host.last_name %> |
+              <div class="pink">
+                <i class="fa-solid fa-bullseye"></i> <%= @event.host.level %>
+              </div>
+            </ul>
+          </div>
+        </div>
 
       </div>
 
       <div class="photo-card-text">
 
         <div class="header-show">
-          <p class= "pink"><%= @event.date %></p>
-          <p class= "bold"><%= @event.name %></p>
-          <%# <p><%= @event.city %></p>
-          <%# <p><%= @event.area %></p>
-        </div>
-
-        <div class="footer-show">
-          <div class="left">
+          <div class="left-header-show">
             <div class="left-in-left">
               <div class="icon-participants"><i class="fa-solid fa-user-group"></i></div>
-              <div class="text-participant"><p><%= @event.bookings.count %></p> <p> &nbsp participants</p></div>
+              <div class="text-participant"><p><%= @event.bookings.count %> participants</p></div>
             </div>
 
             <div class="right-in-left">
@@ -40,9 +42,18 @@
               <div class="price-text"><p><%= @event.min_price %>€ à <%= @event.max_price %>€</p></div>
             </div>
           </div>
-          <div class="right"></div>
+
+          <div class="right-header-show">
+            <p class= "pink date-show"><%= @event.date.to_fs(:rfc822)  %></p>
+            <p class="bold ">Vin de <%= @event.category%></p>
+          </div>
         </div>
 
+          <%# <div class="address-event">
+            <i class="fa-solid fa-location-dot"></i>
+            <p><%= @event.city %>
+            <%# <p><%= @event.region %>
+          <%# </div> %>
       </div>
 
     </div>
@@ -51,6 +62,8 @@
 
     <div class="description">
       <p class="bold">Description</p>
+      <p class= "event-name"><%= @event.name %></p>
+      <p><%= @event.city %><p><%= @event.region %>
       <p><%= @event.description %></p>
     </div>
 
@@ -61,7 +74,13 @@
     <div class="card-index-list">
       <% @bookings.each do | booking | %>
         <div class="single-card">
-          <%= cl_image_tag booking.guest.photo.key, class: 'image-avatar-show' %>
+
+          <%# Displaying avatar or default avatar %>
+          <% if booking.guest.photo.key %>
+            <%= cl_image_tag booking.guest.photo.key, class: 'image-avatar-show' %>
+          <% else %>
+            <%= image_tag "kitten.jpg", class: 'image-avatar-show' %>
+          <% end %>
 
 
           <div class="card-index-list-text">
@@ -85,8 +104,22 @@
     </div>
 
     <div class="btn-card-show">
-      <%= link_to "Participez" %>
+      <%# Si on est host, on voit un bouton Modifier %>
+      <% if @event.host == current_user %>
+        <%= link_to "Modifier", edit_host_event_path(@event) %>
+      <%# Si on est pas host, mais qu'on est déjà un guest, on voit un bouton "Je ne viens plus" %>
+      <% elsif @event.guests.include?(current_user) %>
+        <%= link_to "Je ne viens plus" %>
+      <%# Si on n'est ni host ni guest, on voit un bouton Participer %>
+      <% else %>
+        <%= simple_form_for [@event, @booking], html: { novalidate: false } do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :comment %>
+          <%= f.submit "Participer", class: "btn btn-primary" %>
+        <% end %>
+      <% end %>
     </div>
+
 
     <div class="border-bottom"></div>
 

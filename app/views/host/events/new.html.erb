@@ -1,7 +1,8 @@
 <body class="form">
   <div class="container">
     <%# <p>Utilisez le formulaire ci-dessous pour créer un événement</p> %>
-    <h2>Créer un événement</h1>
+    <h2 class="titre-create-event">Créer un moment de convivialité</h1>
+
 
     <%= simple_form_for @event, url: host_events_path do |f| %>
       <%= render "host/events/form", f: f %>
