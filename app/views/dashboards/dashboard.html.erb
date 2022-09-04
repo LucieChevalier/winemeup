@@ -117,100 +117,39 @@
 
   <%# PROFILE %>
   <div class="tab-pane" id="profile" role="tabpanel">
-    <div id="profile" class="toggle-active">
-      <div data-controller="edit">
+
+      <div class="button">
+        <%= link_to "Modifier", edit_user_path(current_user), class: "bouton-rouge mt-4 mb-4" %>
+      </div>
+
+
         <strong><p>Prénom</p></strong>
-        <%= current_user.first_name %>
-
-        <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
-
-        <span class="d-none" data-edit-target="content">
-          <%= form_for(current_user, data: { turbo: false }) do |f| %>
-          <%= f.text_field :first_name, :value => current_user.first_name %>
-          <% end %>
-        </span>
-      </div>
-
+        <%= current_user.first_name ? current_user.first_name : "Vous n'avez pas renseigné votre prénom" %>
       <br>
       <br>
-
-      <div data-controller="edit">
         <strong><p>Nom de Famille</p></strong>
-        <%= current_user.last_name %>
-
-        <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
-
-        <span class="d-none" data-edit-target="content">
-          <%= form_for(current_user, data: { turbo: false }) do |f| %>
-          <%= f.text_field :last_name, :value => current_user.last_name %>
-          <% end %>
-        </span>
-      </div>
-
+        <%= current_user.last_name ? current_user.last_name : "Vous n'avez pas renseigné votre nom" %>
       <br>
       <br>
-
-      <div data-controller="edit">
         <strong><p>Rue</p></strong>
-        <%= current_user.address %>
-
-        <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
-
-        <span class="d-none" data-edit-target="content">
-          <%= form_for(current_user, data: { turbo: false }) do |f| %>
-          <%= f.text_field :address, :value => current_user.address %>
-          <% end %>
-        </span>
-      </div>
-
+        <%= current_user.address ? current_user.address : "Vous n'avez pas renseigné votre adresse" %>
       <br>
       <br>
-
-      <div data-controller="edit">
         <strong><p>Code Postal</p></strong>
-        <%= current_user.postal_code %>
-
-        <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
-
-        <span class="d-none" data-edit-target="content">
-          <%= form_for(current_user, data: { turbo: false }) do |f| %>
-          <%= f.text_field :postal_code, :value => current_user.postal_code %>
-          <% end %>
-        </span>
-      </div>
-
+        <%= current_user.postal_code ? current_user.postal_code : "Vous n'avez pas renseigné votre code postal" %>
       <br>
       <br>
-
-      <div data-controller="edit">
         <strong><p>Ville</p></strong>
-        <%= current_user.city %>
-
-        <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
-
-        <span class="d-none" data-edit-target="content">
-          <%= form_for(current_user, data: { turbo: false }) do |f| %>
-          <%= f.text_field :city, :value => current_user.city %>
-          <% end %>
-        </span>
-      </div>
-
+        <%= current_user.city ? current_user.city : "Vous n'avez pas renseigné votre ville" %>
       <br>
       <br>
-
-      <div data-controller="edit">
         <strong><p>Niveau actuel</p></strong>
-        <%= current_user.level %>
-
-        <i data-action="click->edit#displayForm" class="fa-solid fa-pen"></i>
-
-        <span class="d-none" data-edit-target="content">
-          <%= form_for(current_user, data: { turbo: false }) do |f| %>
-          <%= f.text_field :level, :value => current_user.level %>
-          <% end %>
-        </span>
-      </div>
-
-    </div>
+        <%= current_user.level ? current_user.level : "Vous n'avez pas renseigné votre niveau" %>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
   </div>
 </div>
