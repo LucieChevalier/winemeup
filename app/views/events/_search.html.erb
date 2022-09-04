@@ -1,0 +1,7 @@
+<div data-search-events-target="list">
+  <% if params[:query].blank? %>
+    <h2><%= events.count %> <%= 'évènement'.pluralize %> <%= 'disponible'.pluralize %></h2>
+  <% else %>
+    <h2><%= events.count %> <%= 'resultat'.pluralize %> pour <code><%= params[:query] %></code></h2>
+  <% end %>
+</div>
