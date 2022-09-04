@@ -14,11 +14,13 @@ export default class extends Controller {
 
   update() {
     // console.log(event) pour verifier que le keyup fonctionne bien
+    // console.log(query.value);
      const url = `${this.formTarget.action}?query=${this.inputTarget.value}`
      fetch(url, {headers: {"Accept": "text/plain"}})
        .then(response => response.text())
        .then((data) => {
          this.listTarget.outerHTML = data
+        // console.log(data)
     })
   }
 }

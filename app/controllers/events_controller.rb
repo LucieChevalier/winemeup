@@ -25,7 +25,6 @@ class EventsController < ApplicationController
     end
   end
 
-
   def show
     @event = Event.find(params[:id])
     @bookings = Booking.all.where(event_id: params[:id])
