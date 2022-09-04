@@ -1,37 +1,103 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<body class="form">
+  <div class="container">
+    <h2 class="h2">Modifier votre profil</h2>
+    <%= simple_form_for(@user, data: { turbo: :false }) do |f| %>
 
-<%= form_for(@user, data: { turbo: false }) do |f| %>
-  <div>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, :value => @user.first_name %>
-  </div>
+      <%= f.error_notification %>
 
-  <div>
-    <%= f.label :last_name %>
-    <%= f.text_field :first_name, :value => @user.last_name %>
-  </div>
-
-  <div>
-    <%= f.label :address %>
-    <%= f.text_field :address, :value => @user.address %>
-  </div>
-
-  <div>
-    <%= f.label :postal_code %>
-    <%= f.text_field :postal_code, :value => @user.postal_code %>
-  </div>
-
-  <div>
-    <%= f.label :city %>
-    <%= f.text_field :city, :valu => @user.city %>
-  </div>
+      <div class="form-inputs form-login">
+        <div class="firstname-form">
+          <div class="fullname-item1">
+            <%= f.input :first_name,
+                        required: true,
+                        autofocus: true,
+                        label: false,
+                        input_html: { placeholder: "Prénom" }%>
+          </div>
+          <div class="fullname-item2">
+            <%= f.input :last_name,
+                        required: true,
+                        autofocus: true,
+                        label: false,
+                        input_html: { placeholder: "Nom de Famille" }%>
+          </div>
+        </div>
 
 
-  <div>
-    <%= f.label :level %>
-    <%= f.text_field :level, :value => @user.level %>
-  </div>
+        <div class="address-form">
+          <div class="address-item1">
+            <%= f.input :address,
+                        required: true,
+                        autofocus: true,
+                        label: false,
+                        input_html: { placeholder: "Adresse" }%>
+          </div>
 
-  <%= f.submit %>
-<% end %>
+          <div class="address-item2">
+            <%= f.input :postal_code,
+                        required: true,
+                        autofocus: true,
+                        label: false,
+                        input_html: { placeholder: "Code Postal" }%>
+          </div>
+          <div class="address-item3">
+            <%= f.input :city,
+                        required: true,
+                        autofocus: true,
+                        label: false,
+                        input_html: { placeholder: "Ville" }%>
+          </div>
+        </div>
+
+        <div class="level-photo-email">
+
+            <%= f.input :level,
+            as: :radio_buttons,
+            collection: [
+              ['Novice'],
+              ['Intermédiaire'],
+              ['Expert']
+              ],
+              legend_tag: false,
+              value_method: :first,
+              required: true %>
+
+            <%#= f.input :level,
+                        required: true,
+                        autofocus: true,
+                        label: false,
+                        input_html: { placeholder: "Niveau" }%>
+
+            <%= f.input :photo, as: :file,
+                        label: false,
+                        input_html: { placeholder: "Photo de profile" }%>
+
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      label: false,
+                      input_html: { placeholder: "Email" }%>
+        </div>
+
+        <div class="password-form">
+          <div class="password-item1">
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password", placeholder: "Mot de passe" } %>
+          </div>
+          <div class="password-item2">
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password", placeholder: "Nouveau mot de passe" } %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Modifier" %>
+      </div>
+    <% end %>
+
+  </div>`
+</body>
