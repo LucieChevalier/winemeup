@@ -50,11 +50,18 @@
         </div>
 
         <div class="level-photo-email">
+            <%= f.hint 'Quel est votre niveau en œnologie ?' %>
+
             <%= f.input :level,
-                        required: true,
-                        autofocus: true,
-                        label: false,
-                        input_html: { placeholder: "Niveau" }%>
+            as: :radio_buttons,
+            collection: [
+              ['Novice'],
+              ['Intermédiaire'],
+              ['Expert']
+              ],
+              legend_tag: false,
+              value_method: :first,
+              required: true %>
 
             <%= f.input :photo, as: :file,
                         label: false,
