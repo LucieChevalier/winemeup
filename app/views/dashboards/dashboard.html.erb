@@ -15,142 +15,142 @@
     </div>
   </div>
 
-<hr class="mb-4 mt-4">
+  <hr class="mb-4 mt-4">
 
-<%# TABS %>
-<div class="text-center">
-  <ul class="nav nav-pills d-inline-flex text-center border-0 rounded-nav" id="myTab" role="tablist">
-    <li class="nav-item flex-fill" role="presentation">
-      <button class="nav-link active" id="events-tab" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab">Évènements</button>
-    </li>
-    <li class="nav-item flex-fill" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Profil</button>
-    </li>
-  </ul>
-</div>
+  <%# TABS %>
+  <div class="text-center">
+    <ul class="nav nav-pills d-inline-flex text-center border-0 rounded-nav" id="myTab" role="tablist">
+      <li class="nav-item flex-fill" role="presentation">
+        <button class="nav-link active" id="events-tab" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab">Évènements</button>
+      </li>
+      <li class="nav-item flex-fill" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Profil</button>
+      </li>
+    </ul>
+  </div>
 
-<div class="tab-content">
+  <div class="tab-content" id="pills-tabContent">
 
-  <%# EVENTS %>
-  <div class="tab-pane active" id="events" role="tabpanel">
+    <%# EVENTS %>
+    <div class="tab-pane active" id="events" role="tabpanel">
 
-      <h2>Mes évènements</h2>
-        <%# Display future events (host) %>
-        <% @future_hosted_events.each do |event| %>
-          <%= link_to event_path(event) do %>
-            <div class="card-dashboard-2">
-                <%= image_tag "#{event.photo}" %>
+        <h2>Mes évènements</h2>
+          <%# Display future events (host) %>
+          <% @future_hosted_events.each do |event| %>
+            <%= link_to event_path(event) do %>
+              <div class="card-dashboard-2">
+                  <%= image_tag "#{event.photo}" %>
+            <% end %>
+
+                  <div class="card-dashboard-2-infos">
+                    <div class= "d-flex justify-content-between">
+                      <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
+                    </div>
+                    <p><%= event.name %></p>
+                      <p class="bluenight"><%= event.category%></p>
+                  </div>
+            </div>
           <% end %>
 
-                <div class="card-dashboard-2-infos">
-                  <div class= "d-flex justify-content-between">
-                    <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
+          <%# Display past events (host) %>
+          <% @past_hosted_events.each do |event| %>
+            <%= link_to event_path(event), style:"filter:grayscale(100%)" do %>
+              <div class="card-dashboard-2">
+                  <%= image_tag "#{event.photo}" %>
+            <% end %>
+
+                  <div class="card-dashboard-2-infos">
+                    <div class= "d-flex justify-content-between">
+                      <h3 style="color: lightgrey"><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
+                    </div>
+                    <p style="color: lightgrey"><%= event.name %></p>
+                      <p class="bluenight" style="color: lightgrey"><%= event.category%></p>
                   </div>
-                  <p><%= event.name %></p>
-                    <p class="bluenight"><%= event.category%></p>
-                </div>
-           </div>
+            </div>
+          <% end %>
+
+        <hr class="mb-4 mt-4">
+
+        <h2>J'y vais !</h2>
+          <%# Display future bookings (guest) %>
+          <% @future_attended_events.each do |event| %>
+            <%= link_to event_path(event) do %>
+              <div class="card-dashboard-2">
+                  <%= image_tag "#{event.photo}" %>
+            <% end %>
+
+                  <div class="card-dashboard-2-infos">
+                    <div class= "d-flex justify-content-between">
+                      <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
+                    </div>
+                    <p><%= event.name %></p>
+                      <p class="bluenight"><%= event.category%></p>
+                  </div>
+            </div>
+          <% end %>
+
+
+
+        <%# <hr class="mb-4 mt-4"> %>
+
+        <%# <h2>Évènements passés</h2> %>
+
+        <%# Display past bookings (guest) %>
+        <% @past_attended_events.each do |event| %>
+          <%= link_to event_path(event), style:"filter:grayscale(100%)" do %>
+              <div class="card-dashboard-2">
+                  <%= image_tag "#{event.photo}" %>
+            <% end %>
+
+                  <div class="card-dashboard-2-infos">
+                    <div class= "d-flex justify-content-between">
+                      <h3 style="color: lightgrey"><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
+                    </div>
+                    <p style="color: lightgrey"><%= event.name %></p>
+                      <p class="bluenight" style="color: lightgrey"><%= event.category%></p>
+                  </div>
+            </div>
         <% end %>
-
-        <%# Display past events (host) %>
-        <% @past_hosted_events.each do |event| %>
-          <%= link_to event_path(event) do %>
-            <div class="card-dashboard-2">
-                <%= image_tag "#{event.photo}" %>
-          <% end %>
-
-                <div class="card-dashboard-2-infos">
-                  <div class= "d-flex justify-content-between">
-                    <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
-                  </div>
-                  <p><%= event.name %></p>
-                    <p class="bluenight"><%= event.category%></p>
-                </div>
-           </div>
-        <% end %>
-
-      <hr class="mb-4 mt-4">
-
-      <h2>Évènements à venir</h2>
-        <%# Display future bookings (guest) %>
-        <% @future_attended_events.each do |event| %>
-          <%= link_to event_path(event) do %>
-            <div class="card-dashboard-2">
-                <%= image_tag "#{event.photo}" %>
-          <% end %>
-
-                <div class="card-dashboard-2-infos">
-                  <div class= "d-flex justify-content-between">
-                    <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
-                  </div>
-                  <p><%= event.name %></p>
-                    <p class="bluenight"><%= event.category%></p>
-                </div>
-           </div>
-        <% end %>
-
-
-
-      <hr class="mb-4 mt-4">
-
-      <h2>Évènements passés</h2>
-
-      <%# Display past bookings (guest) %>
-      <% @past_attended_events.each do |event| %>
-        <%= link_to event_path(event) do %>
-            <div class="card-dashboard-2">
-                <%= image_tag "#{event.photo}" %>
-          <% end %>
-
-                <div class="card-dashboard-2-infos">
-                  <div class= "d-flex justify-content-between">
-                    <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
-                  </div>
-                  <p><%= event.name %></p>
-                    <p class="bluenight"><%= event.category%></p>
-                </div>
-           </div>
-      <% end %>
 
     </div>
 
-  </div>
+    <%# PROFILE %>
+    <div class="tab-pane" id="profile" role="tabpanel">
 
-  <%# PROFILE %>
-  <div class="tab-pane" id="profile" role="tabpanel">
-
-      <div class="button">
-        <%= link_to "Modifier", edit_user_path(current_user), class: "bouton-rouge mt-4 mb-4" %>
-      </div>
+        <div class="button">
+          <%= link_to "Modifier", edit_user_path(current_user), class: "bouton-rouge mt-4 mb-4" %>
+        </div>
 
 
-        <strong><p>Prénom</p></strong>
-        <%= current_user.first_name ? current_user.first_name : "Vous n'avez pas renseigné votre prénom" %>
-      <br>
-      <br>
-        <strong><p>Nom de Famille</p></strong>
-        <%= current_user.last_name ? current_user.last_name : "Vous n'avez pas renseigné votre nom" %>
-      <br>
-      <br>
-        <strong><p>Rue</p></strong>
-        <%= current_user.address ? current_user.address : "Vous n'avez pas renseigné votre adresse" %>
-      <br>
-      <br>
-        <strong><p>Code Postal</p></strong>
-        <%= current_user.postal_code ? current_user.postal_code : "Vous n'avez pas renseigné votre code postal" %>
-      <br>
-      <br>
-        <strong><p>Ville</p></strong>
-        <%= current_user.city ? current_user.city : "Vous n'avez pas renseigné votre ville" %>
-      <br>
-      <br>
-        <strong><p>Niveau actuel</p></strong>
-        <%= current_user.level ? current_user.level : "Vous n'avez pas renseigné votre niveau" %>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+          <strong><p>Prénom</p></strong>
+          <%= current_user.first_name ? current_user.first_name : "Vous n'avez pas renseigné votre prénom" %>
+        <br>
+        <br>
+          <strong><p>Nom de Famille</p></strong>
+          <%= current_user.last_name ? current_user.last_name : "Vous n'avez pas renseigné votre nom" %>
+        <br>
+        <br>
+          <strong><p>Rue</p></strong>
+          <%= current_user.address ? current_user.address : "Vous n'avez pas renseigné votre adresse" %>
+        <br>
+        <br>
+          <strong><p>Code Postal</p></strong>
+          <%= current_user.postal_code ? current_user.postal_code : "Vous n'avez pas renseigné votre code postal" %>
+        <br>
+        <br>
+          <strong><p>Ville</p></strong>
+          <%= current_user.city ? current_user.city : "Vous n'avez pas renseigné votre ville" %>
+        <br>
+        <br>
+          <strong><p>Niveau actuel</p></strong>
+          <%= current_user.level ? current_user.level : "Vous n'avez pas renseigné votre niveau" %>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
   </div>
 </div>
