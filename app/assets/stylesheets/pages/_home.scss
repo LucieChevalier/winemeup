@@ -33,7 +33,7 @@ html, body {
 
 .sous-titre-landing {
   font-size: 48px;
-  color: white;
+  color: $redbottle;
   font-weight: 500;
   // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-shadow: .5px .5px 0px rgb(0, 0, 0);
@@ -161,6 +161,10 @@ html, body {
 
 // cards Stimulus Scroll Reveal
 
+.scroll-revealcontainer {
+    margin-bottom: 5rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -175,6 +179,14 @@ html, body {
   img {
     border-radius: 16px;
   }
+}
+
+.text-carousel {
+  text-align: center;
+  font-size: 24px;
+  color: $redbottle;
+  font-weight: 400;
+
 }
 
 // fin cards Stimulus Scroll Reveal
@@ -407,7 +419,55 @@ border-bottom: 1px solid #999; */
 
 // fin testimonials
 
+// début paralax title
 
+// .container-paralax-title {
+// 	margin: 0;
+// 	min-height: 3000px;
+// 	font-family: 'Montserrat', sans-serif;
+// }
+
+
+// .outer-container {
+// 	max-width: 600px;
+// 	margin: auto;
+// 	width: 90%;
+// 	padding: 200px 0px;
+// 	position: relative;
+// }
+
+// .imageparalax-container {
+// 	padding-bottom:(1/1) * 100%;
+// 	background: black;
+// 	position: relative;
+// 	overflow: hidden;
+// 	z-index: 2;
+// 	background-size: cover;
+// 	background-position: center;
+// }
+
+// .section-title {
+// 	margin: 0;
+// 	font-size: 64px;
+// 	width: 100%;
+// 	text-align: center;
+// 	position: absolute;
+// 	top: 50%;
+// 	left: -30%;
+// 	transform: translateY(-50%);
+// 	z-index: 1;
+// 	white-space: nowrap;
+
+// 	&.on-dark {
+// 		color: $redbottle;
+// 	}
+
+// 	span {
+// 		position: relative;
+// 		display: block;
+// 	}
+// }
+// fin paralax title
 
 }
 

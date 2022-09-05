@@ -24,18 +24,11 @@
 </div>
 
 
-
-    <%= link_to "S'inscrire", new_user_registration_path %>
-
-    <%= link_to "Prochains évènements", events_path%>
-
-
 <%# début du stimulus reveal  %>
 
 <div class="container">
+<div class="scroll-revealcontainer">
   <h2 class="sous-titre-landing titre-second-screen">Les étapes pour rejoindre votre premier évènement</h2>
-
-    <a href="http://localhost:3000/users/sign_in">commencez maintenant</a>
   <div data-controller="scroll-reveal">
   <div data-scroll-reveal-target="item" class="reveal"> <img src="https://images.unsplash.com/photo-1627260101174-35c557ab5c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
             <p class="text-carousel">Ameliorer vos connaissances en oenologie</p></div>
@@ -45,7 +38,7 @@
             <p class="text-carousel">Le reste n'est que magie</p></div>
   </div>
 </div>
-
+</div>
 
  <% unless user_signed_in? == true %>
       <%= link_to "commencez maintenant", new_user_session_path %>
@@ -53,6 +46,26 @@
       <%= link_to "Rejoins un évènement", events_path %>
     <% end %>
 ----------------
+<div class="container-paralax-title">
+<div class="outer-container">
+	<div class="imageparalax-container" style="background-image: url('https://images.unsplash.com/photo-1570528812862-9984124e7e22?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ');">
+
+		<h2 class="section-title on-dark">
+			<span class="paralax-title">
+			Nous rejoindre
+			</span>
+		</h2>
+	</div>
+
+	<h2 class="section-title">
+		<span class="paralax-title">
+			Nous rejoindre
+		</span>
+	</h2>
+</div>
+	</div>
+
+--------
 
 <div class="container">
   <h2 class="sous-titre-landing titre-second-screen">Les étapes pour rejoindre votre premier évènement</h2>
@@ -225,9 +238,7 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
                     <div class="face back-face">
                         <span class="fas fa-quote-left"></span>
                         <div class="testimonial">
-                            I made bacck the purchase price in just 48 hours! Thank you for making it pain less,
-                            pleasant.
-                            The service was execellent. I will refer everyone I know.
+                            J’ai participé hier à mon premier « Wine-Up » autour des « Côtes de Nuit ». Goûter 10 flacons d’exception en n’en payant qu’un seul, cela bat toutes les promotions ! Merci à « Wine-me-Up » d’avoir inventé la foire aux vins perpétuelle !
                         </div>
                         <span class="fas fa-quote-right"></span>
                     </div>
@@ -246,7 +257,26 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
                     <div class="face back-face">
                         <span class="fas fa-quote-left"></span>
                         <div class="testimonial">
-                            Blablabla blabla blabla bla trop cool de pour devenir alcoolique.
+                            Nouveau à Nantes, grâce à 3 « Wine-Ups », j’ai rencontré plus de 20 camarades de boisson. Et j’ai bien l’impression que 2 d’entre-eux pourraient devenir de vrais amis ! Abracadabra ! Y’a de la magie sociale dans cette app !
+                        </div>
+                        <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-4">
+                <div class="card-testimonial">
+                    <div class="face front-face">
+                        <img src="https://images.unsplash.com/photo-1502767882403-636aee14f873?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Oumou Traoré
+                        </div>
+                        <div class="designation">Amateur</div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fas fa-quote-left"></span>
+                        <div class="testimonial">
+                          Grâce à « Wine-me-Up » c’est moi qui choisis le vin au resto, mais surtout, je sais ce que je fais !
                         </div>
                         <span class="fas fa-quote-right"></span>
                     </div>
@@ -265,7 +295,7 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
                     <div class="face back-face">
                         <span class="fas fa-quote-left"></span>
                         <div class="testimonial">
-                            Grace à WineMeUp, j'ai joint ma passion pour le vin à mes sorties hebdomadaires.
+                            Trop bien ! En participant à 10 « Wine-Up » et en organisant 2 j’ai fait, en un an, un veritable de Tour de France des vins, et le tout à vélo puisque je n’ai eu qu’à sillonner ma bonne ville de Paris.
                         </div>
                         <span class="fas fa-quote-right"></span>
                     </div>
@@ -276,8 +306,48 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
 
 
 
+<div class="container container-testimonial">
+  <div class="block-button">
+    <div class="block-button-primary">
+    <%= link_to "S'inscrire", new_user_session_path, class: "btn-landing"%>
+  </div>
+</div>
+
+<div class="container container-testimonial">
+  <div class="block-button">
+    <div class="block-button-primary">
+     <%= link_to "Prochains évènements", events_path, class: "btn-landing"%>
+  </div>
+</div>
+
+
+
 
     <script>
+
+// début paralaxTitle
+let didScroll = false;
+let paralaxTitles = document.querySelectorAll('.paralax-title');
+
+const scrollInProgress = () => {
+	didScroll = true
+}
+
+const raf = () => {
+	if(didScroll) {
+		paralaxTitles.forEach((element, index) => {
+			element.style.transform = "translateX("+ window.scrollY / 5 + "%)"
+		})
+		didScroll = false;
+	}
+	requestAnimationFrame(raf);
+}
+
+
+requestAnimationFrame(raf);
+window.addEventListener('scroll', scrollInProgress)
+
+// fin paralaxtitle
         var elements = document.getElementsByClassName('itemscard');
         window.onscroll = function() {
             for (let i = 0; i < elements.length; i++) {
@@ -290,4 +360,6 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
                 }
             }
         }
+
+
     </script>
