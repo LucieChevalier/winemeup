@@ -9,11 +9,7 @@
 
       <div class="block-button">
         <div class="block-button-primary">
-        <% if user_signed_in? %>
           <%= link_to "Commencez maintenant", events_path, class: "btn-landing"%>
-        <% else %>
-          <%= link_to "Commencez maintenant", new_user_session_path, class: "btn-landing"%>
-        <% end %>
         </div>
         <div class="block-button-empty"></div>
       </div>
