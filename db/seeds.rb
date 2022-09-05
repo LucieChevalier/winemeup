@@ -1,12 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
-require "open-uri"
+# require "open-uri"
 
 puts "Destroying existing seeds"
 
@@ -37,7 +29,7 @@ user2 = User.create!(
   last_name: 'Cabrero',
   email: 'maria.cabrero@gmail.com',
   password: '123456',
-  address: '8 passage de la Poule Noire',
+  address: '6 passage de la Poule Noire',
   level: 'Intermédiaire',
   postal_code: '44000',
   city: 'Nantes'
@@ -52,10 +44,10 @@ user3 = User.create!(
   last_name: 'Dupont',
   email: 'jean.dupont@gmail.com',
   password: '123456',
-  address: '12 rue Paul Bellamy',
+  address: '21 rue de Cahors',
   level: 'Expert',
-  postal_code: '44000',
-  city: 'Nantes'
+  postal_code: '44100',
+  city: 'Saint-Herblain'
 
 )
 file = URI.open("https://st.depositphotos.com/2590737/2940/i/950/depositphotos_29407191-stock-photo-successful-elegant-smiling-mature-casual.jpg")
@@ -157,7 +149,7 @@ user10 = User.create!(
   last_name: 'Carette',
   email: 'laure.carette@gmail.com',
   password: '123456',
-  address: '21 allé des Tanneurs',
+  address: '21 allée des Tanneurs',
   level: 'Novice',
   postal_code: '44000',
   city: 'Nantes'
@@ -199,25 +191,9 @@ file = URI.open("https://www.crushpixel.com/big-static7/preview4/handsome-man-ho
 user12.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user12.save
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 puts "Creating events..."
 
 # A VENIR
-
 
 loire = Event.create!(
 
@@ -235,11 +211,10 @@ loire = Event.create!(
   host: user1
 )
 
-
 champagne = Event.create!(
   name: "Saint-Sylvestre aux 8 champagnes",
   description:'Et si on essayait ensemble 8 champagnes le 3 déembre? Une sorte de warming-up 1 mois avant le réveillon et le meilleur moyen de bien choisir son champagne pour le jour J ',
-  address:'49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address:'33 rue Saint-Léonard, 44000 Nantes',
   date: Date.parse('3rd Dec 2022'),
   time: Time.parse('21:00'),
   category: "Champagne",
@@ -250,7 +225,6 @@ champagne = Event.create!(
   max_price: 20,
   host: user4
 )
-
 
 alsace_lorraine = Event.create!(
   name: "retour de route des vins alsaciens",
@@ -267,11 +241,10 @@ alsace_lorraine = Event.create!(
   host: user1
 )
 
-
 bourgogne = Event.create!(
   name: 'nuit blanche au côte de nuits',
   description: '',
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('16th Sep 2022'),
   time: Time.parse('17:30'),
   category: "Bourgogne",
@@ -283,11 +256,10 @@ bourgogne = Event.create!(
   host: user2
 )
 
-
 provence = Event.create!(
   name: 'pic-nique arrosé aux vins de provence',
   description: '',
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('17th Sep 2022'),
   time: Time.parse('12:00'),
   category: "Provence",
@@ -299,11 +271,10 @@ provence = Event.create!(
   host: user2
 )
 
-
 beaujolais = Event.create!(
   name: 'soirée beaujolais pas nouveau',
   description: '',
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('23rd Sep 2022'),
   time: Time.parse('18:00'),
   category: "Beaujolais",
@@ -320,7 +291,7 @@ beaujolais = Event.create!(
 vallee_du_rhone = Event.create!(
   name: 'vallée du rhône méridonale et charcuterie',
   description: '',
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address: '21 rue de Cahors, 44100 Saint-Herblain',
   date: Date.parse('1st Sep 2022'),
   time: Time.parse('17:30'),
   category: "Rhône",
@@ -332,11 +303,10 @@ vallee_du_rhone = Event.create!(
   host: user3
 )
 
-
 corse = Event.create!(
   name: 'vins corsés et fromages qui puent',
   description:  '',
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address: '21 rue de Cahors, 44100 Saint-Herblain',
   date: Date.parse('4th Sep 2022'),
   time: Time.parse('18:30'),
   category: "Corse",
@@ -348,11 +318,10 @@ corse = Event.create!(
   host: user3
 )
 
-
 jura_savoie_bugey = Event.create!(
   name: 'dégustation des vins de nos montagnes',
   description: '',
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address: '21 rue de Cahors, 44100 Saint-Herblain',
   date: Date.parse('3rd Sep 2022'),
   time: Time.parse('12:00'),
   category: "Jura-Bugey-Savoie",
@@ -364,13 +333,10 @@ jura_savoie_bugey = Event.create!(
   host: user3
 )
 
-
-
-
 languedoc_roussillon = Event.create!(
   name: 'dégustation de nos vins du Roussillon',
   description: '',
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address: '33 rue Saint-Léonard, 44000 Nantes',
   date: Date.parse('24th Aug 2022'),
   time: Time.parse('18:30'),
   category: "Languedoc-Roussillon",
@@ -381,7 +347,6 @@ languedoc_roussillon = Event.create!(
   max_price: 10,
   host: user4
 )
-
 
 sud_ouest = Event.create!(
   name: 'garden party et vins de notre pays basque',
@@ -398,11 +363,10 @@ sud_ouest = Event.create!(
   host: user1
 )
 
-
 bordeaux = Event.create!(
   name: "dégustation premium d'entre-deux-mers",
   description: '',
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  address: '33 rue Saint-Léonard, 44000 Nantes',
   date: Date.parse('18 Aug 2022'),
   time: Time.parse('15:00'),
   category: "Bordeaux",
@@ -413,18 +377,6 @@ bordeaux = Event.create!(
   max_price: 30,
   host: user4
 )
-
-
-
-
-
-
-
-
-
-
-
-
 
 puts "Creating bottles..."
 
@@ -442,7 +394,6 @@ cote_roannaise = Bottle.create!(
   event: loire,
   user: user2
 )
-
 
 sancerre = Bottle.create!(
   name:'',
@@ -720,6 +671,5 @@ booking_13 = Booking.create!(
   guest: user1,
   event: champagne
 )
-
 
 puts "Finished"
