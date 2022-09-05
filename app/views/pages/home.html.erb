@@ -20,66 +20,49 @@
 </div>
 
 
-
-    <%= link_to "S'inscrire", new_user_registration_path %>
-
-    <%= link_to "Prochains évènements", events_path%>
-
-
 <%# début du stimulus reveal  %>
 
 <div class="container">
+<div class="scroll-revealcontainer">
   <h2 class="sous-titre-landing titre-second-screen">Les étapes pour rejoindre votre premier évènement</h2>
-
-    <a href="http://localhost:3000/users/sign_in">commencez maintenant</a>
   <div data-controller="scroll-reveal">
   <div data-scroll-reveal-target="item" class="reveal"> <img src="https://images.unsplash.com/photo-1627260101174-35c557ab5c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
-            <p class="text-carousel">Ameliorer vos connaissances en oenologie</p></div>
-  <div data-scroll-reveal-target="item" class="reveal" data-delay="250ms" style="transition-delay: 250ms;"><img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
+            <p class="text-carousel">Trouvez des « WineUp » organisés à proximité de chez vous</p></div>
+  <div data-scroll-reveal-target="item" class="reveal" data-delay="250ms" style="transition-delay: 250ms;"><img src="https://images.unsplash.com/photo-1544804066-ff04a3f1ab8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80" class="d-block w-100" alt="...">
+            <p class="text-carousel">Améliorez vos connaissances en œnologie</p></div>
+  <div data-scroll-reveal-target="item" class="reveal" data-delay="500ms" style="transition-delay: 500ms;"><img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
             <p class="text-carousel">Rencontrez des amateurs de vin près de chez-vous</p></div>
-  <div data-scroll-reveal-target="item" class="reveal" data-delay="500ms" style="transition-delay: 500ms;"><img src="https://images.unsplash.com/photo-1529573164479-af78bbb26447?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
-            <p class="text-carousel">Le reste n'est que magie</p></div>
   </div>
+</div>
 </div>
 
 
- <% unless user_signed_in? == true %>
-      <%= link_to "commencez maintenant", new_user_session_path %>
-    <% else %>
-      <%= link_to "Rejoins un évènement", events_path %>
-    <% end %>
-----------------
 
-<div class="container">
-  <h2 class="sous-titre-landing titre-second-screen">Les étapes pour rejoindre votre premier évènement</h2>
+<%# parallax %>
+<div class="container-paralax-title">
+  <div class="outer-container">
+    <div class="imageparalax-container" style="background-image: url('https://images.unsplash.com/photo-1516600164266-f3b8166ae679?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');">
 
-    <a href="http://localhost:3000/users/sign_in">commencez maintenant</a>
-  <div data-controller="scroll-reveal">
-  <p data-scroll-reveal-target="item" class="reveal">S'inscrire</p>
-  <p data-scroll-reveal-target="item" class="reveal" data-delay="250ms" style="transition-delay: 250ms;">Repondez à quelques questions afin de personaliser votre profile eunologique</p>
-  <p data-scroll-reveal-target="item" class="reveal" data-delay="500ms" style="transition-delay: 500ms;">Rendez-vous sur la page des évènements de votre ville</p>
-  <p data-scroll-reveal-target="item" class="reveal" data-delay="750ms" style="transition-delay: 750ms;">Affinez vos recherches et selectionnez l'évènement de votre choix</p>
-  <p data-scroll-reveal-target="item" class="reveal" data-delay="1000ms" style="transition-delay: 1000ms;">Le tour est joué, les découvertes viticoles s'ouvrent à vous</p>
-  <p data-scroll-reveal-target="item" class="reveal" data-delay="1250ms" style="transition-delay: 1250ms;">Partagez avec nous vos retours d'expérience afin d'affiner votre profile</p>
+      <h2 class="section-title on-dark">
+        <span class="paralax-title">
+        Nous rejoindre
+        </span>
+      </h2>
+    </div>
+
+    <h2 class="section-title">
+      <span class="paralax-title">
+        Nous rejoindre
+      </span>
+    </h2>
   </div>
 </div>
-
-
- <% unless user_signed_in? == true %>
-      <%= link_to "commencez maintenant", new_user_session_path %>
-    <% else %>
-      <%= link_to "Rejoins un évènement", events_path %>
-    <% end %>
-<%# fin du stimulus reveal  %>
-
-
-
------------------------------------------------------------
-
 
 
 
 <%# scroll recherché de 4you %>
+<div class="container container-testimonial">
+
 
 <div class="container-snapscrollcards">
 
@@ -87,127 +70,31 @@
         <div class="itemscard" id="home">
             <div class="contentcd">
                 <p>HOME</p>
-                <p>Lorem ipsum do libero earum! Fugiat nam optio aperiam.</p>
+                <p>La communauté de WineMeUp organise régulièrement des évènements avec un nombre limité de participants afin de découvrir et déguster différents vins d’une même région voire d’un même domaine</p>
             </div>
         </div>
         <div class="itemscard" id="HTML">
             <div class="contentcd">
                 <p>HTML</p>
-                <img src="https://images.unsplash.com/photo-1627260101174-35c557ab5c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
-                <p>Lorem ipsum cepturi fugit, Fugiat nam optio aperiam.</p>
+                <p>Choisissez votre vin selon le thème choisi par l’organisateur de l’évènement. Rouges, rosés, blancs et pétillants, que vous soyez novice, amateur confirmé ou expert, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. N’oubliez pas, une dégustation est assez personnelle car elle fait appelle à votre propre expérience.
+                </p>
             </div>
         </div>
-        <div class="itemscard" id="CSS">
-            <div class="contentcd">
-                <p>CSS</p>
-                <p>Lorem ipsum in libero earum! Fugiat nam optio aperiam.</p>
-            </div>
-        </div>
-        <div class="itemscard" id="JS">
-            <div class="contentcd">
-                <p>JAVASCRIPT</p>
-                <p>Lorem ipsum in libero earum! Fugiat nam optio aperiam.</p>
-            </div>
-    </div>
-</div>
 
 </div>
-
-<div class="container">
-
-<p>Parcourir Meetup
-Trouvez des événements organisés par des groupes à proximité où vous pourrez rencontrer du monde, tester une nouvelle activité ou partager vos passions.</p>
-
-<p>
-Des millions d'utilisateurs nous font confiance pour découvrir et acheter le vin qui leur convient
-Ce groupe s'adresse aux jeunes actifs adeptes de sorties nocturnes qui apprécient de rencontrer du monde dans le cadre de soirées en ville
-
-L'idée de ce groupe est d'organiser régulièrement des soirées avec un nombre limité de participants (10 maximum) et de faire découvrir des lieux et bons plans de sorties nantais divers et variés dans un esprit convivial
-
-Au fur et à mesure, nous incitons les membres à devenir co-organisateurs pour pouvoir proposer davantage de sorties selon l'inspiration de chacun (n'hésitez pas à m'envoyer un message (https://secure.meetup.com/messaBl) si vous souhaitez proposer une sortie)
-
-Profitez bien de la vie nocturne Nantaise...
-
-Achetez vos vins sur la plus grande place de marché au monde
-Notre service clients est à votre écoute
-Livraison rapide et soignée, à domicile ou en relais
-Laissez-vous conseiller par les avis de notre communauté
-
-Vins
-Rouges, rosés, blancs et pétillants, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. Parcourez les dégustations de nos œnologues et découvrez les procédés vinicoles des différents domaines de France et du monde à travers nos fiches produits.
-</p>
-
-<p>Parcourir Meetup
-Trouvez des événements organisés par des groupes à proximité où vous pourrez rencontrer du monde, tester une nouvelle activité ou partager vos passions.</p>
-
-<p>
-Des millions d'utilisateurs nous font confiance pour découvrir et acheter le vin qui leur convient
-Ce groupe s'adresse aux jeunes actifs adeptes de sorties nocturnes qui apprécient de rencontrer du monde dans le cadre de soirées en ville
-
-L'idée de ce groupe est d'organiser régulièrement des soirées avec un nombre limité de participants (10 maximum) et de faire découvrir des lieux et bons plans de sorties nantais divers et variés dans un esprit convivial
-
-Au fur et à mesure, nous incitons les membres à devenir co-organisateurs pour pouvoir proposer davantage de sorties selon l'inspiration de chacun (n'hésitez pas à m'envoyer un message (https://secure.meetup.com/messaBl) si vous souhaitez proposer une sortie)
-
-Profitez bien de la vie nocturne Nantaise...
-
-Achetez vos vins sur la plus grande place de marché au monde
-Notre service clients est à votre écoute
-Livraison rapide et soignée, à domicile ou en relais
-Laissez-vous conseiller par les avis de notre communauté
-
-Vins
-Rouges, rosés, blancs et pétillants, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. Parcourez les dégustations de nos œnologues et découvrez les procédés vinicoles des différents domaines de France et du monde à travers nos fiches produits.
-</p>
-
-<p>Parcourir Meetup
-Trouvez des événements organisés par des groupes à proximité où vous pourrez rencontrer du monde, tester une nouvelle activité ou partager vos passions.</p>
-
-<p>
-Des millions d'utilisateurs nous font confiance pour découvrir et acheter le vin qui leur convient
-Ce groupe s'adresse aux jeunes actifs adeptes de sorties nocturnes qui apprécient de rencontrer du monde dans le cadre de soirées en ville
-
-L'idée de ce groupe est d'organiser régulièrement des soirées avec un nombre limité de participants (10 maximum) et de faire découvrir des lieux et bons plans de sorties nantais divers et variés dans un esprit convivial
-
-Au fur et à mesure, nous incitons les membres à devenir co-organisateurs pour pouvoir proposer davantage de sorties selon l'inspiration de chacun (n'hésitez pas à m'envoyer un message (https://secure.meetup.com/messaBl) si vous souhaitez proposer une sortie)
-
-Profitez bien de la vie nocturne Nantaise...
-
-Achetez vos vins sur la plus grande place de marché au monde
-Notre service clients est à votre écoute
-Livraison rapide et soignée, à domicile ou en relais
-Laissez-vous conseiller par les avis de notre communauté
-
-Vins
-Rouges, rosés, blancs et pétillants, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. Parcourez les dégustations de nos œnologues et découvrez les procédés vinicoles des différents domaines de France et du monde à travers nos fiches produits.
-</p>
-
-<p>Parcourir Meetup
-Trouvez des événements organisés par des groupes à proximité où vous pourrez rencontrer du monde, tester une nouvelle activité ou partager vos passions.</p>
-
-<p>
-Des millions d'utilisateurs nous font confiance pour découvrir et acheter le vin qui leur convient
-Ce groupe s'adresse aux jeunes actifs adeptes de sorties nocturnes qui apprécient de rencontrer du monde dans le cadre de soirées en ville
-
-L'idée de ce groupe est d'organiser régulièrement des soirées avec un nombre limité de participants (10 maximum) et de faire découvrir des lieux et bons plans de sorties nantais divers et variés dans un esprit convivial
-
-Au fur et à mesure, nous incitons les membres à devenir co-organisateurs pour pouvoir proposer davantage de sorties selon l'inspiration de chacun (n'hésitez pas à m'envoyer un message (https://secure.meetup.com/messaBl) si vous souhaitez proposer une sortie)
-
-Profitez bien de la vie nocturne Nantaise...
-
-Achetez vos vins sur la plus grande place de marché au monde
-Notre service clients est à votre écoute
-Livraison rapide et soignée, à domicile ou en relais
-Laissez-vous conseiller par les avis de notre communauté
-
-Vins
-Rouges, rosés, blancs et pétillants, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. Parcourez les dégustations de nos œnologues et découvrez les procédés vinicoles des différents domaines de France et du monde à travers nos fiches produits.
-</p>
-<h1>rappeler que chacun rapporte une bouteille</h1>
 </div>
+</div>
+
+
+Consulte les évènements près de chez toi
+                Crée-toi un compte et obtiens ton profil œnologique
+                Organise ou inscris-toi à un évènement
+                Achète ta bouteille selon le thème choisi
 
 
 <div class="container container-testimonial">
         <div class="row">
+              <h2>Ils ont passé un agréable "WineUp" et ils nous le font savoir !</h2>
             <div class="col-lg-4">
                 <div class="card-testimonial">
                     <div class="face front-face">
@@ -221,9 +108,7 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
                     <div class="face back-face">
                         <span class="fas fa-quote-left"></span>
                         <div class="testimonial">
-                            I made bacck the purchase price in just 48 hours! Thank you for making it pain less,
-                            pleasant.
-                            The service was execellent. I will refer everyone I know.
+                            J’ai participé hier à mon premier « Wine-Up » autour des « Côtes de Nuit ». Goûter 10 flacons d’exception en n’en payant qu’un seul, cela bat toutes les promotions ! Merci à « Wine-me-Up » d’avoir inventé la foire aux vins perpétuelle !
                         </div>
                         <span class="fas fa-quote-right"></span>
                     </div>
@@ -242,7 +127,26 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
                     <div class="face back-face">
                         <span class="fas fa-quote-left"></span>
                         <div class="testimonial">
-                            Blablabla blabla blabla bla trop cool de pour devenir alcoolique.
+                            Nouveau à Nantes, grâce à 3 « Wine-Ups », j’ai rencontré plus de 20 camarades de boisson. Et j’ai bien l’impression que 2 d’entre-eux pourraient devenir de vrais amis ! Abracadabra ! Y’a de la magie sociale dans cette app !
+                        </div>
+                        <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-4">
+                <div class="card-testimonial">
+                    <div class="face front-face">
+                        <img src="https://images.unsplash.com/photo-1502767882403-636aee14f873?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Oumou Traoré
+                        </div>
+                        <div class="designation">Amateur</div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fas fa-quote-left"></span>
+                        <div class="testimonial">
+                          Grâce à « Wine-me-Up » c’est moi qui choisis le vin au resto, mais surtout, je sais ce que je fais !
                         </div>
                         <span class="fas fa-quote-right"></span>
                     </div>
@@ -261,7 +165,7 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
                     <div class="face back-face">
                         <span class="fas fa-quote-left"></span>
                         <div class="testimonial">
-                            Grace à WineMeUp, j'ai joint ma passion pour le vin à mes sorties hebdomadaires.
+                            Trop bien ! En participant à 10 « Wine-Up » et en organisant 2 j’ai fait, en un an, un veritable de Tour de France des vins, et le tout à vélo puisque je n’ai eu qu’à sillonner ma bonne ville de Paris.
                         </div>
                         <span class="fas fa-quote-right"></span>
                     </div>
@@ -272,8 +176,45 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
 
 
 
+<div class="container container-testimonial">
+  <div class="block-button">
+    <div class="block-button-primary">
+    <%= link_to "S'inscrire", new_user_session_path, class: "btn-landing"%>
+  </div>
+</div>
+
+
+
 
     <script>
+
+
+
+
+
+// début paralaxTitle
+let didScroll = false;
+let paralaxTitles = document.querySelectorAll('.paralax-title');
+
+const scrollInProgress = () => {
+	didScroll = true
+}
+
+const raf = () => {
+	if(didScroll) {
+		paralaxTitles.forEach((element, index) => {
+			element.style.transform = "translateX("+ window.scrollY / 9 + "%)"
+		})
+		didScroll = false;
+	}
+	requestAnimationFrame(raf);
+}
+
+
+requestAnimationFrame(raf);
+window.addEventListener('scroll', scrollInProgress)
+
+// fin paralaxtitle
         var elements = document.getElementsByClassName('itemscard');
         window.onscroll = function() {
             for (let i = 0; i < elements.length; i++) {
@@ -286,4 +227,6 @@ Rouges, rosés, blancs et pétillants, les vins représentent un univers envoût
                 }
             }
         }
+
+
     </script>
