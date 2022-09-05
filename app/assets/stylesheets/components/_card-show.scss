@@ -239,3 +239,123 @@
     border-radius: 16px
   }
 }
+
+.participer-show {
+  display: flex;
+  flex-direction: column;
+
+  .interesse-show {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    background: $redwine;
+    color: white;
+    font-weight: 500;
+    border-radius: 16px;
+    margin: 0px 42px 0px 42px;
+    margin-bottom: 24px;
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    i {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .interesse-show2 {
+    .btn {
+      border-radius: 16px;
+      color: $redwine;
+      background: white;
+      font-size: 12px;
+      border: solid 1px $redwine;
+      border-radius: 16px !important;
+      margin-bottom: 16px;
+
+      &:hover {
+        background: $redwine;
+        color: white;
+        font-weight: 500;
+      }
+    }
+
+    p {
+      text-decoration: none;
+      color: $grey;
+      border-radius: 16px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 6px;
+      padding-bottom: 8px;
+      font-size: 12px;
+      text-align: center;
+      border: solid 1px $grey;
+      font-weight: 300;
+    }
+
+    p:hover {
+      background: $grey;
+      color: white;
+      font-weight: 500;
+    }
+
+    .btn-interesse-show {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.form-login {
+  input {
+    color: #757575;
+    background-color: #F4F4F4;
+    border: solid 1.5px;
+    border-radius: 12px;
+    border-color: #D9D9D9;
+    font-size: 12px;
+  }
+
+  :focus {
+    border-color: #FF6163;
+    box-shadow: 0px 0px 0px 4px rgba(255, 97, 100, .65);
+  }
+}
+
+.dont-come {
+  color: $grey;
+  border-radius: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  font-size: 12px;
+  text-align: center;
+  border: solid 1px $grey;
+  font-weight: 300;
+  margin: 0px 42px 0px 42px;
+
+  a {
+    text-decoration: none;
+    color: $grey;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &:hover {
+    background: $grey;
+    color: white;
+    font-weight: 500;
+    }
+
+}
+
+.js-fun {
+  margin-bottom: 42px;
+}

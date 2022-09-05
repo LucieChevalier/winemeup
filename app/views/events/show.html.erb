@@ -69,7 +69,7 @@
 
     <div class="border-bottom"></div>
 
-    <p class="titre-participant-bold">Les Participants</p>
+    <p class="titre-participant-bold">Les participants</p>
 
     <div class="card-index-list">
       <% @bookings.each do | booking | %>
@@ -108,23 +108,42 @@
       </div>
     </div>
 
-    <div class="btn-card-show">
+    <div class="js-fun">
       <%# Si on est host, on voit un bouton Modifier %>
       <% if @event.host == current_user %>
         <%= link_to "Modifier", edit_host_event_path(@event) %>
       <%# Si on est pas host, mais qu'on est déjà un guest, on voit un bouton "Je ne viens plus" %>
       <% elsif @event.guests.include?(current_user) %>
-        <%= link_to "Je ne viens plus" %>
+        <div class="dont-come"><%= link_to "Je ne viens plus"%></div>
       <%# Si on n'est ni host ni guest, on voit un bouton Participer %>
       <% else %>
-        <%= simple_form_for [@event, @booking], html: { novalidate: false } do |f| %>
-          <%= f.error_notification %>
-          <%= f.input :comment %>
-          <%= f.submit "Participer", class: "btn btn-primary" %>
-        <% end %>
+
+        <div class="participer-show" data-controller="edit">
+          <%#= 1er boutton %>
+          <div class="interesse-show">
+            <p data-action="click->edit#displayForm">Je voudrais participer</p>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+
+          <%#= Boutton dynamique %>
+          <div class="d-none interesse-show2" data-edit-target="content">
+            <%= simple_form_for [@event, @booking], html: { novalidate: false } do |f| %>
+              <%= f.error_notification %>
+              <div class="form-login">
+                <%= f.input :comment,
+                            label: false,
+                            input_html: { placeholder: "Dis nous le nectar de ton choix" }%>
+              </div>
+              <div class="btn-interesse-show">
+                <%= f.submit "Participer", class: "btn" %>
+                <p data-action="click->edit#undisplayForm">Retour</p>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
       <% end %>
     </div>
-
 
     <div class="border-bottom"></div>
 
