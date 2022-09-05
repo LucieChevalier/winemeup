@@ -10,8 +10,11 @@ applicationscroll.register('scroll-reveal', ScrollReveal)
 import EditController from "./edit_controller"
 application.register("edit", EditController)
 
-// import FirstnameController from "./firstname_controller"
-// application.register("firstname", FirstnameController)
-
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import MapController from "./map_controller"
+application.register("map", MapController)
+
+import SearchEventsController from "./search_events_controller"
+application.register("search-events", SearchEventsController)
