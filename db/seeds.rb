@@ -28,8 +28,8 @@ user1 = User.create!(
   city: 'Saint-Herblain'
 )
 
-file = URI.open("https://ca.slack-edge.com/T02NE0241-U03P0GRQ610-c5d5d8b3a5bf-512")
-user1.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+file = URI.open("https://blackwhite.pictures/media/c/0704/small-kitten-portrait-free-stock-photo-negativespace-2736.jpg")
+user1.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user1.save
 
 user2 = User.create!(
@@ -43,8 +43,8 @@ user2 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://us.123rf.com/450wm/goodluz/goodluz1406/goodluz140600356/28837803-femme-d%C3%A9gustation-de-vin-rouge-dans-la-cave.jpg?ver=6")
-user2.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+file = URI.open("https://us.123rf.com/450wm/goodluz/goodluz1406/goodluz140600356/28837803-femme-d%C3%A9gustation-de-vin-rouge-dans-la-cave.jpg")
+user2.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user2.save
 
 user3 = User.create!(
@@ -59,7 +59,7 @@ user3 = User.create!(
 
 )
 file = URI.open("https://st.depositphotos.com/2590737/2940/i/950/depositphotos_29407191-stock-photo-successful-elegant-smiling-mature-casual.jpg")
-user3.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user3.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user3.save
 
 user4 = User.create!(
@@ -74,7 +74,7 @@ user4 = User.create!(
 
 )
 file = URI.open("https://st.depositphotos.com/1008939/1880/i/950/depositphotos_18807295-stock-photo-portrait-of-handsome-man.jpg")
-user4.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user4.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user4.save
 
 user5 = User.create!(
@@ -88,8 +88,8 @@ user5 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://ca.slack-edge.com/T02NE0241-U03P303J9AQ-30cf6392d1ab-512")
-user5.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/b/bc/Juvenile_Ragdoll.jpg")
+user5.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user5.save
 
 user6 = User.create!(
@@ -103,8 +103,8 @@ user6 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://ca.slack-edge.com/T02NE0241-U03NXK6JSTF-a9ff886149d6-512")
-user6.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+file = URI.open("https://live.staticflickr.com/6162/6145580246_57c2131678_b.jpg")
+user6.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user6.save
 
 user7 = User.create!(
@@ -118,8 +118,8 @@ user7 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://ca.slack-edge.com/T02NE0241-U03PE616CKT-cde5a9e93695-512")
-user7.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg")
+user7.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user7.save
 
 user8 = User.create!(
@@ -134,7 +134,7 @@ user8 = User.create!(
 
 )
 file = URI.open("https://previews.123rf.com/images/vgstudio/vgstudio1406/vgstudio140600096/28827646-jeune-homme-avec-un-verre-de-vin-rouge-%C3%A0-l-ext%C3%A9rieur.jpg")
-user8.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user8.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user8.save
 
 user9 = User.create!(
@@ -149,7 +149,7 @@ user9 = User.create!(
 
 )
 file = URI.open("https://thumbs.dreamstime.com/b/l-homme-chauve-dans-un-proc%C3%A8s-go%C3%BBte-le-vin-20453171.jpg")
-user9.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user9.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user9.save
 
 user10 = User.create!(
@@ -164,7 +164,7 @@ user10 = User.create!(
 
 )
 file = URI.open("https://fotomelia.com/wp-content/uploads/edd/2015/12/banque-d-images-gratuites-libres-de-droits438-1560x1286.jpg")
-user10.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user10.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user10.save
 
 
@@ -180,7 +180,7 @@ user11 = User.create!(
 
 )
 file = URI.open("https://thumbs.dreamstime.com/b/b%C3%A4rtiger-mann-mit-wein-80753619.jpg")
-user11.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user11.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user11.save
 
 
@@ -196,7 +196,7 @@ user12 = User.create!(
 
 )
 file = URI.open("https://www.crushpixel.com/big-static7/preview4/handsome-man-holding-glass-wine-112645.jpg")
-user12.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
+user12.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user12.save
 
 
