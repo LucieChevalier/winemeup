@@ -34,6 +34,7 @@ class Host::EventsController < ApplicationController
       :description,
       :address,
       :date,
+      :time,
       :category,
       :level,
       :host_request,
