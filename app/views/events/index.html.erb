@@ -1,5 +1,6 @@
 <h2 class="titre-index">Prochains évènements</h2>
 
+
 <div class="search-bar" data-controller="search-events">
   <%= form_with url: events_path, method: :get, class: "d-flex", data: { search_events_target: "form" } do %>
     <%= text_field_tag :query,
@@ -9,7 +10,8 @@
       data: { action: "keyup->search-events#update", search_events_target: "input" }
     %>
     <%= submit_tag "Chercher", class: "btn btn-primary" %>
-  <% end %>
+
+<% end %>
 
   <%= render 'search', events: @events %>
 </div>
