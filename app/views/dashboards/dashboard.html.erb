@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="margin-bottom: 10rem">
 
   <div class="card-dashboard-1 d-flex align-items-center justify-content-center">
 
@@ -33,40 +33,40 @@
 
   <%# EVENTS %>
   <div class="tab-pane active" id="events" role="tabpanel">
-    <div id="events">
 
       <h2>Mes évènements</h2>
         <%# Display future events (host) %>
         <% @future_hosted_events.each do |event| %>
-          <div class="card-dashboard-2">
-              <%= image_tag "#{event.photo}" %>
-            <div class="card-dashboard-2-infos">
-              <div class= "d-flex justify-content-between">
-                <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
-                <% if event.host == current_user %>
-                  <%= link_to edit_host_event_path(event) do %>
-                    <i class='fa-regular fa-pen-to-square'></i>
-                  <% end  %>
-                <% end %>
-              </div>
-              <p><%= event.name %></p>
-                <p class="bluenight"><%= event.category%></p>
-            </div>
-          </div>
+          <%= link_to event_path(event) do %>
+            <div class="card-dashboard-2">
+                <%= image_tag "#{event.photo}" %>
+          <% end %>
+
+                <div class="card-dashboard-2-infos">
+                  <div class= "d-flex justify-content-between">
+                    <h3><%#= event.date.strftime('%d %b %Y') %> - <%#= event.time.strftime('%H:%M') %></h3>
+                  </div>
+                  <p><%= event.name %></p>
+                    <p class="bluenight"><%= event.category%></p>
+                </div>
+           </div>
         <% end %>
 
         <%# Display past events (host) %>
         <% @past_hosted_events.each do |event| %>
-          <div class="card-dashboard-2">
-              <%= image_tag "#{event.photo}" %>
-            <div class="card-dashboard-2-infos">
-              <div class= "d-flex justify-content-between">
+          <%= link_to event_path(event) do %>
+            <div class="card-dashboard-2">
+                <%= image_tag "#{event.photo}" %>
+          <% end %>
 
-              </div>
-              <p><%= event.name %></p>
-                <p class="bluenight"><%= event.category%></p>
-            </div>
-          </div>
+                <div class="card-dashboard-2-infos">
+                  <div class= "d-flex justify-content-between">
+                    <h3><%#= event.date.strftime('%d %b %Y') %> - <%#= event.time.strftime('%H:%M') %></h3>
+                  </div>
+                  <p><%= event.name %></p>
+                    <p class="bluenight"><%= event.category%></p>
+                </div>
+           </div>
         <% end %>
 
       <hr class="mb-4 mt-4">
@@ -74,21 +74,19 @@
       <h2>Évènements à venir</h2>
         <%# Display future bookings (guest) %>
         <% @future_attended_events.each do |event| %>
-        <div class="card-dashboard-2">
-              <%= image_tag "#{event.photo}" %>
-            <div class="card-dashboard-2-infos">
-              <div class= "d-flex justify-content-between">
-                <h3><%= event.date.strftime('%d %b %Y') %> - <%= event.time.strftime('%H:%M') %></h3>
-                <% if event.host == current_user %>
-                  <%= link_to edit_host_event_path(event) do %>
-                    <i class='fa-regular fa-pen-to-square'></i>
-                  <% end  %>
-                <% end %>
-              </div>
-              <p><%= event.name %></p>
-                <p class="bluenight"><%= event.category%></p>
-            </div>
-          </div>
+          <%= link_to event_path(event) do %>
+            <div class="card-dashboard-2">
+                <%= image_tag "#{event.photo}" %>
+          <% end %>
+
+                <div class="card-dashboard-2-infos">
+                  <div class= "d-flex justify-content-between">
+                    <h3><%#= event.date.strftime('%d %b %Y') %> - <%#= event.time.strftime('%H:%M') %></h3>
+                  </div>
+                  <p><%= event.name %></p>
+                    <p class="bluenight"><%= event.category%></p>
+                </div>
+           </div>
         <% end %>
 
 
@@ -99,16 +97,19 @@
 
       <%# Display past bookings (guest) %>
       <% @past_attended_events.each do |event| %>
-      <div class="card-dashboard-2">
-            <%= image_tag "#{event.photo}" %>
-          <div class="card-dashboard-2-infos">
-            <div class= "d-flex justify-content-between">
+        <%= link_to event_path(event) do %>
+            <div class="card-dashboard-2">
+                <%= image_tag "#{event.photo}" %>
+          <% end %>
 
-            </div>
-            <p><%= event.name %></p>
-              <p class="bluenight"><%= event.category%></p>
-          </div>
-        </div>
+                <div class="card-dashboard-2-infos">
+                  <div class= "d-flex justify-content-between">
+                    <h3><%#= event.date.strftime('%d %b %Y') %> - <%#= event.time.strftime('%H:%M') %></h3>
+                  </div>
+                  <p><%= event.name %></p>
+                    <p class="bluenight"><%= event.category%></p>
+                </div>
+           </div>
       <% end %>
 
     </div>
