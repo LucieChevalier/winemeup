@@ -258,7 +258,7 @@ bourgogne = Event.create!(
 )
 
 provence = Event.create!(
-  name: 'pic-nique arrosé aux vins de provence',
+  name: 'pique-nique arrosé aux vins de provence',
   description: '',
   address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('17th Sep 2022'),
