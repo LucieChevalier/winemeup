@@ -1,6 +1,77 @@
 <body class="body-show">
 
+<% if user_signed_in? == false %>
+
   <div class="container-show">
+    <div class="card-beg">
+
+     <div class="photo-card">
+        <%= image_tag "#{@event.photo}" %>
+
+        <div class="avatar-show">
+        <%# Displaying avatar or default avatar %>
+          <% if @event.host.photo.key %>
+            <%= cl_image_tag @event.host.photo.key, class: 'image-avatar-show' %>
+          <% else %>
+            <%= image_tag "kitten.jpg", class: 'image-avatar-show' %>
+          <% end %>
+
+
+          <div class="profile-show-card">
+            <ul>
+              <%= @event.host.first_name %>
+              <%= @event.host.last_name %> |
+              <div class="pink">
+                <i class="fa-solid fa-bullseye"></i> <%= @event.host.level %>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="photo-card-text">
+
+        <div class="header-show">
+          <div class="left-header-show">
+            <div class="left-in-left">
+              <div class="icon-participants"><i class="fa-solid fa-user-group"></i></div>
+              <div class="text-participant"><p><%= @event.bookings.count %> participants</p></div>
+            </div>
+
+            <div class="right-in-left">
+              <div class="icon-price"><i class="fa-solid fa-wine-bottle"></i></div>
+              <div class="price-text"><p><%= @event.min_price %>€ à <%= @event.max_price %>€</p></div>
+            </div>
+          </div>
+
+          <div class="right-header-show">
+            <p class= "pink date-show"><%= @event.date.to_fs(:rfc822)  %></p>
+            <p class="bold ">Vin de <%= @event.category%></p>
+          </div>
+        </div>
+
+          <%# <div class="address-event">
+            <i class="fa-solid fa-location-dot"></i>
+            <p><%= @event.city %>
+            <%# <p><%= @event.region %>
+          <%# </div> %>
+      </div>
+
+    </div>
+
+    <div class="border-bottom"></div>
+
+    <div class="description">
+      <p class="bold">Description</p>
+      <p class= "event-name"><%= @event.name %></p>
+      <p><%= @event.city %><p><%= @event.region %>
+      <p><%= @event.description %></p>
+    </div>
+
+      <% else %>
+
+    <div class="container-show">
     <div class="card-beg">
 
      <div class="photo-card">
@@ -90,6 +161,7 @@
               <div class="pink"><i class="fa-solid fa-bullseye"></i> <%= booking.guest.level %></div>
             </ul>
           </div>
+          <p> Apportera : <span><%= booking.comment %></span></p>
         </div>
       <% end %>
     </div>
@@ -151,4 +223,6 @@
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwCyAX1OfLensC6oAcpRQMFIBaqYSTOjqJg&usqp=CAU" alt="" class="image-show">
     </div>
   </div>
+
+<% end %>
 </body>
