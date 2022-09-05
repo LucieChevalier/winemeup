@@ -195,7 +195,7 @@ user12 = User.create!(
   city: 'Lyon'
 
 )
-file = URI.open("https://www.crushpixel.com/big-static7/preview4/handsome-man-holding-glass-wine-112645.jpg")
+file = URI.open("https://www.vets4pets.com/siteassets/species/cat/kitten/tiny-kitten-in-sunlight.jpg")
 user12.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user12.save
 
