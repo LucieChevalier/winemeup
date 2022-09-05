@@ -18,17 +18,17 @@ User.destroy_all
 puts "Creating users..."
 
 user1 = User.create!(
-  first_name: 'Julien',
-  last_name: 'Bardy',
-  email: 'julien.bardy@gmail.com',
+  first_name: 'Maxime',
+  last_name: 'Gueye',
+  email: 'maxime.gueye@free.fr',
   password: '123456',
   address: '49 quai Émile Cormerais',
-  level: 'Novice',
+  level: 'Expert',
   postal_code: '44800',
   city: 'Saint-Herblain'
 )
 
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://ca.slack-edge.com/T02NE0241-U03P0GRQ610-c5d5d8b3a5bf-512")
 user1.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user1.save
 
@@ -43,7 +43,7 @@ user2 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://us.123rf.com/450wm/goodluz/goodluz1406/goodluz140600356/28837803-femme-d%C3%A9gustation-de-vin-rouge-dans-la-cave.jpg?ver=6")
 user2.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user2.save
 
@@ -58,7 +58,7 @@ user3 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://st.depositphotos.com/2590737/2940/i/950/depositphotos_29407191-stock-photo-successful-elegant-smiling-mature-casual.jpg")
 user3.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user3.save
 
@@ -73,14 +73,14 @@ user4 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://st.depositphotos.com/1008939/1880/i/950/depositphotos_18807295-stock-photo-portrait-of-handsome-man.jpg")
 user4.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user4.save
 
 user5 = User.create!(
-  first_name: 'Thierry',
-  last_name: 'Dabo',
-  email: 'thierry.dabo@gmail.com',
+  first_name: 'Jordan',
+  last_name: 'Bareix',
+  email: 'jordan.bareix@free.fr',
   password: '123456',
   address: '2 place Aristide Briand',
   level: 'Intermédiaire',
@@ -88,29 +88,29 @@ user5 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://ca.slack-edge.com/T02NE0241-U03P303J9AQ-30cf6392d1ab-512")
 user5.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user5.save
 
 user6 = User.create!(
-  first_name: 'Alex',
-  last_name: 'Plantey',
-  email: 'alex.plantey@gmail.com',
+  first_name: 'Lucie',
+  last_name: 'Chevalier',
+  email: 'lucie.chevalier@free.fr',
   password: '123456',
   address: '11 avenue de Normandie',
-  level: 'Expert',
+  level: 'Novice',
   postal_code: '44300',
   city: 'Nantes'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://ca.slack-edge.com/T02NE0241-U03NXK6JSTF-a9ff886149d6-512")
 user6.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user6.save
 
 user7 = User.create!(
-  first_name: 'Vincent',
-  last_name: 'Briat',
-  email: 'vincent.briat@bouygues.fr',
+  first_name: 'Julien',
+  last_name: 'Lamy',
+  email: 'julien.lamy@free.fr',
   password: '123456',
   address: '12 rue Paul Bellamy',
   level: 'Novice',
@@ -118,7 +118,7 @@ user7 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://ca.slack-edge.com/T02NE0241-U03PE616CKT-cde5a9e93695-512")
 user7.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user7.save
 
@@ -133,7 +133,7 @@ user8 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://previews.123rf.com/images/vgstudio/vgstudio1406/vgstudio140600096/28827646-jeune-homme-avec-un-verre-de-vin-rouge-%C3%A0-l-ext%C3%A9rieur.jpg")
 user8.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user8.save
 
@@ -148,7 +148,7 @@ user9 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://thumbs.dreamstime.com/b/l-homme-chauve-dans-un-proc%C3%A8s-go%C3%BBte-le-vin-20453171.jpg")
 user9.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user9.save
 
@@ -163,7 +163,7 @@ user10 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://fotomelia.com/wp-content/uploads/edd/2015/12/banque-d-images-gratuites-libres-de-droits438-1560x1286.jpg")
 user10.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user10.save
 
@@ -179,7 +179,7 @@ user11 = User.create!(
   city: 'Paris'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://thumbs.dreamstime.com/b/b%C3%A4rtiger-mann-mit-wein-80753619.jpg")
 user11.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user11.save
 
@@ -195,7 +195,7 @@ user12 = User.create!(
   city: 'Lyon'
 
 )
-file = URI.open("https://www.feter-recevoir.com/upload/image/deguisement-pikachu-bebe-p-image-178360-grande.jpg")
+file = URI.open("https://www.crushpixel.com/big-static7/preview4/handsome-man-holding-glass-wine-112645.jpg")
 user12.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png")
 user12.save
 
@@ -216,69 +216,54 @@ user12.save
 
 puts "Creating events..."
 
-loire_test = Event.create!(
-  name: 'Le Lorem Ipsum est',
-  description: "Le Lorem Ipsum est simplement du",
-  address: "Le Lorem Ipsum est simplement ",
-  date: Date.parse('3rd Feb 2022'),
-  time: Time.parse('08:30'),
-  category: 'Loire',
-  level: 'Novice',
-  host_request: 'Le Lorem Ipsum est simplement du faux texte la mise en page avant impression.',
-  max_number_guest: 12,
-  min_price: 8,
-  max_price: 12,
-  host: user1
-)
+# A VENIR
+
 
 loire = Event.create!(
 
   name: 'descente de la loire en pinard',
-  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du côte roannaise en Auvergne jusqu'à notre Muscadet local",
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
-  date: Date.parse('3rd Feb 2022'),
-  time: Time.parse('08:30'),
+  date: Date.parse('10th Sep 2022'),
+  time: Time.parse('14:30'),
   category: "Loire",
   level: 'Novice',
   host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
-  max_number_guest: 12,
+  max_number_guest: 7,
   min_price: 8,
   max_price: 12,
   host: user1
 )
-
-
 
 
 champagne = Event.create!(
-  name: "Saint-Sylvestre aux 12 champagnes",
-  description:'',
+  name: "Saint-Sylvestre aux 8 champagnes",
+  description:'Et si on essayait ensemble 8 champagnes le 3 déembre? Une sorte de warming-up 1 mois avant le réveillon et le meilleur moyen de bien choisir son champagne pour le jour J ',
   address:'49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Nov 2022'),
-  time: Time.parse('08:30'),
+  date: Date.parse('3rd Dec 2022'),
+  time: Time.parse('21:00'),
   category: "Champagne",
   level: 'Novice',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
-  max_price: 12,
-  host: user1
+  max_number_guest: 7,
+  min_price: 16,
+  max_price: 20,
+  host: user4
 )
-
 
 
 alsace_lorraine = Event.create!(
   name: "retour de route des vins alsaciens",
-  description: '',
+  description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Nov 2022'),
-  time: Time.parse('08:30'),
+  date: Date.parse('24th Sep 2022'),
+  time: Time.parse('14:00'),
   category: "Alsace-Lorraine",
   level: 'Novice',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
-  max_price: 12,
+  max_number_guest: 6,
+  min_price: 9,
+  max_price: 13,
   host: user1
 )
 
@@ -287,28 +272,28 @@ bourgogne = Event.create!(
   name: 'nuit blanche au côte de nuits',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Nov 2022'),
+  date: Date.parse('16th Sep 2022'),
   time: Time.parse('17:30'),
   category: "Bourgogne",
   level: 'Novice',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
-  max_price: 12,
+  max_number_guest: 5,
+  min_price: 12,
+  max_price: 16,
   host: user2
 )
 
 
-jura_savoie_bugey = Event.create!(
-  name: 'dégustation des vins de nos montagnes',
+provence = Event.create!(
+  name: 'pic-nique arrosé aux vins de provence',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Nov 2022'),
-  time: Time.parse('17:30'),
-  category: "Jura-Bugey-Savoie",
+  date: Date.parse('17th Sep 2022'),
+  time: Time.parse('12:00'),
+  category: "Provence",
   level: 'Novice',
   host_request: '',
-  max_number_guest: '',
+  max_number_guest: 5,
   min_price: 8,
   max_price: 12,
   host: user2
@@ -319,30 +304,31 @@ beaujolais = Event.create!(
   name: 'soirée beaujolais pas nouveau',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Nov 2022'),
-  time: Time.parse('17:30'),
+  date: Date.parse('23rd Sep 2022'),
+  time: Time.parse('18:00'),
   category: "Beaujolais",
   level: 'Novice',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
+  max_number_guest: 6,
+  min_price: 7,
   max_price: 12,
   host: user2
 )
 
+# PASSES
 
 vallee_du_rhone = Event.create!(
   name: 'vallée du rhône méridonale et charcuterie',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Feb 2022'),
+  date: Date.parse('1st Sep 2022'),
   time: Time.parse('17:30'),
   category: "Rhône",
   level: 'Novice',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
-  max_price: 12,
+  max_number_guest: 6,
+  min_price: 9,
+  max_price: 15,
   host: user3
 )
 
@@ -351,46 +337,48 @@ corse = Event.create!(
   name: 'vins corsés et fromages qui puent',
   description:  '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Feb 2022'),
-  time: Time.parse('08:30'),
+  date: Date.parse('4th Sep 2022'),
+  time: Time.parse('18:30'),
   category: "Corse",
   level: 'Novice',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
-  max_price: 12,
+  max_number_guest: 6,
+  min_price: 10,
+  max_price: 14,
   host: user3
 )
 
 
-provence = Event.create!(
-  name: 'pic-nique arrosé aux vins de provence',
+jura_savoie_bugey = Event.create!(
+  name: 'dégustation des vins de nos montagnes',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Feb 2022'),
-  time: Time.parse('08:30'),
-  category: "Provence",
+  date: Date.parse('3rd Sep 2022'),
+  time: Time.parse('12:00'),
+  category: "Jura-Bugey-Savoie",
   level: 'Novice',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
-  max_price: 12,
+  max_number_guest: 9,
+  min_price: 10,
+  max_price: 15,
   host: user3
 )
+
+
 
 
 languedoc_roussillon = Event.create!(
   name: 'dégustation de nos vins du Roussillon',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Feb 2022'),
-  time: Time.parse('08:30'),
+  date: Date.parse('24th Aug 2022'),
+  time: Time.parse('18:30'),
   category: "Languedoc-Roussillon",
   level: 'Novice',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
-  max_price: 12,
+  max_number_guest: 7,
+  min_price: 5,
+  max_price: 10,
   host: user4
 )
 
@@ -399,15 +387,15 @@ sud_ouest = Event.create!(
   name: 'garden party et vins de notre pays basque',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Feb 2022'),
-  time: Time.parse('08:30'),
+  date: Date.parse('25th Aug 2022'),
+  time: Time.parse('17:00'),
   category: "Sud-Ouest",
   level: 'Intermédiaire',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
-  max_price: 12,
-  host: user4
+  max_number_guest: 11,
+  min_price: 9,
+  max_price: 13,
+  host: user1
 )
 
 
@@ -415,14 +403,14 @@ bordeaux = Event.create!(
   name: "dégustation premium d'entre-deux-mers",
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
-  date: Date.parse('3rd Feb 2022'),
-  time: Time.parse('08:30'),
+  date: Date.parse('18 Aug 2022'),
+  time: Time.parse('15:00'),
   category: "Bordeaux",
   level: 'Expert',
   host_request: '',
-  max_number_guest: '',
-  min_price: 8,
-  max_price: 12,
+  max_number_guest: 4,
+  min_price: 20,
+  max_price: 30,
   host: user4
 )
 
@@ -637,7 +625,7 @@ puts "Creating bookings..."
 booking_1 = Booking.create!(
   status: 'Upcoming',
   comment: '',
-  guest: user5,
+  guest: user10,
   event: loire
 )
 
@@ -645,7 +633,7 @@ booking_2 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user6,
-  event: bourgogne
+  event: loire
 )
 
 booking_3 = Booking.create!(
@@ -658,22 +646,80 @@ booking_3 = Booking.create!(
 booking_4 = Booking.create!(
   status: 'Upcoming',
   comment: '',
+  guest: user10,
+  event: loire
+)
+
+booking_5 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user9,
+  event: loire
+)
+
+booking_6 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user8,
+  event: loire
+)
+
+booking_7 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user6,
+  event: bourgogne
+)
+
+booking_8 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
   guest: user8,
   event: champagne
 )
 
-  booking_5 = Booking.create!(
+booking_9 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user9,
   event: champagne
 )
 
-booking_6 = Booking.create!(
-  status: 'Past',
+booking_10 = Booking.create!(
+  status: 'Upcoming',
   comment: '',
   guest: user10,
   event: bourgogne
 )
+
+
+booking_10 = Booking.create!(
+  status: 'Past',
+  comment: '',
+  guest: user5,
+  event: corse
+)
+
+booking_11 = Booking.create!(
+  status: 'Past',
+  comment: '',
+  guest: user1,
+  event: bordeaux
+)
+
+booking_12 = Booking.create!(
+  status: 'Past',
+  comment: '',
+  guest: user5,
+  event: bordeaux
+)
+
+booking_13 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user1,
+  event: champagne
+)
+
 
 puts "Finished"
