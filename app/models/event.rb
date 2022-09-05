@@ -4,6 +4,9 @@ class Event < ApplicationRecord
   has_many :bottles
   has_many :guests, through: :bookings, class_name: "User" # Rajout Lucie
 
+  # CHatroom
+  has_one :chatroom
+
   CATEGORIES = %w[Alsace-Lorraine Beaujolais Bordeaux Bourgogne Champagne Corse Jura-Bugey-Savoie Languedoc-Roussillon Loire Provence Rhône Sud-Ouest]
 
   # Validations
