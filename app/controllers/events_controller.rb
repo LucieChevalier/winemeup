@@ -29,6 +29,8 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @bookings = Booking.all.where(event_id: params[:id])
     @booking = Booking.new
+
+    @marker = [{ lat: @event.latitude, lng: @event.longitude }]
   end
 
   private

@@ -3,9 +3,6 @@
 // ./bin/rails generate stimulus controllerName
 
 import { application } from "./application"
-import { applicationscroll } from "./scroll_reveal"
-applicationscroll.register('scroll-reveal', ScrollReveal)
-
 
 import EditController from "./edit_controller"
 application.register("edit", EditController)
@@ -18,3 +15,6 @@ application.register("map", MapController)
 
 import SearchEventsController from "./search_events_controller"
 application.register("search-events", SearchEventsController)
+
+import { applicationscroll } from "./scroll_reveal"
+// applicationscroll.register('scroll-reveal', ScrollReveal)
