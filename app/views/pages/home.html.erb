@@ -15,89 +15,279 @@
           <%= link_to "Commencez maintenant", new_user_session_path, class: "btn-landing"%>
         <% end %>
         </div>
-        <div class="block-button-empty"></div>
+        <div class="block-button-empty">
+        </div>
       </div>
 
     </div>
   </div>
 </div>
 
-
-<div class="container-second">
-  <div class="screen-second">
-
-
-
-<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="carousel-card-container">
-        <img src="https://images.unsplash.com/photo-1491924778227-f225b115dd5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
-        <p class="text-carousel">Ameliorer vos connaissances en oenologie</p>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="carousel-card-container">
-        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
-        <p class="text-carousel">Rencontrez des amateurs de vin près de chez-vous</p>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="carousel-card-container">
-        <img src="https://images.unsplash.com/photo-1529573164479-af78bbb26447?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
-        <p class="text-carousel">Le reste n'est que magie</p>
-      </div>
-    </div>
-  </div>
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-    <%# <span class="carousel-control-prev-icon" aria-hidden="true"></span> %>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-    <%# <span class="carousel-control-next-icon" aria-hidden="true"></span> %>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-  </div>
-</div>
 
 
     <%= link_to "S'inscrire", new_user_registration_path %>
 
     <%= link_to "Prochains évènements", events_path%>
 
+
+<%# début du stimulus reveal  %>
+
 <div class="container">
   <h2 class="sous-titre-landing titre-second-screen">Les étapes pour rejoindre votre premier évènement</h2>
 
-  <ul>
-    <li>S'inscrire</li>
-    <li>Repondez à quelques questions afin de personaliser votre profile eunologique</li>
-    <li>Rendez-vous sur la page des évènements de votre ville</li>
-    <li>Affinez vos recherches et selectionnez l'évènement de votre choix</li>
-    <li>Le tour est joué, les découvertes viticoles s'ouvrent à vous</li>
-    <li>Partagez avec nous vos retours d'expérience afin d'affiner votre profile</li>
-  </ul>
+    <a href="http://localhost:3000/users/sign_in">commencez maintenant</a>
+  <div data-controller="scroll-reveal">
+  <div data-scroll-reveal-target="item" class="reveal"> <img src="https://images.unsplash.com/photo-1627260101174-35c557ab5c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
+            <p class="text-carousel">Ameliorer vos connaissances en oenologie</p></div>
+  <div data-scroll-reveal-target="item" class="reveal" data-delay="250ms" style="transition-delay: 250ms;"><img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
+            <p class="text-carousel">Rencontrez des amateurs de vin près de chez-vous</p></div>
+  <div data-scroll-reveal-target="item" class="reveal" data-delay="500ms" style="transition-delay: 500ms;"><img src="https://images.unsplash.com/photo-1529573164479-af78bbb26447?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
+            <p class="text-carousel">Le reste n'est que magie</p></div>
+  </div>
+</div>
 
-    <% unless user_signed_in? == true %>
+
+ <% unless user_signed_in? == true %>
       <%= link_to "commencez maintenant", new_user_session_path %>
     <% else %>
       <%= link_to "Rejoins un évènement", events_path %>
     <% end %>
+----------------
+
+<div class="container">
+  <h2 class="sous-titre-landing titre-second-screen">Les étapes pour rejoindre votre premier évènement</h2>
+
+    <a href="http://localhost:3000/users/sign_in">commencez maintenant</a>
+  <div data-controller="scroll-reveal">
+  <p data-scroll-reveal-target="item" class="reveal">S'inscrire</p>
+  <p data-scroll-reveal-target="item" class="reveal" data-delay="250ms" style="transition-delay: 250ms;">Repondez à quelques questions afin de personaliser votre profile eunologique</p>
+  <p data-scroll-reveal-target="item" class="reveal" data-delay="500ms" style="transition-delay: 500ms;">Rendez-vous sur la page des évènements de votre ville</p>
+  <p data-scroll-reveal-target="item" class="reveal" data-delay="750ms" style="transition-delay: 750ms;">Affinez vos recherches et selectionnez l'évènement de votre choix</p>
+  <p data-scroll-reveal-target="item" class="reveal" data-delay="1000ms" style="transition-delay: 1000ms;">Le tour est joué, les découvertes viticoles s'ouvrent à vous</p>
+  <p data-scroll-reveal-target="item" class="reveal" data-delay="1250ms" style="transition-delay: 1250ms;">Partagez avec nous vos retours d'expérience afin d'affiner votre profile</p>
+  </div>
 </div>
 
 
+ <% unless user_signed_in? == true %>
+      <%= link_to "commencez maintenant", new_user_session_path %>
+    <% else %>
+      <%= link_to "Rejoins un évènement", events_path %>
+    <% end %>
+<%# fin du stimulus reveal  %>
 
 
 
------------------
+-----------------------------------------------------------
 
 
 
-<div class="main-chiffres">
-  <div data-w-id="fa454967-5b6e-f5ce-1294-b79b50d0d0cf" class="_1-ch" style="will-change: opacity, transform; opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-  <p class="paragraph pcenter"><span class="big-p">92 %</span><br>Des utilisateurs effectuent une action après avoir regardé un TikTok</p>
 
- </div>
+<%# scroll recherché de 4you %>
+
+<div class="container-snapscrollcards">
+
+<div class="snapscrollcards">
+        <div class="itemscard" id="home">
+            <div class="contentcd">
+                <p>HOME</p>
+                <p>Lorem ipsum do libero earum! Fugiat nam optio aperiam.</p>
+            </div>
+        </div>
+        <div class="itemscard" id="HTML">
+            <div class="contentcd">
+                <p>HTML</p>
+                <img src="https://images.unsplash.com/photo-1627260101174-35c557ab5c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
+                <p>Lorem ipsum cepturi fugit, Fugiat nam optio aperiam.</p>
+            </div>
+        </div>
+        <div class="itemscard" id="CSS">
+            <div class="contentcd">
+                <p>CSS</p>
+                <p>Lorem ipsum in libero earum! Fugiat nam optio aperiam.</p>
+            </div>
+        </div>
+        <div class="itemscard" id="JS">
+            <div class="contentcd">
+                <p>JAVASCRIPT</p>
+                <p>Lorem ipsum in libero earum! Fugiat nam optio aperiam.</p>
+            </div>
+    </div>
+</div>
+
+</div>
+
+<div class="container">
+
+<p>Parcourir Meetup
+Trouvez des événements organisés par des groupes à proximité où vous pourrez rencontrer du monde, tester une nouvelle activité ou partager vos passions.</p>
+
+<p>
+Des millions d'utilisateurs nous font confiance pour découvrir et acheter le vin qui leur convient
+Ce groupe s'adresse aux jeunes actifs adeptes de sorties nocturnes qui apprécient de rencontrer du monde dans le cadre de soirées en ville
+
+L'idée de ce groupe est d'organiser régulièrement des soirées avec un nombre limité de participants (10 maximum) et de faire découvrir des lieux et bons plans de sorties nantais divers et variés dans un esprit convivial
+
+Au fur et à mesure, nous incitons les membres à devenir co-organisateurs pour pouvoir proposer davantage de sorties selon l'inspiration de chacun (n'hésitez pas à m'envoyer un message (https://secure.meetup.com/messaBl) si vous souhaitez proposer une sortie)
+
+Profitez bien de la vie nocturne Nantaise...
+
+Achetez vos vins sur la plus grande place de marché au monde
+Notre service clients est à votre écoute
+Livraison rapide et soignée, à domicile ou en relais
+Laissez-vous conseiller par les avis de notre communauté
+
+Vins
+Rouges, rosés, blancs et pétillants, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. Parcourez les dégustations de nos œnologues et découvrez les procédés vinicoles des différents domaines de France et du monde à travers nos fiches produits.
+</p>
+
+<p>Parcourir Meetup
+Trouvez des événements organisés par des groupes à proximité où vous pourrez rencontrer du monde, tester une nouvelle activité ou partager vos passions.</p>
+
+<p>
+Des millions d'utilisateurs nous font confiance pour découvrir et acheter le vin qui leur convient
+Ce groupe s'adresse aux jeunes actifs adeptes de sorties nocturnes qui apprécient de rencontrer du monde dans le cadre de soirées en ville
+
+L'idée de ce groupe est d'organiser régulièrement des soirées avec un nombre limité de participants (10 maximum) et de faire découvrir des lieux et bons plans de sorties nantais divers et variés dans un esprit convivial
+
+Au fur et à mesure, nous incitons les membres à devenir co-organisateurs pour pouvoir proposer davantage de sorties selon l'inspiration de chacun (n'hésitez pas à m'envoyer un message (https://secure.meetup.com/messaBl) si vous souhaitez proposer une sortie)
+
+Profitez bien de la vie nocturne Nantaise...
+
+Achetez vos vins sur la plus grande place de marché au monde
+Notre service clients est à votre écoute
+Livraison rapide et soignée, à domicile ou en relais
+Laissez-vous conseiller par les avis de notre communauté
+
+Vins
+Rouges, rosés, blancs et pétillants, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. Parcourez les dégustations de nos œnologues et découvrez les procédés vinicoles des différents domaines de France et du monde à travers nos fiches produits.
+</p>
+
+<p>Parcourir Meetup
+Trouvez des événements organisés par des groupes à proximité où vous pourrez rencontrer du monde, tester une nouvelle activité ou partager vos passions.</p>
+
+<p>
+Des millions d'utilisateurs nous font confiance pour découvrir et acheter le vin qui leur convient
+Ce groupe s'adresse aux jeunes actifs adeptes de sorties nocturnes qui apprécient de rencontrer du monde dans le cadre de soirées en ville
+
+L'idée de ce groupe est d'organiser régulièrement des soirées avec un nombre limité de participants (10 maximum) et de faire découvrir des lieux et bons plans de sorties nantais divers et variés dans un esprit convivial
+
+Au fur et à mesure, nous incitons les membres à devenir co-organisateurs pour pouvoir proposer davantage de sorties selon l'inspiration de chacun (n'hésitez pas à m'envoyer un message (https://secure.meetup.com/messaBl) si vous souhaitez proposer une sortie)
+
+Profitez bien de la vie nocturne Nantaise...
+
+Achetez vos vins sur la plus grande place de marché au monde
+Notre service clients est à votre écoute
+Livraison rapide et soignée, à domicile ou en relais
+Laissez-vous conseiller par les avis de notre communauté
+
+Vins
+Rouges, rosés, blancs et pétillants, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. Parcourez les dégustations de nos œnologues et découvrez les procédés vinicoles des différents domaines de France et du monde à travers nos fiches produits.
+</p>
+
+<p>Parcourir Meetup
+Trouvez des événements organisés par des groupes à proximité où vous pourrez rencontrer du monde, tester une nouvelle activité ou partager vos passions.</p>
+
+<p>
+Des millions d'utilisateurs nous font confiance pour découvrir et acheter le vin qui leur convient
+Ce groupe s'adresse aux jeunes actifs adeptes de sorties nocturnes qui apprécient de rencontrer du monde dans le cadre de soirées en ville
+
+L'idée de ce groupe est d'organiser régulièrement des soirées avec un nombre limité de participants (10 maximum) et de faire découvrir des lieux et bons plans de sorties nantais divers et variés dans un esprit convivial
+
+Au fur et à mesure, nous incitons les membres à devenir co-organisateurs pour pouvoir proposer davantage de sorties selon l'inspiration de chacun (n'hésitez pas à m'envoyer un message (https://secure.meetup.com/messaBl) si vous souhaitez proposer une sortie)
+
+Profitez bien de la vie nocturne Nantaise...
+
+Achetez vos vins sur la plus grande place de marché au monde
+Notre service clients est à votre écoute
+Livraison rapide et soignée, à domicile ou en relais
+Laissez-vous conseiller par les avis de notre communauté
+
+Vins
+Rouges, rosés, blancs et pétillants, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. Parcourez les dégustations de nos œnologues et découvrez les procédés vinicoles des différents domaines de France et du monde à travers nos fiches produits.
+</p>
+<h1>rappeler que chacun rapporte une bouteille</h1>
+</div>
+
+
+<div class="container container-testimonial">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card-testimonial">
+                    <div class="face front-face">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Camille Chadebaud
+                        </div>
+                        <div class="designation">Novice</div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fas fa-quote-left"></span>
+                        <div class="testimonial">
+                            I made bacck the purchase price in just 48 hours! Thank you for making it pain less,
+                            pleasant.
+                            The service was execellent. I will refer everyone I know.
+                        </div>
+                        <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-testimonial">
+                    <div class="face front-face">
+                        <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Sélim Menouer
+                        </div>
+                        <div class="designation">Amateur</div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fas fa-quote-left"></span>
+                        <div class="testimonial">
+                            Blablabla blabla blabla bla trop cool de pour devenir alcoolique.
+                        </div>
+                        <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-testimonial">
+                    <div class="face front-face">
+                        <img src="https://images.unsplash.com/photo-1614574762522-6ac2fbba2208?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjY2fHxtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Julien Bardy
+                        </div>
+                        <div class="designation">Expert</div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fas fa-quote-left"></span>
+                        <div class="testimonial">
+                            Grace à WineMeUp, j'ai joint ma passion pour le vin à mes sorties hebdomadaires.
+                        </div>
+                        <span class="fas fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var elements = document.getElementsByClassName('itemscard');
+        window.onscroll = function() {
+            for (let i = 0; i < elements.length; i++) {
+                if (elements[i].getBoundingClientRect().y <= 650) {
+                    elements[i].children[0].children[1].style.transform = "translateY(0px)";
+                    elements[i].children[0].children[1].style.opacity = 1;
+                } else {
+                    elements[i].children[0].children[1].style.transform = "translateY(50px)";
+                    elements[i].children[0].children[1].style.opacity = 0;
+                }
+            }
+        }
+    </script>
