@@ -29,22 +29,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @bookings = Booking.all.where(event_id: params[:id])
     @booking = Booking.new
-
-    # The `geocoded` scope filters only flats with coordinates
-    # @markers = @event.geocoded
-    # {
-    #   lat: @event.latitude,
-    #   lng: @event.longitude
-    # }
   end
-
-  # def longuedescription(description)
-  #   if description.to_s.count >= 20
-  #     puts "[...]"
-  #   else
-  #     description
-  #   end
-  # end
 
   private
 
