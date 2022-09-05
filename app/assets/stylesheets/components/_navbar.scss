@@ -23,7 +23,29 @@
     .nav-item {
       margin-top: 5px;
 
+      .dropdown-menu {
+        border-radius: 16px 16px 16px 16px;
+        padding: 3px;
+
+        &:hover {
+          background: $redwine;
+          color: white;
+          border: 1px solid transparent;
+        }
+      }
+
+      a {
+        font-size: 12px;
+        display: flex;
+        justify-content: space-around;
+
+        &:hover {
+          background: $redwine;
+          border-radius: 16px;
+          color: white;
+          border: none;
+        }
+      }
     }
   }
-
 }

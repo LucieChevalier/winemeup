@@ -49,3 +49,24 @@
       font-weight: 200;
   }
 }
+
+
+.button-index-create {
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: $redwine;;
+  font-size: 12px;
+  border: 1px solid $redwine;
+
+  &:hover {
+    background: $redwine;
+    color: white;
+  }
+}
