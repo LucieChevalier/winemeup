@@ -63,7 +63,7 @@ user3.photo.attach(io: file, filename: "costume-1.png", content_type: "image/png
 user3.save
 
 user4 = User.create!(
-  first_name: 'Alice',
+  first_name: 'Alex',
   last_name: 'Hay',
   email: 'alice.hay@gmail.com',
   password: '123456',

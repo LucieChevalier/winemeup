@@ -4,7 +4,8 @@
 
     <%# Displaying avatar or default avatar %>
     <% if current_user.photo.key %>
-      <%= cl_image_tag current_user.photo.key %>
+      <%= cl_image_tag current_user.photo.key, style:"object-fit: cover"%>
+
     <% else %>
       <%= image_tag "kitten.jpg" %>
     <% end %>
