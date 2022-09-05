@@ -169,14 +169,13 @@
     <div class="border-bottom"></div>
 
 
-    <div class="map">
+    <div class="map-show">
       <div class="map-card">
-        <div style="width: 100%; height: 600px;"
+        <div style="width: 100%; height: 300px;"
           data-controller="map"
-          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-marker-value="<%= @marker.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwCyAX1OfLensC6oAcpRQMFIBaqYSTOjqJg&usqp=CAU" alt="" class="image-show">
       </div>
     </div>
 
