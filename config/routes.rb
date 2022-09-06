@@ -23,8 +23,11 @@ Rails.application.routes.draw do
     resources :bottles, only: %i[new create]
     # As a user, I can join an event
     resources :bookings, only: %i[new create] # => TODO: Delete NEW if not needed
+    # Chatroom
+    resources :chatrooms, only: :show do
+      resources :messages, only: :create
+    end
   end
-
   # As a user, I can see the listing of events I will attend
   # As a user I can see the events I attended in the past
   # As a user, I can leave an event
@@ -34,13 +37,7 @@ Rails.application.routes.draw do
   # As a user, I can claim one of the bottles requested by the host on the event page
   resources :bottles, only: %i[edit update]
 
-  # As a user, I can discuss via the chat with others attendees
-  # resources :chatrooms, only: %i[show] do
-  #   resources :messages, only: %i[index new create]
-  # end
 
-  # As a user, I can bookmark an event
-  # resources :bookmarks, only: %i[index new create]
   # As a host, I can create an event
   # As a host, I can update an event
   # As a host, I can see all the events I created

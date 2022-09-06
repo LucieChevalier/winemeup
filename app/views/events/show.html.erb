@@ -218,9 +218,39 @@
 
     <div class="border-bottom"></div>
 
-    <div class="chat">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwCyAX1OfLensC6oAcpRQMFIBaqYSTOjqJg&usqp=CAU" alt="" class="image-show">
-    </div>
+    <%# chat begins here %>
+      <% if @event.host == current_user || @event.guests.include?(current_user) %>
+
+        <h2 class="text-center">Messages</h2>
+
+        <div style="margin-bottom: 10rem" class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+
+          <%# Existing messages %>
+
+          <div class="messages" data-chatroom-subscription-target="messages">
+            <% @chatroom.messages.each do |message| %>
+              <%= render "messages/message", message: message %>
+            <% end %>
+          </div>
+
+
+          <%# Form %>
+
+          <%= simple_form_for [@event, @chatroom, @message],
+            html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f|
+          %>
+            <%= f.input :content,
+              label: false,
+              placeholder: "Message ##{@chatroom.name}",
+              wrapper_html: {class: "flex-grow-1"}
+            %>
+            <%= f.submit "Envoyer", class: "btn btn-primary mb-3" %>
+          <% end %>
+        </div>
+
+      <% end %>
+    <%# chat ends here %>
+
   </div>
 
 <% end %>

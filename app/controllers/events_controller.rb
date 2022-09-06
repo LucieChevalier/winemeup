@@ -30,6 +30,19 @@ class EventsController < ApplicationController
     @booking = Booking.new
 
     @marker = [{ lat: @event.latitude, lng: @event.longitude }]
+
+    # Chatroom
+    if @event.chatroom
+      @chatroom = Chatroom.find_by(event: @event)
+    else
+      @chatroom = Chatroom.new(
+                                name: @event.name,
+                                event_id: @event.id
+                              )
+      @chatroom.save
+    end
+
+    @message = Message.new
   end
 
   private
