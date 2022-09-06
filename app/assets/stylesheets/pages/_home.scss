@@ -442,6 +442,22 @@ text-align: center;}
   font-weight: 600;
   display: flex;
 }
+.contentcd>h2 {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 20px;
+  // color: $redbottle;
+  color: $redbottle;
+  font-weight: 400;
+  display: flex;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s;
+  // border: 1px solid #e3e3e3;
+  // border-radius: 16px;
+
+}
 
 .contentcd>p {
   margin-right: 10px;
