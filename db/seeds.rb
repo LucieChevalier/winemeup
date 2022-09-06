@@ -22,7 +22,7 @@ user1 = User.create!(
   city: 'Saint-Herblain'
 )
 
-file = URI.open("https://blackwhite.pictures/media/c/0704/small-kitten-portrait-free-stock-photo-negativespace-2736.jpg")
+file = URI.open("T02NE0241-U03P0GRQ610-c5d5d8b3a5bf-512.jpg")
 user1.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user1.save
 
@@ -82,7 +82,7 @@ user5 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://upload.wikimedia.org/wikipedia/commons/b/bc/Juvenile_Ragdoll.jpg")
+file = URI.open("T02NE0241-U03P303J9AQ-30cf6392d1ab-512.jpg")
 user5.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user5.save
 
@@ -97,7 +97,7 @@ user6 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://live.staticflickr.com/6162/6145580246_57c2131678_b.jpg")
+file = URI.open("T02NE0241-U03NXK6JSTF-a9ff886149d6-512.jpg")
 user6.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user6.save
 
@@ -112,7 +112,7 @@ user7 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg")
+file = URI.open("T02NE0241-U03PE616CKT-cde5a9e93695-512.jpg")
 user7.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user7.save
 
