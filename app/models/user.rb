@@ -15,4 +15,5 @@ class User < ApplicationRecord
   has_many :bottles
   has_one :dashboard # Rajout Lucie
   has_one_attached :photo # Rajout Lucie
+  has_one :survey # Rajout Max
 end
