@@ -3,7 +3,10 @@ fr:
     models:
       event: Evenement
     attributes:
+      user:
+        password: Mot de passe
+        password_confirmation: Confirmer mot de passe
+        remember_me: Mémoriser
       event:
-        name: Nom
         level: Niveau
         category: Catégorie
