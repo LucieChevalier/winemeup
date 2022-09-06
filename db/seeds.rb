@@ -2,7 +2,8 @@
 
 puts "Destroying existing seeds"
 
-
+Message.destroy_all
+Chatroom.destroy_all
 Bottle.destroy_all
 Booking.destroy_all
 Event.destroy_all
