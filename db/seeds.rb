@@ -52,7 +52,7 @@ user3 = User.create!(
   city: 'Saint-Herblain'
 
 )
-file = URI.open("https://st.depositphotos.com/2590737/2940/i/950/depositphotos_29407191-stock-photo-successful-elegant-smiling-mature-casual.jpg")
+file = URI.open("https://thumbs.dreamstime.com/b/portrait-d-homme-arabe-95179443.jpg")
 user3.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user3.save
 
@@ -107,7 +107,7 @@ user7 = User.create!(
   email: 'julien.lamy@free.fr',
   password: '123456',
   address: '12 rue Paul Bellamy',
-  level: 'Novice',
+  level: 'Intermédiaire',
   postal_code: '44200',
   city: 'Nantes'
 
@@ -163,17 +163,17 @@ user10.save
 
 
 user11 = User.create!(
-  first_name: 'Albert',
-  last_name: 'Gilbert',
-  email: 'albert.gilbert@gmail.com',
+  first_name: 'Oumou',
+  last_name: 'Traore',
+  email: 'oumou.traore@gmail.com',
   password: '123456',
-  address: '12 villa de la Renaissance',
+  address: '20 avenue Alexandre Goupil',
   level: 'Intermédiaire',
-  postal_code: '75019',
-  city: 'Paris'
+  postal_code: '44700',
+  city: 'Orvaul'
 
 )
-file = URI.open("https://thumbs.dreamstime.com/b/b%C3%A4rtiger-mann-mit-wein-80753619.jpg")
+file = URI.open("https://image.freepik.com/photos-gratuite/gros-plan-jolie-femme-noire-plein-air_1262-6034.jpg")
 user11.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user11.save
 
@@ -183,13 +183,13 @@ user12 = User.create!(
   last_name: 'Gaussent',
   email: 'patrick.gaussent@gmail.com',
   password: '123456',
-  address: "2 rue de l'Arbre sec",
+  address: "60 rue de la Pais",
   level: 'Expert',
-  postal_code: '69000',
-  city: 'Lyon'
+  postal_code: '44340',
+  city: 'Bouguenais'
 
 )
-file = URI.open("https://www.vets4pets.com/siteassets/species/cat/kitten/tiny-kitten-in-sunlight.jpg")
+file = URI.open("https://thumbs.dreamstime.com/b/homme-barbu-bel-buvant-du-vin-rouge-76045516.jpg")
 user12.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user12.save
 
@@ -197,50 +197,50 @@ puts "Creating events..."
 
 # A VENIR
 
-loire = Event.create!(
 
-  name: 'descente de la loire en pinard',
-  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
-  address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
-  date: Date.parse('10th Sep 2022'),
-  time: Time.parse('14:30'),
-  category: "Loire",
-  level: 'Novice',
-  host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
-  max_number_guest: 7,
-  min_price: 8,
-  max_price: 12,
-  host: user1
-)
-
-champagne = Event.create!(
-  name: "Saint-Sylvestre aux 8 champagnes",
-  description:'Et si on essayait ensemble 8 champagnes le 3 déembre? Une sorte de warming-up 1 mois avant le réveillon et le meilleur moyen de bien choisir son champagne pour le jour J ',
-  address:'33 rue Saint-Léonard, 44000 Nantes',
-  date: Date.parse('3rd Dec 2022'),
-  time: Time.parse('21:00'),
-  category: "Champagne",
+bourgogne3 = Event.create!(
+  name: 'Les Bourgognes du Sud : Mâconnais & côtes Chalonnaise',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('23rd Sep 2022'),
+  time: Time.parse('17:30'),
+  category: "Bourgogne",
   level: 'Novice',
   host_request: '',
-  max_number_guest: 7,
-  min_price: 16,
-  max_price: 20,
-  host: user4
+  max_number_guest: 5,
+  min_price: 12,
+  max_price: 16,
+  host: user2
 )
 
-alsace_lorraine = Event.create!(
-  name: "retour de route des vins alsaciens",
-  description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
-  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+bourgogne2 = Event.create!(
+  name: 'Les hauts-vins de Basse-Bourgogne',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('24th Sep 2022'),
-  time: Time.parse('14:00'),
-  category: "Alsace-Lorraine",
+  time: Time.parse('17:30'),
+  category: "Bourgogne",
   level: 'Novice',
   host_request: '',
-  max_number_guest: 6,
-  min_price: 9,
-  max_price: 13,
-  host: user1
+  max_number_guest: 5,
+  min_price: 12,
+  max_price: 16,
+  host: user2
+)
+
+bourgogne1 = Event.create!(
+  name: 'Côte de Beaunes contre Côte de nuits',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('30th Sep 2022'),
+  time: Time.parse('17:30'),
+  category: "Bourgogne",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 5,
+  min_price: 12,
+  max_price: 16,
+  host: user2
 )
 
 bourgogne = Event.create!(
@@ -255,6 +255,81 @@ bourgogne = Event.create!(
   max_number_guest: 5,
   min_price: 12,
   max_price: 16,
+  host: user2
+)
+
+provence5 = Event.create!(
+  name: 'Les 3 couleurs de la Provence : Blanc, Rosé, Rouge',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('10th Sep 2022'),
+  time: Time.parse('12:00'),
+  category: "Provence",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 5,
+  min_price: 8,
+  max_price: 12,
+  host: user2
+)
+
+provence4 = Event.create!(
+  name: 'La Provence pas rosée : les Rouges',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('16th Sep 2022'),
+  time: Time.parse('12:00'),
+  category: "Provence",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 5,
+  min_price: 8,
+  max_price: 12,
+  host: user2
+)
+
+provence3 = Event.create!(
+  name: 'La Provence pas rosée : les Blancs',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('23rd Sep 2022'),
+  time: Time.parse('12:00'),
+  category: "Provence",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 5,
+  min_price: 8,
+  max_price: 12,
+  host: user2
+)
+
+provence2 = Event.create!(
+  name: 'Quel est le meilleur rosé de provence?',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('24th Sep 2022'),
+  time: Time.parse('12:00'),
+  category: "Provence",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 5,
+  min_price: 8,
+  max_price: 12,
+  host: user2
+)
+
+provence1 = Event.create!(
+  name: 'pique-nique arrosé aux vins de provence',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('30th Sep 2022'),
+  time: Time.parse('12:00'),
+  category: "Provence",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 5,
+  min_price: 8,
+  max_price: 12,
   host: user2
 )
 
@@ -273,6 +348,52 @@ provence = Event.create!(
   host: user2
 )
 
+
+beaujolais3 = Event.create!(
+  name: 'les grand-crus du Beaujolais, ça existe!',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('23rd Sep 2022'),
+  time: Time.parse('18:00'),
+  category: "Beaujolais",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 7,
+  max_price: 12,
+  host: user2
+)
+
+beaujolais2 = Event.create!(
+  name: 'les Beaujolais villages',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('24th Sep 2022'),
+  time: Time.parse('18:00'),
+  category: "Beaujolais",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 7,
+  max_price: 12,
+  host: user2
+)
+
+beaujolais1 = Event.create!(
+  name: 'Les Beaujolais contre les Lyonnais',
+  description: '',
+  address: '6 passage de la Poule Noire, 44000 Nantes',
+  date: Date.parse('30th Sep 2022'),
+  time: Time.parse('18:00'),
+  category: "Beaujolais",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 7,
+  max_price: 12,
+  host: user2
+)
+
 beaujolais = Event.create!(
   name: 'soirée beaujolais pas nouveau',
   description: '',
@@ -287,6 +408,211 @@ beaujolais = Event.create!(
   max_price: 12,
   host: user2
 )
+
+
+alsace_lorraine3 = Event.create!(
+  name: "les Alsaciens du 67",
+  description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: Date.parse('17th Sep 2022'),
+  time: Time.parse('14:00'),
+  category: "Alsace-Lorraine",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 9,
+  max_price: 13,
+  host: user1
+)
+
+alsace_lorraine2 = Event.create!(
+  name: "Les Alsaciens du 68",
+  description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: Date.parse('23rd Sep 2022'),
+  time: Time.parse('14:00'),
+  category: "Alsace-Lorraine",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 9,
+  max_price: 13,
+  host: user1
+)
+
+alsace_lorraine1 = Event.create!(
+  name: "les Grand-Crus alsaciens",
+  description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: Date.parse('30th Sep 2022'),
+  time: Time.parse('14:00'),
+  category: "Alsace-Lorraine",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 9,
+  max_price: 13,
+  host: user1
+)
+
+alsace_lorraine = Event.create!(
+  name: "retour de route des vins alsaciens",
+  description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: Date.parse('24th Sep 2022'),
+  time: Time.parse('14:00'),
+  category: "Alsace-Lorraine",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 9,
+  max_price: 13,
+  host: user1
+)
+
+
+champagne3 = Event.create!(
+  name: "Vallée de la Marne & Montagne de Reims",
+  description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
+  address:'33 rue Saint-Léonard, 44000 Nantes',
+  date: Date.parse('17th sep 2022'),
+  time: Time.parse('21:00'),
+  category: "Champagne",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 7,
+  min_price: 16,
+  max_price: 20,
+  host: user4
+)
+
+champagne2 = Event.create!(
+  name: "Les 3 côtes de Champagne : Blancs, Sézanne & Bars",
+  description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
+  address:'33 rue Saint-Léonard, 44000 Nantes',
+  date: Date.parse('23rd sep 2022'),
+  time: Time.parse('21:00'),
+  category: "Champagne",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 7,
+  min_price: 16,
+  max_price: 20,
+  host: user4
+)
+
+champagne1 = Event.create!(
+  name: "Champagnes contre Coteaux champenois de Vitry-le-François",
+  description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
+  address:'33 rue Saint-Léonard, 44000 Nantes',
+  date: Date.parse('24th sep 2022'),
+  time: Time.parse('21:00'),
+  category: "Champagne",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 7,
+  min_price: 16,
+  max_price: 20,
+  host: user4
+)
+
+champagne = Event.create!(
+  name: "Avant-Saint-Sylvestre aux 8 champagnes",
+  description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
+  address:'33 rue Saint-Léonard, 44000 Nantes',
+  date: Date.parse('30th sep 2022'),
+  time: Time.parse('21:00'),
+  category: "Champagne",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 7,
+  min_price: 16,
+  max_price: 20,
+  host: user4
+)
+
+
+loire2 = Event.create!(
+
+  name: "Les Vins d'Anjou et du Saumurois",
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
+  address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
+  date: Date.parse('16th Sep 2022'),
+  time: Time.parse('14:30'),
+  category: "Loire",
+  level: 'Novice',
+  host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
+  max_number_guest: 7,
+  min_price: 8,
+  max_price: 12,
+  host: user1
+)
+
+loire3 = Event.create!(
+
+  name: "Autour de Tours",
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
+  address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
+  date: Date.parse('17 Sep 2022'),
+  time: Time.parse('14:30'),
+  category: "Loire",
+  level: 'Novice',
+  host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
+  max_number_guest: 7,
+  min_price: 8,
+  max_price: 12,
+  host: user1
+)
+
+loire4 = Event.create!(
+
+  name: "Orléans, capitale du vinaigre, mais pas que...",
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
+  address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
+  date: Date.parse('23rd Sep 2022'),
+  time: Time.parse('14:30'),
+  category: "Loire",
+  level: 'Novice',
+  host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
+  max_number_guest: 7,
+  min_price: 8,
+  max_price: 12,
+  host: user1
+)
+
+loire5 = Event.create!(
+
+  name: "Tout en amont, les vins méconnus d'Auvergne",
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
+  address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
+  date: Date.parse('24th Sep 2022'),
+  time: Time.parse('14:30'),
+  category: "Loire",
+  level: 'Novice',
+  host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
+  max_number_guest: 7,
+  min_price: 8,
+  max_price: 12,
+  host: user1
+)
+
+loire = Event.create!(
+
+  name: 'toute la loire en pinard',
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
+  address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
+  date: Date.parse('1st Oct 2022'),
+  time: Time.parse('14:30'),
+  category: "Loire",
+  level: 'Novice',
+  host_request: '1 côte-roannaise et 1 muscadet-sèvre-et-maine',
+  max_number_guest: 7,
+  min_price: 8,
+  max_price: 12,
+  host: user1
+)
+
+
 
 # PASSES
 
@@ -672,6 +998,41 @@ booking_13 = Booking.create!(
   comment: '',
   guest: user1,
   event: champagne
+)
+
+booking_14 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user11,
+  event: provence
+)
+
+booking_15 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user12,
+  event: provence
+)
+
+booking_16 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user7,
+  event: beaujolais
+)
+
+booking_17 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user8,
+  event: beaujolais
+)
+
+booking_18 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user9,
+  event: beaujolais
 )
 
 puts "Finished"
