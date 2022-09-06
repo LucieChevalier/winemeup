@@ -1,4 +1,5 @@
 // Specific CSS for your home-page
+
 html, body {
     margin-bottom: 20px;
     background: white
@@ -164,12 +165,12 @@ html, body {
   padding-top: 1px;
   padding-bottom: 1px;
   width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 
 }
 
 #carouselExampleControls {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 
 }
   .carousel-inner {
@@ -484,20 +485,6 @@ html, body {
 
 // debut testimonials
 
-/* Reseting */
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//     font-family: 'Poppins', sans-serif;
-// }
-
-// body {
-//     // background: linear-gradient(to bottom, $redbottle, $redwine);
-//     // animation: background-color 20s;
-//     // min-height: 100vh;
-// }
-
 .container {
   .container-testimonial{
     margin-top: 80px;
@@ -610,6 +597,12 @@ border-bottom: 1px solid #999; */
 }
 
 // fin testimonials
+
+
+
+//
+
+
 
 
 
