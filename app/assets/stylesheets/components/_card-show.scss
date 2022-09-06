@@ -186,6 +186,16 @@
       margin-top: -11px;
     }
 
+    p {
+      margin-left: 58px;
+      font-style: italic;
+      color: $grey
+    }
+
+    span {
+      font-weight: 700;
+    }
+
     .card-index-list-text {
       display: flex;
 
@@ -238,6 +248,11 @@
     flex-grow: 1;
     border-radius: 16px
   }
+}
+
+.map-card {
+  margin-top: 12px;
+  margin-bottom: 42px;
 }
 
 .participer-show {
@@ -357,5 +372,5 @@
 }
 
 .js-fun {
-  margin-bottom: 42px;
+  margin-bottom: 24px;
 }

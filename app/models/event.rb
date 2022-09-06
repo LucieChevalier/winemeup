@@ -4,12 +4,19 @@ class Event < ApplicationRecord
   has_many :bottles
   has_many :guests, through: :bookings, class_name: "User" # Rajout Lucie
 
+  # CHatroom
+  has_one :chatroom
+
   CATEGORIES = %w[Alsace-Lorraine Beaujolais Bordeaux Bourgogne Champagne Corse Jura-Bugey-Savoie Languedoc-Roussillon Loire Provence Rhône Sud-Ouest]
 
   # Validations
   validates :name, :address, :date, :level, presence: true
   validates :level, inclusion: { in: %w[Novice Intermédiaire Expert] }
   validates :category, inclusion: { in: CATEGORIES }
+
+  # Geocoding
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   after_create do
     case category

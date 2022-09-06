@@ -10,3 +10,42 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.container-fluid {
+  display: flex;
+  align-items: flex-start !important;
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .nav-item {
+      margin-top: 5px;
+
+      .dropdown-menu {
+        border-radius: 16px 16px 16px 16px;
+        padding: 3px;
+
+        &:hover {
+          background: $redwine;
+          color: white;
+          border: 1px solid transparent;
+        }
+      }
+
+      a {
+        font-size: 12px;
+        display: flex;
+        justify-content: space-around;
+
+        &:hover {
+          background: $redwine;
+          border-radius: 16px;
+          color: white;
+          border: none;
+        }
+      }
+    }
+  }
+}

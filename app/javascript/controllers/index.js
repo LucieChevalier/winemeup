@@ -8,6 +8,8 @@ applicationscroll.register('scroll-reveal', ScrollReveal)
 // import Carousel from 'stimulus-carousel'
 // application.register('carousel', Carousel)
 
+import ChatroomSubscriptionController from "./chatroom_subscription_controller"
+application.register("chatroom-subscription", ChatroomSubscriptionController)
 
 import EditController from "./edit_controller"
 application.register("edit", EditController)

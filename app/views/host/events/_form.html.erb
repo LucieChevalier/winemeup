@@ -43,11 +43,17 @@
       </div>
     </div>
 
-        <%= f.input :date, as: :date, html5: true, required: true,
-                    required: true,
-                    autofocus: true,
-                    label: false %>
+        <div class="d-flex">
+          <%= f.input :date, as: :date, html5: true, required: true,
+                      required: true,
+                      autofocus: true,
+                      label: false %>
 
+          <%= f.input :time, as: :time, html5: true, required: true,
+                      required: true,
+                      autofocus: true,
+                      label: false %>
+        </div>
     <div class="date-level-form">
       <div class="date-level-form-item1">
         <%= f.input :level, as: :radio_buttons, collection: [
