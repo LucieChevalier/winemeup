@@ -5,6 +5,8 @@
 import { application } from "./application"
 import { applicationscroll } from "./scroll_reveal"
 applicationscroll.register('scroll-reveal', ScrollReveal)
+// import Carousel from 'stimulus-carousel'
+// application.register('carousel', Carousel)
 
 
 import EditController from "./edit_controller"
