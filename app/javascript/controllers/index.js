@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import ChatroomSubscriptionController from "./chatroom_subscription_controller"
+application.register("chatroom-subscription", ChatroomSubscriptionController)
+
 import EditController from "./edit_controller"
 application.register("edit", EditController)
 
@@ -15,6 +18,3 @@ application.register("map", MapController)
 
 import SearchEventsController from "./search_events_controller"
 application.register("search-events", SearchEventsController)
-
-import { applicationscroll } from "./scroll_reveal"
-// applicationscroll.register('scroll-reveal', ScrollReveal)
