@@ -22,8 +22,8 @@ user1 = User.create!(
   city: 'Saint-Herblain'
 )
 
-file = URI.open("https://blackwhite.pictures/media/c/0704/small-kitten-portrait-free-stock-photo-negativespace-2736.jpg")
-user1.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+file = URI.open("https://avatars.githubusercontent.com/u/106144925")
+user1.photo.attach(io: file, filename: "costume-1.jpeg", content_type: "image/jpeg")
 user1.save
 
 user2 = User.create!(
@@ -82,8 +82,8 @@ user5 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://upload.wikimedia.org/wikipedia/commons/b/bc/Juvenile_Ragdoll.jpg")
-user5.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+file = URI.open("https://avatars.githubusercontent.com/u/108475328")
+user5.photo.attach(io: file, filename: "costume-1.jpeg", content_type: "image/jpeg")
 user5.save
 
 user6 = User.create!(
@@ -97,8 +97,8 @@ user6 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://live.staticflickr.com/6162/6145580246_57c2131678_b.jpg")
-user6.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+file = URI.open("https://avatars.githubusercontent.com/u/107299884")
+user6.photo.attach(io: file, filename: "costume-1.jpeg", content_type: "image/jpeg")
 user6.save
 
 user7 = User.create!(
@@ -112,8 +112,8 @@ user7 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg")
-user7.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+file = URI.open("https://avatars.githubusercontent.com/u/106027481")
+user7.photo.attach(io: file, filename: "costume-1.jpeg", content_type: "image/jpeg")
 user7.save
 
 user8 = User.create!(
