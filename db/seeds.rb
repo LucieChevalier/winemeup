@@ -22,8 +22,8 @@ user1 = User.create!(
   city: 'Saint-Herblain'
 )
 
-file = URI.open("T02NE0241-U03P0GRQ610-c5d5d8b3a5bf-512.jpg")
-user1.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+file = URI.open("https://avatars.githubusercontent.com/u/106144925")
+user1.photo.attach(io: file, filename: "costume-1.jpeg", content_type: "image/jpeg")
 user1.save
 
 user2 = User.create!(
@@ -82,8 +82,8 @@ user5 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("T02NE0241-U03P303J9AQ-30cf6392d1ab-512.jpg")
-user5.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+file = URI.open("https://avatars.githubusercontent.com/u/108475328")
+user5.photo.attach(io: file, filename: "costume-1.jpeg", content_type: "image/jpeg")
 user5.save
 
 user6 = User.create!(
@@ -97,8 +97,8 @@ user6 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("T02NE0241-U03NXK6JSTF-a9ff886149d6-512.jpg")
-user6.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+file = URI.open("https://avatars.githubusercontent.com/u/107299884")
+user6.photo.attach(io: file, filename: "costume-1.jpeg", content_type: "image/jpeg")
 user6.save
 
 user7 = User.create!(
@@ -112,8 +112,8 @@ user7 = User.create!(
   city: 'Nantes'
 
 )
-file = URI.open("T02NE0241-U03PE616CKT-cde5a9e93695-512.jpg")
-user7.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+file = URI.open("https://avatars.githubusercontent.com/u/106027481")
+user7.photo.attach(io: file, filename: "costume-1.jpeg", content_type: "image/jpeg")
 user7.save
 
 user8 = User.create!(
