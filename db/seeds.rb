@@ -41,12 +41,12 @@ user2.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg
 user2.save
 
 user3 = User.create!(
-  first_name: 'Jean',
-  last_name: 'Dupont',
-  email: 'jean.dupont@gmail.com',
+  first_name: 'Sélim',
+  last_name: 'Menouer',
+  email: 'sélim.menouer@gmail.com',
   password: '123456',
   address: '21 rue de Cahors',
-  level: 'Expert',
+  level: 'Intermédiaire',
   postal_code: '44100',
   city: 'Saint-Herblain'
 
@@ -576,42 +576,42 @@ puts "Creating bookings..."
 
 booking_1 = Booking.create!(
   status: 'Upcoming',
-  comment: '',
+  comment: '1 Sancerre',
   guest: user10,
   event: loire
 )
 
 booking_2 = Booking.create!(
   status: 'Upcoming',
-  comment: '',
+  comment: '1 Menetou-Salon',
   guest: user6,
   event: loire
 )
 
 booking_3 = Booking.create!(
   status: 'Upcoming',
-  comment: '',
+  comment: '1 Coteaux-du-layon grand cru Quarts de Chaume',
   guest: user7,
   event: loire
 )
 
 booking_4 = Booking.create!(
   status: 'Upcoming',
-  comment: '',
-  guest: user10,
+  comment: '1 Saumur-Champigny',
+  guest: user3,
   event: loire
 )
 
 booking_5 = Booking.create!(
   status: 'Upcoming',
-  comment: '',
+  comment: '1 Bourgueil',
   guest: user9,
   event: loire
 )
 
 booking_6 = Booking.create!(
   status: 'Upcoming',
-  comment: '',
+  comment: '1 Pouilly-Fumé',
   guest: user8,
   event: loire
 )
