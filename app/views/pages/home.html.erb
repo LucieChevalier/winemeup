@@ -4,7 +4,7 @@
       <h1 class="titre-landing">WineMeUp</h1>
 
       <div class="slogan">
-        <h2 class="sous-titre-landing">Venez partager un moment convivialité autour du vin</h2>
+        <h2 class="sous-titre-landing">Venez partager un moment de convivialité autour du vin</h2>
       </div>
 
       <div class="block-button">
@@ -20,81 +20,84 @@
 </div>
 
 
-<%# début du stimulus reveal  %>
-
 <div class="container">
 <div class="scroll-revealcontainer">
-  <h2 class="sous-titre-landing titre-second-screen">Les étapes pour rejoindre votre premier évènement</h2>
+  <h2 class="sous-titre-landing titre-second-screen"></h2>
   <div data-controller="scroll-reveal">
-  <div data-scroll-reveal-target="item" class="reveal"> <img src="https://images.unsplash.com/photo-1627260101174-35c557ab5c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
-            <p class="text-carousel">Trouvez des « WineUp » organisés à proximité de chez vous</p></div>
-  <div data-scroll-reveal-target="item" class="reveal" data-delay="250ms" style="transition-delay: 250ms;"><img src="https://images.unsplash.com/photo-1544804066-ff04a3f1ab8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80" class="d-block w-100" alt="...">
-            <p class="text-carousel">Améliorez vos connaissances en œnologie</p></div>
-  <div data-scroll-reveal-target="item" class="reveal" data-delay="500ms" style="transition-delay: 500ms;"><img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
-            <p class="text-carousel">Rencontrez des amateurs de vin près de chez-vous</p></div>
+  <div data-scroll-reveal-target="item" class="reveal" data-delay="300ms"><p class="commercial-text">La communauté de WineMeUp organise des évènements afin de découvrir et déguster différents vins d’une même région</p></div>
   </div>
 </div>
 </div>
 
+<%# carousel %>
 
-
-<%# parallax %>
-<div class="container-paralax-title">
-  <div class="outer-container">
-    <div class="imageparalax-container" style="background-image: url('https://images.unsplash.com/photo-1516600164266-f3b8166ae679?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');">
-
-      <h2 class="section-title on-dark">
-        <span class="paralax-title">
-        Nous rejoindre
-        </span>
-      </h2>
+<div class="container carousel-container">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1627260101174-35c557ab5c8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
+          <p class="text-carousel">Trouvez des « WineUp » organisés à proximité de chez vous</p></div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1596438214057-5ff7c7fa76b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fHdpbmUlMjBnbGFzc2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
+          <p class="text-carousel">Améliorez vos connaissances en œnologie</p></div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100" alt="...">
+          <p class="text-carousel">Rencontrez des amateurs de vin près de chez-vous</p></div>
+        </div>
     </div>
-
-    <h2 class="section-title">
-      <span class="paralax-title">
-        Nous rejoindre
-      </span>
-    </h2>
   </div>
 </div>
+<%# fin du carousel %>
+
 
 
 
 <%# scroll recherché de 4you %>
-<div class="container container-testimonial">
 
-
-<div class="container-snapscrollcards">
-
-<div class="snapscrollcards">
+<div class="container">
+  <div class="container container-snapscroll">
+    <div class="container-snapscrollcards">
+  <div class="title-text-snapscrollcards">Deviens un WineUper !</div>
+      <div class="snapscrollcards">
         <div class="itemscard" id="home">
             <div class="contentcd">
                 <p>HOME</p>
-                <p>La communauté de WineMeUp organise régulièrement des évènements avec un nombre limité de participants afin de découvrir et déguster différents vins d’une même région voire d’un même domaine</p>
+                <p>Consulte les évènements près de chez toi</p>
             </div>
         </div>
-        <div class="itemscard" id="HTML">
+         <div class="itemscard" id="home">
             <div class="contentcd">
-                <p>HTML</p>
-                <p>Choisissez votre vin selon le thème choisi par l’organisateur de l’évènement. Rouges, rosés, blancs et pétillants, que vous soyez novice, amateur confirmé ou expert, les vins représentent un univers envoûtant. Contemplez leurs robes, découvrez leur palette aromatique et leurs saveurs... et partez à la découverte de toutes les facettes des vins. N’oubliez pas, une dégustation est assez personnelle car elle fait appelle à votre propre expérience.
-                </p>
+                <p>HOME</p>
+                <p>Crée-toi un compte et obtiens ton profil œnologique</p>
             </div>
         </div>
-
+         <div class="itemscard" id="home">
+            <div class="contentcd">
+                <p>HOME</p>
+                <p>Organise ou inscris-toi à un évènement</p>
+            </div>
+        </div>
+         <div class="itemscard" id="home">
+            <div class="contentcd">
+                <p>HOME</p>
+                <p>Apporte ta bouteille selon le thème</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
+    <div class="border-bottom"></div>
 
 
-Consulte les évènements près de chez toi
-                Crée-toi un compte et obtiens ton profil œnologique
-                Organise ou inscris-toi à un évènement
-                Achète ta bouteille selon le thème choisi
 
-
+<div class="container">
 <div class="container container-testimonial">
         <div class="row">
-              <h2>Ils ont passé un agréable "WineUp" et ils nous le font savoir !</h2>
+              <div class="title-text-testimonial">Ils ont passé un agréable "WineUp" et ils nous le font savoir !</div>
             <div class="col-lg-4">
                 <div class="card-testimonial">
                     <div class="face front-face">
@@ -152,7 +155,7 @@ Consulte les évènements près de chez toi
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <%# <div class="col-lg-4">
                 <div class="card-testimonial">
                     <div class="face front-face">
                         <img src="https://images.unsplash.com/photo-1614574762522-6ac2fbba2208?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjY2fHxtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
@@ -169,12 +172,13 @@ Consulte les évènements près de chez toi
                         </div>
                         <span class="fas fa-quote-right"></span>
                     </div>
-                </div>
+                </div> %>
             </div>
         </div>
     </div>
+</div>
 
-
+<div class="container">
 
 <div class="container container-testimonial">
   <div class="block-button">
@@ -182,15 +186,8 @@ Consulte les évènements près de chez toi
     <%= link_to "S'inscrire", new_user_session_path, class: "btn-landing"%>
   </div>
 </div>
-
-
-
-
+</div>
     <script>
-
-
-
-
 
 // début paralaxTitle
 let didScroll = false;
