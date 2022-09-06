@@ -41,7 +41,7 @@ export default class extends Controller {
   }
 
   #userStyleClass(currentUserIsSender) {
-    return currentUserIsSender ? "sender-style" : "receiver-style"
+    return currentUserIsSender ? "sender-style bubble-bottom-right" : "receiver-style bubble-bottom-left"
   }
 
   resetForm(event) {
