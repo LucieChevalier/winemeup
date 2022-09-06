@@ -7,7 +7,10 @@ class DashboardsController < ApplicationController
 
     @attended_events = current_user.bookings.map(&:event).sort_by(&:date).sort_by(&:time)
     @future_attended_events = @attended_events.select { |event| event.date >= Date.today }
-    @past_attended_events = @attended_events.select { |event| event.date < Date.today }.reverse
+    @past_attended_events = @attended_events.select { |event| event.date < Date.today }.reverse    # Redirecting user
 
+    survey = current_user.survey
+
+    @recommendations = survey.sommelier(survey.question_2, survey.question_3)
   end
 end

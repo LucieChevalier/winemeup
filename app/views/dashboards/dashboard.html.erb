@@ -1,9 +1,8 @@
 <div class="container" style="margin-bottom: 10rem">
-
+  <%= link_to "survey", new_user_survey_path(user_id: current_user) %>
   <div class="card-dashboard-1 d-flex align-items-center justify-content-center">
-
     <%# Displaying avatar or default avatar %>
-    <% if current_user.photo.key %>
+    <% if current_user.photo.attached? %>
       <%= cl_image_tag current_user.photo.key, style:"object-fit: cover"%>
 
     <% else %>
@@ -33,6 +32,9 @@
   <div class="tab-content" id="pills-tabContent">
 
     <%# EVENTS %>
+
+            <h1>YOLQLELELELELELELELEEEEEEE</h1>
+        <%= @recommendations %>
     <div class="tab-pane active" id="events" role="tabpanel">
 
         <h2>Mes évènements</h2>
@@ -145,12 +147,6 @@
         <br>
           <strong><p>Niveau actuel</p></strong>
           <%= current_user.level ? current_user.level : "Vous n'avez pas renseigné votre niveau" %>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </div>
 
   </div>
