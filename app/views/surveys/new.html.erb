@@ -1,0 +1,25 @@
+    <%= simple_form_for @survey, url: user_surveys_path do |f| %>
+
+
+      <%= f.input :question_1,
+                    as: :radio_buttons,
+                    label: "lwjkehrkjew",
+                    collection: [
+                        ['Novice'],
+                        ['Intermédiaire'],
+                        ['Expert']
+                        ],
+                    value_method: :first,
+                    required: true %> %>
+
+      <%= f.input :question_2,
+                  required: true,
+                  autofocus: true %>
+
+
+        <%= f.input :question_3,
+                    required: true,
+                    autofocus: true %>
+
+        <%= f.submit "Créer", class: "btn"%>
+    <% end %>
