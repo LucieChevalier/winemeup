@@ -1,0 +1,58 @@
+// To style the wrapping div
+.message-row {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+// To style the message itself
+.sender-style, .receiver-style {
+  width: 70%;
+  max-width: 400px;
+  border-radius: 4px;
+  padding: 8px;
+  min-height: 80px;
+  position: relative;
+}
+
+.sender-style {
+  background-color: $bluenight;
+  color:white;
+}
+
+.receiver-style {
+  background-color: $light-gray;
+  color:$bluenight;
+}
+
+.message{
+  font-size: 8px;
+}
+
+// test
+
+
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 12px solid #F4F4F4;
+  border-right: 7px solid transparent;
+  border-top: 12px solid #F4F4F4;
+  border-bottom: 20px solid transparent;
+  left: 0px;
+  bottom: -29px;
+}
+
+.bubble-bottom-right:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid transparent;
+  border-right: 12px solid #424A5E;
+  border-top: 12px solid #424A5E;
+  border-bottom: 20px solid transparent;
+  right: 0px;
+  bottom: -17px;
+}
