@@ -1,12 +1,9 @@
-<div class="button">
-  <%= link_to "Créer un évènement", new_host_event_path, class: "bouton-blanc" %>
-</div>
-<h2 class="titre-index">Prochains évènements</h2>
 
+<%= link_to "Créer un évènement", new_host_event_path, class: "button-index-create" %>
 
 
 <div class="search-bar" data-controller="search-events">
-  <%= form_with url: events_path, method: :get, class: "d-flex", data: { search_events_target: "form" } do %>
+  <%= form_with url: events_path, method: :get, class: "d-flex search-bar-index", data: { search_events_target: "form" } do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",

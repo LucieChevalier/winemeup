@@ -274,3 +274,29 @@
     color: $redwine;
   }
 }
+
+.form-control {
+  border-radius: 16px 0px 0px 16px;
+  font-size: 12px;
+  margin-top: 12px;
+
+}
+
+.btn-primary {
+  border-radius: 0px 16px 16px 0px;
+  background: $redwine;
+  font-size: 12px;
+  border: $redwine;
+  margin-top: 12px;
+
+  &:hover {
+    background: white;
+    color: $redwine;
+  }
+}
+
+.events-counts {
+  padding: 24px;
+  margin-top: 12px;
+  color: $bluenight
+}
