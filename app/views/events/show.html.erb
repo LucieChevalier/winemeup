@@ -137,37 +137,47 @@
     <div class="description">
       <p class="bold">Description</p>
       <p class= "event-name"><%= @event.name %></p>
+      <p><i class="fa-solid fa-bullseye"></i> <%= @event.level %></p>
       <p><%= @event.city %><p><%= @event.region %>
       <p><%= @event.description %></p>
     </div>
 
     <div class="border-bottom"></div>
 
-    <p class="titre-participant-bold">Les participants</p>
+    <p class="titre-participant-bold">Participants</p>
 
-    <div class="card-index-list">
-      <% @bookings.each do | booking | %>
-        <div class="single-card">
+    <%# Display if the event is full, empty or how many tickets left %>
+    <% if @bookings == [] %>
+      <p class= "text-center"><em>Personne ne s'est encore inscrit</em></p>
+    <% elsif @bookings.count == @event.max_number_guest %>
+      <p class= "text-center"><em>Cet évènement est complet</em></p>
+    <% else %>
+      <p class= "text-center"><em>Il reste <%= @event.max_number_guest - @bookings.count %> place(s)</em></p>
+    <% end %>
 
-          <%# Displaying avatar or default avatar %>
-          <% if booking.guest.photo.key %>
-            <%= cl_image_tag booking.guest.photo.key, class: 'image-avatar-show' %>
-          <% else %>
-            <%= image_tag "kitten.jpg", class: 'image-avatar-show' %>
-          <% end %>
+      <div class="card-index-list">
+        <% @bookings.each do | booking | %>
+          <div class="single-card">
+
+            <%# Displaying avatar or default avatar %>
+            <% if booking.guest.photo.key %>
+              <%= cl_image_tag booking.guest.photo.key, class: 'image-avatar-show' %>
+            <% else %>
+              <%= image_tag "kitten.jpg", class: 'image-avatar-show' %>
+            <% end %>
 
 
-          <div class="card-index-list-text">
-            <ul>
-              <%= booking.guest.first_name %>
-              <%= booking.guest.last_name %> |
-              <div class="pink"><i class="fa-solid fa-bullseye"></i> <%= booking.guest.level %></div>
-            </ul>
+            <div class="card-index-list-text">
+              <ul>
+                <%= booking.guest.first_name %>
+                <%= booking.guest.last_name %> |
+                <div class="pink"><i class="fa-solid fa-bullseye"></i> <%= booking.guest.level %></div>
+              </ul>
+            </div>
+            <p> Apportera : <span><%= booking.comment %></span></p>
           </div>
-          <p> Apportera : <span><%= booking.comment %></span></p>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
 
     <div class="border-bottom"></div>
 
@@ -201,30 +211,34 @@
       <%# Si on n'est ni host ni guest, on voit un bouton Participer %>
       <% else %>
 
-        <div class="participer-show" data-controller="edit">
-          <%#= 1er boutton %>
-          <div class="interesse-show">
-            <p data-action="click->edit#displayForm">Je voudrais participer</p>
-            <i class="fa-solid fa-caret-down"></i>
-          </div>
+        <%# Si l'event est full, on n'affiche pas de bouton permettant de s'inscrire %>
+        <% if @bookings.count == @event.max_number_guest %>
+          <%# On n'affiche rien ici %>
+        <% else %>
+          <div class="participer-show" data-controller="edit">
+            <%#= 1er boutton %>
+            <div class="interesse-show">
+              <p data-action="click->edit#displayForm">Je voudrais participer</p>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
 
-          <%#= Boutton dynamique %>
-          <div class="d-none interesse-show2" data-edit-target="content">
-            <%= simple_form_for [@event, @booking], html: { novalidate: false } do |f| %>
-              <%= f.error_notification %>
-              <div class="form-login">
-                <%= f.input :comment,
-                            label: false,
-                            input_html: { placeholder: "Dis nous le nectar de ton choix" }%>
-              </div>
-              <div class="btn-interesse-show">
-                <%= f.submit "Participer", class: "btn" %>
-                <p data-action="click->edit#undisplayForm">Retour</p>
-              </div>
-            <% end %>
+            <%#= Boutton dynamique %>
+            <div class="d-none interesse-show2" data-edit-target="content">
+              <%= simple_form_for [@event, @booking], html: { novalidate: false } do |f| %>
+                <%= f.error_notification %>
+                <div class="form-login">
+                  <%= f.input :comment,
+                              label: false,
+                              input_html: { placeholder: "Dis nous le nectar de ton choix" }%>
+                </div>
+                <div class="btn-interesse-show">
+                  <%= f.submit "Participer", class: "btn" %>
+                  <p data-action="click->edit#undisplayForm">Retour</p>
+                </div>
+              <% end %>
+            </div>
           </div>
-        </div>
-
+        <% end %>
       <% end %>
     </div>
 
