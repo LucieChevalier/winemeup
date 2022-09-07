@@ -12,7 +12,6 @@ class DashboardsController < ApplicationController
     survey = current_user.survey
 
     @recommendations = survey.sommelier(survey.question_2, survey.question_3)
-
   end
 
   def photo(category)

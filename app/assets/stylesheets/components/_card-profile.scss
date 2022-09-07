@@ -1,0 +1,27 @@
+.card-recommendation {
+  display: flex;
+  margin-bottom: 24px;
+  align-items: center;
+
+  img {
+    height: 81px;
+    width: 81px;
+    border-radius: 12px;
+  }
+
+  .inforecommendation {
+    padding-left: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FF6163;
+    margin: 0px;
+  }
+
+
+}
+
+.sous-tritre-profile {
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #424A5E;
+}
