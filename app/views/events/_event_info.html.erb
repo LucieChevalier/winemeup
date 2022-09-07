@@ -1,9 +1,16 @@
+  <%# BEG - Griser l'event s'il est full %>
+  <% if event.bookings.count == event.max_number_guest %>
+    <div class="unique-card" style="filter:grayscale(100%)">
+  <% else %>
+     <div class="unique-card">
+  <% end %>
+  <%# END - Griser l'event s'il est full %>
 
-    <div class="unique-card">
       <%= link_to event_path(event) do %>
-      <div class="card-image-index">
-        <%= image_tag "#{event.photo}" %>
-      </div>
+
+        <div class="card-image-index">
+          <%= image_tag "#{event.photo}" %>
+        </div>
 
       <% end %>
 
