@@ -19,5 +19,8 @@ application.register("map", MapController)
 import PreventDefaultController from "./prevent_default_controller"
 application.register("prevent-default", PreventDefaultController)
 
+import ScrollAnimationController from "./scroll_animation_controller"
+application.register("scroll-animation", ScrollAnimationController)
+
 import SearchEventsController from "./search_events_controller"
 application.register("search-events", SearchEventsController)

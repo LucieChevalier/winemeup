@@ -1,34 +1,34 @@
 <div class="container-landing">
   <div class="screen background-img">
-    <div class="block">
-      <h1 class="titre-landing">WineMeUp</h1>
+    <%# <div class="block"> %>
+    <div class="flex-wrapping">
+      <div class="wrapping-home">
 
-      <div class="slogan">
-        <h2 class="sous-titre-landing">Venez partager un moment de convivialité autour du vin</h2>
-      </div>
-
-      <div class="block-button">
-        <div class="block-button-primary">
-          <%= link_to "Commencez maintenant", events_path, class: "btn-landing"%>
+        <div class="slogan">
+          <h1 class="titre-landing">WineMeUp</h1>
+          <h2 class="sous-titre-landing">Venez partager un moment de convivialité autour du vin</h2>
         </div>
-        <div class="block-button-empty">
-        </div>
-      </div>
 
+          <div class="button-landing">
+              <%= link_to "Commencez maintenant", events_path, class: "btn-landing"%>
+          </div>
+      </div>
     </div>
+
+    <%# </div> %>
   </div>
 </div>
 
 
 
-<div class="container">
-  <div class="container container-snapscroll">
+<div class="container" data-controller="scroll-animation" data-action="scroll@window->scroll-animation#animText">
+  <div class="container container-snapscroll" >
     <br>
       <div class="snapscrollcards">
-        <div class="itemscard" id="home">
+        <div class="itemscard" data-scroll-animation-target="itemscard" id="home">
             <div class="contentcd">
                 <p>HOME</p>
-                <p style="font-weight: 600">La communauté de WineMeUp organise des évènements afin de déguster différents vins d’une même région</p>
+                <p style="font-weight: 600" >Que vous soyez novice ou expert, une dégustation reste une avenure personnelle qui fait appelle à votre propre expérience</p>
             </div>
       </div>
     </div>
@@ -78,41 +78,42 @@
 
 <%# scroll recherché de 4you %>
 
-<div class="container">
+<div class="container" data-controller="scroll-animation" data-action="scroll@window->scroll-animation#animText">
   <div class="container container-snapscroll">
-    <div class="container-snapscrollcards">
-  <div class="title-text-snapscrollcards">Deviens un WineUper !</div>
-      <div class="snapscrollcards">
-        <div class="itemscard" id="home">
-            <div class="contentcd">
-                <p>HOME</p>
-                <p><i class="fa-solid fa-check"></i>Consulte les évènements près de chez toi</p>
+    <div class="container-snapscrollcards" >
+      <div class="title-text-snapscrollcards">Deviens un WineUper !</div>
+          <div class="snapscrollcards">
+            <div class="itemscard" data-scroll-animation-target="itemscard" id="home">
+                <div class="contentcd">
+                    <p>HOME</p>
+                    <p><i class="fa-solid fa-check"></i>Consulte les évènements près de chez toi</p>
+                </div>
             </div>
-        </div>
-         <div class="itemscard" id="home">
-            <div class="contentcd">
-                <p>HOME</p>
-                <p><i class="fa-solid fa-check"></i>Crée-toi un compte et obtiens ton profil œnologique</p>
+            <div class="itemscard" data-scroll-animation-target="itemscard" id="home">
+                <div class="contentcd">
+                    <p>HOME</p>
+                    <p><i class="fa-solid fa-check"></i>Crée ton compte et obtiens ton profil œnologique</p>
+                </div>
             </div>
-        </div>
-         <div class="itemscard" id="home">
-            <div class="contentcd">
-                <p>HOME</p>
-                <p><i class="fa-solid fa-check"></i>Organise ou inscris-toi à un évènement</p>
+            <div class="itemscard" data-scroll-animation-target="itemscard" id="home">
+                <div class="contentcd">
+                    <p>HOME</p>
+                    <p><i class="fa-solid fa-check"></i>Organise ou inscris-toi à un évènement</p>
+                </div>
             </div>
-        </div>
-         <div class="itemscard" id="home">
-            <div class="contentcd">
-                <p>HOME</p>
-                <p><i class="fa-solid fa-check"></i>Apporte ta bouteille selon le thème</p>
+            <div class="itemscard" data-scroll-animation-target="itemscard" id="home">
+                <div class="contentcd">
+                    <p>HOME</p>
+                    <p><i class="fa-solid fa-check"></i>Apporte ta bouteille selon le thème</p>
+                </div>
             </div>
-        </div>
+          </div>
       </div>
     </div>
   </div>
 </div>
 
-    <div class="border-bottom"></div>
+  <div class="border-bottom"></div>
 
 
 
@@ -160,7 +161,7 @@
                     </div>
                 </div>
             </div>
-             <div class="col-lg-4">
+            <div class="col-lg-4">
                 <div class="card-testimonial">
                     <div class="face front-face">
                         <img src="https://images.unsplash.com/photo-1502767882403-636aee14f873?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
@@ -204,13 +205,12 @@
 </div>
 
 <div class="container">
-
-<div class="container container-testimonial">
-  <div class="block-button">
-    <div class="block-button-primary">
-    <%= link_to "S'inscrire", new_user_session_path, class: "btn-landing"%>
+  <div class="container container-testimonial">
+    <div class="block-button">
+      <div class="block-button-primary">
+      <%= link_to "S'inscrire", new_user_session_path, class: "btn-landing"%>
+    </div>
   </div>
-</div>
 </div>
 
 
@@ -219,18 +219,18 @@
 // début scrollsnap 4you
 
 
-        var elements = document.getElementsByClassName('itemscard');
-        window.onscroll = function() {
-            for (let i = 0; i < elements.length; i++) {
-                if (elements[i].getBoundingClientRect().y <= 650) {
-                    elements[i].children[0].children[1].style.transform = "translateY(0px)";
-                    elements[i].children[0].children[1].style.opacity = 1;
-                } else {
-                    elements[i].children[0].children[1].style.transform = "translateY(50px)";
-                    elements[i].children[0].children[1].style.opacity = 0;
-                }
-            }
-        }
+        // var elements = document.getElementsByClassName('itemscard');
+        // window.onscroll = function() {
+        //     for (let i = 0; i < elements.length; i++) {
+        //         if (elements[i].getBoundingClientRect().y <= 650) {
+        //             elements[i].children[0].children[1].style.transform = "translateY(0px)";
+        //             elements[i].children[0].children[1].style.opacity = 1;
+        //         } else {
+        //             elements[i].children[0].children[1].style.transform = "translateY(50px)";
+        //             elements[i].children[0].children[1].style.opacity = 0;
+        //         }
+        //     }
+        // }
 
 
 
