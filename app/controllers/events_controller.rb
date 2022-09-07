@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   def index
 
     if params[:query].present?
-      sql_query = "category ILIKE :query OR description ILIKE :query OR level ILIKE :query OR city ILIKE :query OR name ILIKE :query"
+      sql_query = "name ILIKE :query OR description ILIKE :query OR level ILIKE :query OR city ILIKE :query OR name ILIKE :query"
       # sql_query = <<~SQL
       #   events.name @@ :query
       #   OR events.category @@ :query
@@ -12,7 +12,7 @@ class EventsController < ApplicationController
       #   OR events.description @@ :query
       #   OR events.level @@ :query
       # SQL
-      @events = Event.where('category ILIKE ?', "%#{params[:query]}%").order(:date).order(:time).select { |event| event.date >= Date.today }
+      @events = Event.where('name ILIKE ?', "%#{params[:query]}%").order(:date).order(:time).select { |event| event.date >= Date.today }
       # @events = Event.where(sql_query, query: "%#{params[:query]}%") # the "%" to make sure the string for search is taken anywhere in the sentence
     else
       @events = Event.all.order(:date).order(:time).select { |event| event.date >= Date.today }
