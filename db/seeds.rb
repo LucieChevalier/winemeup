@@ -73,8 +73,8 @@ user4.save
 
 user5 = User.create!(
   first_name: 'Jordan',
-  last_name: 'Bareix',
-  email: 'jordan.bareix@free.fr',
+  last_name: 'Barreix',
+  email: 'jordan.barreix@free.fr',
   password: '123456',
   address: '2 place Aristide Briand',
   level: 'Intermédiaire',
@@ -214,7 +214,7 @@ bourgogne3 = Event.create!(
 )
 
 bourgogne2 = Event.create!(
-  name: 'Les hauts-vins de Basse-Bourgogne',
+  name: 'Les hauts vins de Basse-Bourgogne',
   description: '',
   address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('24th Sep 2022'),
@@ -244,7 +244,7 @@ bourgogne1 = Event.create!(
 )
 
 bourgogne = Event.create!(
-  name: 'nuit blanche au côte de nuits',
+  name: 'Nuit blanche au côte de nuits',
   description: '',
   address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('16th Sep 2022'),
@@ -319,7 +319,7 @@ provence2 = Event.create!(
 )
 
 provence1 = Event.create!(
-  name: 'pique-nique arrosé aux vins de provence',
+  name: 'Pique-nique arrosé aux vins de provence',
   description: '',
   address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('30th Sep 2022'),
@@ -334,7 +334,7 @@ provence1 = Event.create!(
 )
 
 provence = Event.create!(
-  name: 'pique-nique arrosé aux vins de provence',
+  name: 'Pique-nique arrosé aux vins de provence',
   description: '',
   address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('17th Sep 2022'),
@@ -350,10 +350,10 @@ provence = Event.create!(
 
 
 beaujolais3 = Event.create!(
-  name: 'les grand-crus du Beaujolais, ça existe!',
+  name: 'Le Beaujolais entre Bourgogne & Lyonnais',
   description: '',
   address: '6 passage de la Poule Noire, 44000 Nantes',
-  date: Date.parse('23rd Sep 2022'),
+  date: Date.parse('15th Sep 2022'),
   time: Time.parse('18:00'),
   category: "Beaujolais",
   level: 'Novice',
@@ -365,7 +365,7 @@ beaujolais3 = Event.create!(
 )
 
 beaujolais2 = Event.create!(
-  name: 'les Beaujolais villages',
+  name: 'Les Beaujolais villages',
   description: '',
   address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('24th Sep 2022'),
@@ -380,7 +380,7 @@ beaujolais2 = Event.create!(
 )
 
 beaujolais1 = Event.create!(
-  name: 'Les Beaujolais contre les Lyonnais',
+  name: 'Les Crus du Beaujolais',
   description: '',
   address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('30th Sep 2022'),
@@ -395,7 +395,7 @@ beaujolais1 = Event.create!(
 )
 
 beaujolais = Event.create!(
-  name: 'soirée beaujolais pas nouveau',
+  name: 'Soirée Beaujolais pas nouveau',
   description: '',
   address: '6 passage de la Poule Noire, 44000 Nantes',
   date: Date.parse('23rd Sep 2022'),
@@ -411,7 +411,7 @@ beaujolais = Event.create!(
 
 
 alsace_lorraine3 = Event.create!(
-  name: "les Alsaciens du 67",
+  name: "MTM-Meuse Toul et Maine : les oubliés de Lorraine",
   description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
   date: Date.parse('17th Sep 2022'),
@@ -426,7 +426,7 @@ alsace_lorraine3 = Event.create!(
 )
 
 alsace_lorraine2 = Event.create!(
-  name: "Les Alsaciens du 68",
+  name: "Rieslings & Gewurztraminer du Bas-Rhin (67)",
   description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
   date: Date.parse('23rd Sep 2022'),
@@ -441,7 +441,7 @@ alsace_lorraine2 = Event.create!(
 )
 
 alsace_lorraine1 = Event.create!(
-  name: "les Grand-Crus alsaciens",
+  name: "Les Grand-Crus alsaciens",
   description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
   date: Date.parse('30th Sep 2022'),
@@ -456,7 +456,7 @@ alsace_lorraine1 = Event.create!(
 )
 
 alsace_lorraine = Event.create!(
-  name: "retour de route des vins alsaciens",
+  name: "Retour de route des vins alsaciens",
   description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
   date: Date.parse('24th Sep 2022'),
@@ -475,7 +475,7 @@ champagne3 = Event.create!(
   name: "Vallée de la Marne & Montagne de Reims",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard, 44000 Nantes',
-  date: Date.parse('17th sep 2022'),
+  date: Date.parse('17th Sep 2022'),
   time: Time.parse('21:00'),
   category: "Champagne",
   level: 'Novice',
@@ -490,7 +490,7 @@ champagne2 = Event.create!(
   name: "Les 3 côtes de Champagne : Blancs, Sézanne & Bars",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard, 44000 Nantes',
-  date: Date.parse('23rd sep 2022'),
+  date: Date.parse('23rd Sep 2022'),
   time: Time.parse('21:00'),
   category: "Champagne",
   level: 'Novice',
@@ -502,10 +502,10 @@ champagne2 = Event.create!(
 )
 
 champagne1 = Event.create!(
-  name: "Champagnes contre Coteaux champenois de Vitry-le-François",
+  name: "Champagnes & Coteaux champenois de Vitry-le-François",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard, 44000 Nantes',
-  date: Date.parse('24th sep 2022'),
+  date: Date.parse('24th Sep 2022'),
   time: Time.parse('21:00'),
   category: "Champagne",
   level: 'Novice',
@@ -520,7 +520,7 @@ champagne = Event.create!(
   name: "Avant-Saint-Sylvestre aux 8 champagnes",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard, 44000 Nantes',
-  date: Date.parse('30th sep 2022'),
+  date: Date.parse('30th Sep 2022'),
   time: Time.parse('21:00'),
   category: "Champagne",
   level: 'Novice',
@@ -534,7 +534,7 @@ champagne = Event.create!(
 
 loire2 = Event.create!(
 
-  name: "Les Vins d'Anjou et du Saumurois",
+  name: "Les Vins de rois d'Anjou et du Saumurois",
   description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
   date: Date.parse('16th Sep 2022'),
@@ -582,7 +582,7 @@ loire4 = Event.create!(
 
 loire5 = Event.create!(
 
-  name: "Tout en amont, les vins méconnus d'Auvergne",
+  name: "Tout en amont, les vins d'Auvergne",
   description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
   date: Date.parse('24th Sep 2022'),
@@ -598,7 +598,7 @@ loire5 = Event.create!(
 
 loire = Event.create!(
 
-  name: 'toute la loire en pinard',
+  name: 'Toute la loire en pinard',
   description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
   date: Date.parse('1st Oct 2022'),
@@ -612,12 +612,165 @@ loire = Event.create!(
   host: user1
 )
 
+vallee_du_rhone1 = Event.create!(
+  name: 'Rouges et blancs de la vallée du Rhône septentrionale',
+  description: '',
+  address: '21 rue de Cahors, 44100 Saint-Herblain',
+  date: Date.parse('15th Sep 2022'),
+  time: Time.parse('17:30'),
+  category: "Rhône",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 9,
+  max_price: 15,
+  host: user3
+)
+
+vallee_du_rhone2 = Event.create!(
+  name: 'Vallée du rhône méridonale et charcuterie',
+  description: 'Rouges et blancs de la vallée du Rhône méridionale',
+  address: '21 rue de Cahors, 44100 Saint-Herblain',
+  date: Date.parse('27th Sep 2022'),
+  time: Time.parse('18:30'),
+  category: "Rhône",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 9,
+  max_price: 15,
+  host: user3
+)
+
+
+corse1 = Event.create!(
+  name: 'Le GR vins',
+  description:  '',
+  address: '21 rue de Cahors, 44100 Saint-Herblain',
+  date: Date.parse('14th Sep 2022'),
+  time: Time.parse('18:30'),
+  category: "Corse",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 10,
+  max_price: 14,
+  host: user3
+)
+
+corse2 = Event.create!(
+  name: 'La Corse par le Sud',
+  description:  '',
+  address: '21 rue de Cahors, 44100 Saint-Herblain',
+  date: Date.parse('26th Sep 2022'),
+  time: Time.parse('18:30'),
+  category: "Corse",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 6,
+  min_price: 10,
+  max_price: 14,
+  host: user3
+)
+
+jura_savoie_bugey1 = Event.create!(
+  name: 'Dégustation des vins de nos montagnes',
+  description: '',
+  address: '21 rue de Cahors, 44100 Saint-Herblain',
+  date: Date.parse('15th Sep 2022'),
+  time: Time.parse('12:00'),
+  category: "Jura-Bugey-Savoie",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 9,
+  min_price: 10,
+  max_price: 15,
+  host: user3
+)
+
+
+languedoc_roussillon1 = Event.create!(
+  name: 'Dégustation de nos vins du Roussillon',
+  description: 'Decouverte des vins de pays du Roussilon?',
+  address: '33 rue Saint-Léonard, 44000 Nantes',
+  date: Date.parse('13th Sep 2022'),
+  time: Time.parse('18:30'),
+  category: "Languedoc-Roussillon",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 7,
+  min_price: 5,
+  max_price: 10,
+  host: user4
+)
+
+sud_ouest1 = Event.create!(
+  name: 'Petits vins des Pyrénées',
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: Date.parse('12th Sep 2022'),
+  time: Time.parse('17:00'),
+  category: "Sud-Ouest",
+  level: 'Intermédiaire',
+  host_request: '',
+  max_number_guest: 11,
+  min_price: 9,
+  max_price: 13,
+  host: user1
+)
+
+sud_ouest2 = Event.create!(
+  name: 'Retour de route des vins du Bergeracois',
+  description: '',
+  address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
+  date: Date.parse('18th Sep 2022'),
+  time: Time.parse('17:00'),
+  category: "Sud-Ouest",
+  level: 'Intermédiaire',
+  host_request: '',
+  max_number_guest: 11,
+  min_price: 9,
+  max_price: 13,
+  host: user1
+)
+
+
+bordeaux1 = Event.create!(
+  name: "Bordeaux rive-gauche : les Graves",
+  description: '',
+  address: '33 rue Saint-Léonard, 44000 Nantes',
+  date: Date.parse('10th Sep 2022'),
+  time: Time.parse('15:00'),
+  category: "Bordeaux",
+  level: 'Expert',
+  host_request: '',
+  max_number_guest: 4,
+  min_price: 20,
+  max_price: 30,
+  host: user4
+)
+
+
+bordeaux2 = Event.create!(
+  name: "Bordeaux rive-droite : Blayais & Libournais",
+  description: '',
+  address: '33 rue Saint-Léonard, 44000 Nantes',
+  date: Date.parse('29th September 2022'),
+  time: Time.parse('15:00'),
+  category: "Bordeaux",
+  level: 'Expert',
+  host_request: '',
+  max_number_guest: 4,
+  min_price: 20,
+  max_price: 30,
+  host: user4
+)
 
 
 # PASSES
 
 vallee_du_rhone = Event.create!(
-  name: 'vallée du rhône méridonale et charcuterie',
+  name: 'Vallée du rhône méridonale et charcuterie',
   description: '',
   address: '21 rue de Cahors, 44100 Saint-Herblain',
   date: Date.parse('1st Sep 2022'),
@@ -632,7 +785,7 @@ vallee_du_rhone = Event.create!(
 )
 
 corse = Event.create!(
-  name: 'vins corsés et fromages qui puent',
+  name: 'Vins corsés et fromages qui puent',
   description:  '',
   address: '21 rue de Cahors, 44100 Saint-Herblain',
   date: Date.parse('4th Sep 2022'),
@@ -647,10 +800,10 @@ corse = Event.create!(
 )
 
 jura_savoie_bugey = Event.create!(
-  name: 'dégustation des vins de nos montagnes',
+  name: 'Dégustation des vins de nos montagnes',
   description: '',
   address: '21 rue de Cahors, 44100 Saint-Herblain',
-  date: Date.parse('3rd Sep 2022'),
+  date: Date.parse('5th Sep 2022'),
   time: Time.parse('12:00'),
   category: "Jura-Bugey-Savoie",
   level: 'Novice',
@@ -662,7 +815,37 @@ jura_savoie_bugey = Event.create!(
 )
 
 languedoc_roussillon = Event.create!(
-  name: 'dégustation de nos vins du Roussillon',
+  name: 'Dégustation de nos vins du Roussillon',
+  description: '',
+  address: '33 rue Saint-Léonard, 44000 Nantes',
+  date: Date.parse('4th Sep 2022'),
+  time: Time.parse('18:30'),
+  category: "Languedoc-Roussillon",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 7,
+  min_price: 5,
+  max_price: 10,
+  host: user4
+)
+
+jura_savoie_bugey = Event.create!(
+  name: 'Dégustation des vins de nos montagnes',
+  description: '',
+  address: '21 rue de Cahors, 44100 Saint-Herblain',
+  date: Date.parse('3rd sep 2022'),
+  time: Time.parse('12:00'),
+  category: "Jura-Bugey-Savoie",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 9,
+  min_price: 10,
+  max_price: 15,
+  host: user3
+)
+
+languedoc_roussillon = Event.create!(
+  name: 'Dégustation de nos vins du Roussillon',
   description: '',
   address: '33 rue Saint-Léonard, 44000 Nantes',
   date: Date.parse('24th Aug 2022'),
@@ -677,7 +860,7 @@ languedoc_roussillon = Event.create!(
 )
 
 sud_ouest = Event.create!(
-  name: 'garden party et vins de notre pays basque',
+  name: 'Garden party et vins de notre pays basque',
   description: '',
   address: '49 quai Émile Cormerais, 44800 Saint-Herblain',
   date: Date.parse('25th Aug 2022'),
@@ -692,7 +875,7 @@ sud_ouest = Event.create!(
 )
 
 bordeaux = Event.create!(
-  name: "dégustation premium d'entre-deux-mers",
+  name: "Dégustation premium d'entre-deux-mers",
   description: '',
   address: '33 rue Saint-Léonard, 44000 Nantes',
   date: Date.parse('18 Aug 2022'),
