@@ -137,8 +137,8 @@
     <div class="description">
       <p class="bold">Description</p>
       <p class= "event-name"><%= @event.name %></p>
-      <p><i class="fa-solid fa-bullseye"></i> <%= @event.level %></p>
       <p><%= @event.city %><p><%= @event.region %>
+      <p><i class="fa-solid fa-bullseye"></i> <%= @event.level %></p>
       <p><%= @event.description %></p>
     </div>
 
@@ -179,8 +179,14 @@
         <% end %>
       </div>
 
+
     <div class="border-bottom"></div>
 
+    <%# Display full address %>
+      <div class="text-center mt-4">
+        <p><strong><%= @event.address %></strong></p>
+        <p><strong><%= @event.postal_code %> <%= @event.city %></strong></p>
+      </div>
 
     <div class="map-show">
       <div class="map-card">
