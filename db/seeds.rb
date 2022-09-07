@@ -7,6 +7,7 @@ Chatroom.destroy_all
 Bottle.destroy_all
 Booking.destroy_all
 Event.destroy_all
+Survey.destroy_all
 User.destroy_all
 
 puts "Creating users..."
