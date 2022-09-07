@@ -133,7 +133,10 @@
 
         <h2 class="titre-profile">Recommendations</h2>
         <br>
-        <%= @recommendations %>
+        <h3>Partez à la découverte des régions viticoles suivantes :</h3>
+        <% @recommendations.each do | recommendation | %>
+          <%= render 'recommendation', recommendation: recommendation %>
+        <% end %>
 
         <div class="button">
           <%= link_to "survey", new_user_survey_path(user_id: current_user), class: "bouton-rouge" %>
