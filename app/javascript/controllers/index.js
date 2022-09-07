@@ -3,9 +3,6 @@
 // ./bin/rails generate stimulus controllerName
 
 import { application } from "./application"
-// import Carousel from 'stimulus-carousel'
-// application.register('carousel', Carousel)
-
 
 import ChatroomSubscriptionController from "./chatroom_subscription_controller"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
