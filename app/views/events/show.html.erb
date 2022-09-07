@@ -229,7 +229,7 @@
     <%# chat begins here %>
       <% if @event.host == current_user || @event.guests.include?(current_user) %>
 
-        <h2 class="text-center">Messages</h2>
+        <h2 class="text-center mt-4">Messages</h2>
 
         <div class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
 
