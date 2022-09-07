@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    if current_user.survey.nil?
+    if current_user.surveys == []
       new_user_survey_path(current_user)
     else
       events_url
