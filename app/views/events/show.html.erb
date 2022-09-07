@@ -185,7 +185,10 @@
     <div class="js-fun">
       <%# Si on est host, on voit un bouton Modifier %>
       <% if @event.host == current_user %>
-        <%= link_to "Modifier", edit_host_event_path(@event) %>
+
+        <div class="button">
+          <%= link_to "Modifier", edit_host_event_path(@event), class:"bouton-rouge" %>
+        </div>
 
       <%# Si on est pas host, mais qu'on est déjà un guest, on voit un bouton "Je ne viens plus" %>
       <% elsif @event.guests.include?(current_user) %>
