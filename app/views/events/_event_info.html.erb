@@ -14,11 +14,11 @@
           <p class="text-category-index"><%= event.category%></p>
           <p class="text-date-index"><%= event.date.to_fs(:rfc822) %></p>
         </div>
-        <p class="text-name-event-index"><%= event.name.capitalize %></p>
+        <p class="text-name-event-index"><%= event.name %></p>
 
         <div class="icon-address">
           <i class="fa-solid fa-house"></i>
-          <p class="text-city-index"><%= event.address.capitalize %></p>
+          <p class="text-city-index"><%= event.address %> <%= event.postal_code %> <%= event.city %></p>
         </div>
 
         <div class="icon-price">
