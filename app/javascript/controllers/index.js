@@ -16,5 +16,8 @@ application.register("hello", HelloController)
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import PreventDefaultController from "./prevent_default_controller"
+application.register("prevent-default", PreventDefaultController)
+
 import SearchEventsController from "./search_events_controller"
 application.register("search-events", SearchEventsController)
