@@ -24,3 +24,8 @@ application.register("scroll-animation", ScrollAnimationController)
 
 import SearchEventsController from "./search_events_controller"
 application.register("search-events", SearchEventsController)
+
+
+// import { Application } from '@hotwired/stimulus'
+import ScrollReveal from 'stimulus-scroll-reveal'
+application.register('scroll-reveal', ScrollReveal)
