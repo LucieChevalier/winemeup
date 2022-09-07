@@ -25,7 +25,7 @@ Rails.application.routes.draw do
     # As a host or participant, after an event is created, I can add bottles
     resources :bottles, only: %i[new create]
     # As a user, I can join an event
-    resources :bookings, only: %i[new create] # => TODO: Delete NEW if not needed
+    resources :bookings, only: %i[new create destroy] # => TODO: Delete NEW if not needed
     # Chatroom
     resources :chatrooms, only: :show do
       resources :messages, only: :create
