@@ -184,12 +184,19 @@
     <div class="js-fun">
       <%# Si on est host, on voit un bouton Modifier %>
       <% if @event.host == current_user %>
+
         <div class="button">
           <%= link_to "Modifier", edit_host_event_path(@event), class:"bouton-rouge" %>
         </div>
+
       <%# Si on est pas host, mais qu'on est déjà un guest, on voit un bouton "Je ne viens plus" %>
       <% elsif @event.guests.include?(current_user) %>
-        <div class="dont-come"><%= link_to "Je ne viens plus"%></div>
+        <div class="dont-come">
+          <%= link_to "Je ne viens plus",
+            event_booking_path(@event),
+            data: {turbo_method: :delete}
+          %>
+        </div>
       <%# Si on n'est ni host ni guest, on voit un bouton Participer %>
       <% else %>
 
@@ -225,7 +232,7 @@
     <%# chat begins here %>
       <% if @event.host == current_user || @event.guests.include?(current_user) %>
 
-        <h2 class="text-center">Messages</h2>
+        <h2 class="text-center mt-4">Messages</h2>
 
         <div class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
 

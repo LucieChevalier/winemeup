@@ -8,11 +8,11 @@
                     required: false,
                     autofocus: true,
                     label: false,
-                    input_html: { placeholder: "Email"} %>
+                    input_html: { placeholder: "Adresse e-mail"} %>
         <%= f.input :password,
                     required: false,
                     label: false,
-                    input_html: { autocomplete: "current-password", placeholder: "Mot de passe" } %>
+                    input_html: { autocomplete: "current-password", placeholder: "******" } %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
@@ -23,7 +23,7 @@
 
       <div class="forget-btn-div">
         <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-          <%= link_to "Forgot your password?", new_password_path(resource_name), class: "forget-btn"%><br />
+          <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), class: "forget-btn"%><br />
         <% end %>
       </div>
     <% end %>

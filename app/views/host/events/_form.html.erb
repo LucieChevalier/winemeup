@@ -32,7 +32,7 @@
                     required: true,
                     autofocus: true,
                     label: false,
-                    input_html: { placeholder: "Code Postal", class: "fulladdress" }%>
+                    input_html: { placeholder: "Code postal", class: "fulladdress" }%>
       </div>
       <div class="address-item3">
         <%= f.input :city,
@@ -75,7 +75,7 @@
                   required: true,
                   autofocus: true,
                   label: false,
-                  input_html: { placeholder: "Une demande spéciale?" }%>
+                  input_html: { placeholder: "Demande spéciale ?" }%>
     </div>
 
     <div class="host-form-item2">
@@ -83,7 +83,7 @@
                   required: true,
                   autofocus: true,
                   label: false,
-                  input_html: { placeholder: "Nombre maximum de participant" }%>
+                  input_html: { placeholder: "Nbre max participants" }%>
     </div>
   </div>
 
@@ -93,7 +93,7 @@
                   required: true,
                   autofocus: true,
                   label: false,
-                  input_html: { placeholder: "Prix minimum / bouteille" }%>
+                  input_html: { placeholder: "Prix min/bouteille" }%>
     </div>
 
     <div class="price-form-item1">
@@ -101,14 +101,14 @@
                 required: true,
                 autofocus: true,
                 label: false,
-                input_html: { placeholder: "Prix maximum / bouteille" }%>
+                input_html: { placeholder: "Prix max/bouteille" }%>
     </div>
   </div>
 
 
   <div class="form-actions btn-create">
 
-  <% if @event %>
+  <% if @event.id %>
     <%= f.submit "Modifier", class: "btn"%>
   <% else %>
     <%= f.submit "Créer", class: "btn"%>
