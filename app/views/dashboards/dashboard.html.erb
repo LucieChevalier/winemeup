@@ -1,5 +1,5 @@
 <div class="container" style="margin-bottom: 10rem">
-  <%= link_to "survey", new_user_survey_path(user_id: current_user) %>
+
   <div class="card-dashboard-1 d-flex align-items-center justify-content-center">
     <%# Displaying avatar or default avatar %>
     <% if current_user.photo.attached? %>
@@ -9,9 +9,13 @@
       <%= image_tag "kitten.jpg" %>
     <% end %>
 
-    <div class="card-dashboard-1-infos d-flex flex-column align-items-center">
+    <div class="card-dashboard-1-infos d-flex flex-column">
       <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
-      <h3><%= current_user.level %></h3>
+
+      <div class="name-iconprofile">
+        <i class="fa-solid fa-bullseye"></i>
+        <h3><%= current_user.level %></h3>
+      </div>
     </div>
   </div>
 
@@ -31,13 +35,16 @@
 
   <div class="tab-content" id="pills-tabContent">
 
+
     <%# EVENTS %>
 
-            <h1>YOLQLELELELELELELELEEEEEEE</h1>
-        <%= @recommendations %>
     <div class="tab-pane active" id="events" role="tabpanel">
 
-        <h2>Mes évènements</h2>
+    <br>
+    <br>
+
+        <h2 class="titre-profile">Mes évènements</h2>
+          <br>
           <%# Display future events (host) %>
           <% @future_hosted_events.each do |event| %>
             <%= link_to event_path(event) do %>
@@ -74,7 +81,8 @@
 
         <hr class="mb-4 mt-4">
 
-        <h2>J'y vais !</h2>
+        <h2 class="titre-profile">J'y vais !</h2>
+            <br>
           <%# Display future bookings (guest) %>
           <% @future_attended_events.each do |event| %>
             <%= link_to event_path(event) do %>
@@ -118,35 +126,75 @@
     </div>
 
     <%# PROFILE %>
+    <br>
     <div class="tab-pane" id="profile" role="tabpanel">
+
+        <br>
+
+        <h2 class="titre-profile">Recommendations</h2>
+        <br>
+        <%= @recommendations %>
+
+        <div class="button">
+          <%= link_to "survey", new_user_survey_path(user_id: current_user), class: "bouton-rouge" %>
+        </div>
+        <br>
+
+        <hr class="mb-4 mt-4">
+        <br>
+
+        <h2 class="titre-profile">Mon profil</h2>
+
+        <br>
+        <div class="fullname-profile">
+          <div class="firstname-profile">
+            <strong><p>Prénom</p></strong>
+            <div class="prenom-profile">
+              <%= current_user.first_name ? current_user.first_name : "Vous n'avez pas renseigné votre prénom" %>
+            </div>
+          </div>
+
+          <div class="familly-profile">
+            <strong><p>Nom de Famille</p></strong>
+            <div class="familyname-profile">
+            <%= current_user.last_name ? current_user.last_name : "Vous n'avez pas renseigné votre nom" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="fulladdress-profile">
+          <div class="rue-profile">
+            <strong><p>Rue</p></strong>
+            <div class="rue-profileuni">
+              <%= current_user.address ? current_user.address : "Vous n'avez pas renseigné votre adresse" %>
+            </div>
+          </div>
+
+          <div class="postalcode-profile">
+            <strong><p>Code Postal</p></strong>
+            <div class="postalcodeuni">
+              <%= current_user.postal_code ? current_user.postal_code : "Vous n'avez pas renseigné votre code postal" %>
+            </div>
+          </div>
+
+          <div class="city-profile">
+            <strong><p>Ville</p></strong>
+            <div class="villeprofile">
+              <%= current_user.city ? current_user.city : "Vous n'avez pas renseigné votre ville" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="niveau-profile">
+          <strong><p>Niveau actuel</p></strong>
+          <div class="level-profile">
+            <%= current_user.level ? current_user.level : "Vous n'avez pas renseigné votre niveau" %>
+          </div>
+        </div>
 
         <div class="button">
           <%= link_to "Modifier", edit_user_path(current_user), class: "bouton-rouge mt-4 mb-4" %>
         </div>
-
-
-          <strong><p>Prénom</p></strong>
-          <%= current_user.first_name ? current_user.first_name : "Vous n'avez pas renseigné votre prénom" %>
-        <br>
-        <br>
-          <strong><p>Nom de Famille</p></strong>
-          <%= current_user.last_name ? current_user.last_name : "Vous n'avez pas renseigné votre nom" %>
-        <br>
-        <br>
-          <strong><p>Rue</p></strong>
-          <%= current_user.address ? current_user.address : "Vous n'avez pas renseigné votre adresse" %>
-        <br>
-        <br>
-          <strong><p>Code Postal</p></strong>
-          <%= current_user.postal_code ? current_user.postal_code : "Vous n'avez pas renseigné votre code postal" %>
-        <br>
-        <br>
-          <strong><p>Ville</p></strong>
-          <%= current_user.city ? current_user.city : "Vous n'avez pas renseigné votre ville" %>
-        <br>
-        <br>
-          <strong><p>Niveau actuel</p></strong>
-          <%= current_user.level ? current_user.level : "Vous n'avez pas renseigné votre niveau" %>
     </div>
 
   </div>
