@@ -1,25 +1,49 @@
+  <div class="survey">
     <%= simple_form_for @survey, url: user_surveys_path do |f| %>
 
-
+    <div class="question_1">
       <%= f.input :question_1,
                     as: :radio_buttons,
-                    label: "lwjkehrkjew",
-                    collection: [
-                        ['Novice'],
-                        ['Intermédiaire'],
-                        ['Expert']
-                        ],
+                    label: "Votre plaisir ultime?",
+                    collection:
+                    [
+                      ['Rouge'],
+                      ['Rosé'],
+                      ['Blanc'],
+                      ['Bulles'],
+                    ],
                     value_method: :first,
-                    required: true %> %>
+                    required: true %>
+    </div>
 
+    <div class="question_2">
       <%= f.input :question_2,
+                  as: :radio_buttons,
+                  label: "Plutôt finesse ou puissance?",
+                  collection:
+                    [
+                      ['Finesse'],
+                      ['Puissance'],
+                    ],
                   required: true,
                   autofocus: true %>
+    </div>
 
-
+    <div class="question_3">
         <%= f.input :question_3,
+                    as: :radio_buttons,
+                    label: "Plutôt fraîcheur ou rondeur?",
+                    collection:
+                    [
+                      ['Fraîcheur'],
+                      ['Rondeur'],
+                    ],
                     required: true,
                     autofocus: true %>
+    </div>
 
-        <%= f.submit "Créer", class: "btn"%>
+    <div class="button-start">
+        <%= f.submit "Commencer", class: "btn"%>
+    </div>
     <% end %>
+  </div>

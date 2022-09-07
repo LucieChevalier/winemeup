@@ -12,5 +12,35 @@ class DashboardsController < ApplicationController
     survey = current_user.survey
 
     @recommendations = survey.sommelier(survey.question_2, survey.question_3)
+
   end
+
+  def photo(category)
+    case category
+      when CATEGORIES[0]
+        @recommendation_photo = "alsace.jpg"
+      when CATEGORIES[1]
+        @recommendation_photo = "beaujolais.jpg"
+      when CATEGORIES[2]
+        @recommendation_photo = "bordeaux.jpg"
+      when CATEGORIES[3]
+        @recommendation_photo = "bourgogne.jpg"
+      when CATEGORIES[4]
+        @recommendation_photo = "champagne.jpg"
+      when CATEGORIES[5]
+        @recommendation_photo = "corse.jpg"
+      when CATEGORIES[6]
+        @recommendation_photo = "jura.jpg"
+      when CATEGORIES[7]
+        @recommendation_photo = "languedoc.jpg"
+      when CATEGORIES[8]
+        @recommendation_photo = "loire.jpg"
+      when CATEGORIES[9]
+        @recommendation_photo = "provence.jpg"
+      when CATEGORIES[10]
+        @recommendation_photo = "rhone.jpg"
+      when CATEGORIES[11]
+        @recommendation_photo = "sud.jpg"
+      end
+    end
 end
