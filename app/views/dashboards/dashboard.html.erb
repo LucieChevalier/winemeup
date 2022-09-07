@@ -41,14 +41,14 @@
 
         <br>
 
-        <h2 class="titre-profile">Recommendations</h2>
+        <h2 class="titre-profile">Mes recommandations</h2>
         <br>
         <% @recommendations.each do | recommendation | %>
           <%= render 'recommendation', recommendation: recommendation %>
         <% end %>
           <br>
         <div class="button">
-          <%= link_to "survey", new_user_survey_path(user_id: current_user), class: "bouton-rouge" %>
+          <%= link_to "Obtenir des recommandations", new_user_survey_path(user_id: current_user), class: "bouton-rouge" %>
         </div>
         <br>
 
@@ -109,7 +109,6 @@
         </div>
     </div>
 
-  </div>
 
     <%# EVENTS %>
 
@@ -201,3 +200,5 @@
     </div>
 
 </div>
+
+  </div>
