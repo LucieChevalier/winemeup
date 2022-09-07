@@ -168,3 +168,129 @@
 </div>
 </div>
 
+
+
+
+
+
+
+---------------------------------------------------
+
+
+<section>
+  <h1>Reveal element</h1>
+</section>
+<section>
+  <div class="container reveal">
+    <h2>Your Title</h2>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section>
+  <div class="container reveal">
+    <h2>Your Title</h2>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+    <div class="cards">
+      <div class="text-card2">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section>
+  <div class="container reveal">
+    <h2>Your Title</h2>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section>
+  <div class="container reveal">
+    <h2>Your Title</h2>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+    <div class="cards">
+      <div class="text-card">
+      <h3>Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor neque ipsa incidunt similique eos nisi consequuntur ullam earum quaerat laudantium sapiente laborum itaque nostrum consectetur voluptatibus dolores, expedita adipisci pariatur.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+<script type="text/javascript">
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+  var reveals = document.querySelectorAll('.reveal');
+
+for(var i = 0; i < reveals.length; i++){
+
+  var windowheight = window.innerHeight;
+  var revealtop = reveals[i].getBoundingClientRect().top;
+  // var revealpoint = 150;
+  var revealpoint = 150;
+
+
+  if(revealtop < windowheight - revealpoint){
+    reveals[i].classList.add('active');
+  }
+  else{
+    reveals[i].classList.remove('active');
+  }
+}
+}
+
+
+</script>
