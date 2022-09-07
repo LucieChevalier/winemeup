@@ -20,3 +20,14 @@ $grey: #808080;
 $yellobottle: #f5d800;
 $pinkbottle: #fbb089;
 $redbottle: #c1282d;
+
+$colors:
+ "redbottle" $redbottle,
+ "pinkbottle" $pinkbottle;
+
+
+ @each $name, $color in $colors {
+  .#{$name} {
+    color: $color;
+  }
+}

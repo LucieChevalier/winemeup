@@ -601,8 +601,8 @@ loire5 = Event.create!(
 loire = Event.create!(
 
 
-  name: 'toute la loire en pinard',
-  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise d'Auvergne (dont je me charge) jusqu'à notre Muscadet local, en passant par les vins que vous apporterez.",
+  name: 'toute la loire en pinards',
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de Cheviré pour une descente de la Loire par ses pinards : du Côte Roannaise d'Auvergne (dont je me charge) jusqu'à notre Muscadet local, en passant par ceux que vous apporterez...",
 
   address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
   date: Date.parse('1st Oct 2022'),
@@ -879,8 +879,8 @@ sud_ouest = Event.create!(
 )
 
 bordeaux = Event.create!(
-  name: "Dégustation premium d'entre-deux-mers",
-  description: '',
+  name: "Dégustation premium d'Entre-deux-mers",
+  description: "Avant d'orpailler les rives gauche puis droite de la Garonne, nous commençons notre exploration du vignoble bordelais par le milieu avec l'Entre-deux-mers.",
   address: '33 rue Saint-Léonard, 44000 Nantes',
   date: Date.parse('18 Aug 2022'),
   time: Time.parse('15:00'),
@@ -1075,17 +1075,6 @@ muscadet_sèvre_et_maine = Bottle.create!(
   user: user2
 )
 
-
-
-
-
-
-
-
-
-
-
-
 puts "Creating bookings..."
 
 booking_1 = Booking.create!(
@@ -1220,6 +1209,20 @@ booking_18 = Booking.create!(
   comment: '',
   guest: user9,
   event: beaujolais
+)
+
+booking_19 = Booking.create!(
+  status: 'Past',
+  comment: '',
+  guest: user7,
+  event: bordeaux
+)
+
+booking_19 = Booking.create!(
+  status: 'Past',
+  comment: '',
+  guest: user6,
+  event: bordeaux
 )
 
 puts "Finished"
