@@ -11,9 +11,9 @@
   justify-content: space-around;
   position: fixed;
   width: 80%;
-  bottom: 5px;
+  bottom: 10px;
 
-  .accueil-nav, .explore-nav, .user-nav {
+  .accueil-nav, .explore-nav, .user-nav, .plus-nav {
     display: flex;
     flex-direction: column;
     margin-top: 12px;

@@ -1,0 +1,34 @@
+.fullname-profile, .fulladdress-profile, .niveau-profile {
+  display: flex;
+}
+
+.firstname-profile, .familly-profile, .rue-profile, .postalcode-profile, .city-profile, .niveau-profile {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 18px;
+
+  p {
+    color: lightgrey;
+    font-size: 14px;
+    font-style: italic;
+    margin-right: 6px;
+  }
+
+  .prenom-profile, .familyname-profile, .rue-profileuni, .postalcodeuni, .villeprofile, .level-profile {
+    color: lightslategray;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 0px;
+    display: flex;
+  }
+}
+
+.name-iconprofile {
+  color: $redwine;
+  display: flex;
+  align-items: center;
+
+  h3 {
+    margin-left: 6px;
+  }
+}

@@ -600,8 +600,10 @@ loire5 = Event.create!(
 
 loire = Event.create!(
 
-  name: 'Toute la loire en pinard',
-  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
+
+  name: 'toute la loire en pinard',
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise d'Auvergne (dont je me charge) jusqu'à notre Muscadet local, en passant par les vins que vous apporterez.",
+
   address: "49 quai Émile Cormerais, 44800 Saint-Herblain",
   date: Date.parse('1st Oct 2022'),
   time: Time.parse('14:30'),
