@@ -268,22 +268,22 @@ bourgogne = Event.create!(
   host: user2
 )
 
-provence5 = Event.create!(
-  name: 'Les 3 couleurs de la Provence : Blanc, Rosé, Rouge',
-  description: '',
-  address: '6 passage de la Poule Noire',
-  postal_code: '44000',
-  city: 'Nantes',
-  date: Date.parse('10th Sep 2022'),
-  time: Time.parse('12:00'),
-  category: "Provence",
-  level: 'Novice',
-  host_request: '',
-  max_number_guest: 5,
-  min_price: 8,
-  max_price: 12,
-  host: user2
-)
+# provence5 = Event.create!(
+#   name: 'Les 3 couleurs de la Provence : Blanc, Rosé, Rouge',
+#   description: '',
+#   address: '6 passage de la Poule Noire',
+#   postal_code: '44000',
+#   city: 'Nantes',
+#   date: Date.parse('10th Sep 2022'),
+#   time: Time.parse('12:00'),
+#   category: "Provence",
+#   level: 'Novice',
+#   host_request: '',
+#   max_number_guest: 5,
+#   min_price: 8,
+#   max_price: 12,
+#   host: user2
+# )
 
 provence4 = Event.create!(
   name: 'La Provence pas rosée : les Rouges',

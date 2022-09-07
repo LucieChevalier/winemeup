@@ -374,3 +374,78 @@
 .js-fun {
   margin-bottom: 24px;
 }
+
+.level-small-card {
+  position: absolute;
+
+  .text-level-index {
+    display: flex;
+    background: #FF6163;
+    color: white;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+    margin: -205px 16px;
+    padding: 6px 10px 6px 10px;
+    gap: 4px;
+
+    i {
+      color: white
+    }
+  }
+}
+
+
+.icon-address {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    gap: 10px;
+    margin: 6px
+  }
+
+  .flex-wrap-address {
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    color: grey;
+    font-family: poppins;
+    font-size: 14px;
+    font-weight: 500;
+
+  }
+}
+
+
+.wrap-last-rank {
+  display: flex;
+
+  .city-price-wrap-ntm {
+
+    p {
+      color: grey !important;
+      font-family: poppins;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+  }
+
+  .price-icon-wrap-ntm {
+    display: flex;
+
+    .bts-ntm {
+      color: grey !important;
+    }
+
+    .text-price-index {
+      color: grey !important;
+      font-family: poppins;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
