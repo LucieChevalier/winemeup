@@ -1210,10 +1210,17 @@ booking_18 = Booking.create!(
   event: beaujolais
 )
 
-booking_12 = Booking.create!(
+booking_19 = Booking.create!(
   status: 'Past',
   comment: '',
-  guest: user5,
+  guest: user7,
+  event: bordeaux
+)
+
+booking_19 = Booking.create!(
+  status: 'Past',
+  comment: '',
+  guest: user6,
   event: bordeaux
 )
 
