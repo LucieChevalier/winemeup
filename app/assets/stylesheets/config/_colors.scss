@@ -22,9 +22,16 @@ $pinkbottle: #fbb089;
 $redbottle: #c1282d;
 
 $colors:
- "redbottle" $redbottle,
- "pinkbottle" $pinkbottle;
-
+"redbottle" $redbottle,
+"pinkbottle" $pinkbottle,
+"offwhite" $offwhite,
+"offpink" $offpink,
+"taup" $taup,
+"redwine" $redwine,
+"beige" $beige,
+"bluenight" $bluenight,
+"grey" $grey,
+"yellobottle" $yellobottle;
 
  @each $name, $color in $colors {
   .#{$name} {

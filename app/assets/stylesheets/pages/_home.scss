@@ -22,6 +22,36 @@ html, body {
   padding: 42px;
 }
 
+.button-landing {
+  display: flex;
+  justify-content: space-around;
+  background-color: $redwine;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid $redwine;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 48px;
+  margin-left: 48px;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: $redwine;
+    }
+  }
+
+
+  &:hover {
+    background-color: white;
+    border: 1px solid $redwine;
+  }
+
+}
+
 .titre-landing {
   font-size: 128px;
   color: $redwine;
@@ -70,11 +100,21 @@ html, body {
     }
 }
 
+// Format mobile SE
 
-// Format mobile
+@media (max-width: 376px) {
+
+  .block {
+    padding-top: 300px;
+  }
+}
+
+// Format mobile 12 pro
+// @media (min-width: 100px) and (max-width: 575px)
 
 @media only screen and (max-width: 600px) {
   .background-img {
+    height: 100vh;
     // background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.pexels.com/photos/3171201/pexels-photo-3171201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     // background-image: url("https://images.unsplash.com/photo-1464638681273-0962e9b53566?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
     // background-image: url("https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
@@ -157,6 +197,20 @@ html, body {
     }
   }
 
+  .flex-wrapping {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+
+    .wrapping-home {
+      margin-top: 250px;
+
+      .button-landing {
+        margin-top: 72px;
+      }
+    }
+  }
+
 
 
 
@@ -177,7 +231,7 @@ html, body {
 }
   .carousel-inner {
     img {
-      border-radius: 16px;
+      border-radius: none;
     }
 
   }
@@ -431,7 +485,8 @@ html, body {
 
 .contentcd {
   width: 100%;
-  text-align: center;}
+  // text-align: left;
+}
 
 .title-snapcroll {
   margin-right: 10px;
@@ -446,7 +501,7 @@ html, body {
 .contentcd>span {
   margin-right: 10px;
   margin-left: 10px;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   // color: $redbottle;
   color: $redbottle;
@@ -462,7 +517,7 @@ html, body {
 .contentcd>p {
   margin-right: 10px;
   margin-left: 10px;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   // color: $redbottle;
   color: $redbottle;
@@ -475,6 +530,11 @@ html, body {
   // border-radius: 16px;
 }
 
+.contentcd>i {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+}
 
 .contentcd>img {
   font-size: 20px;
