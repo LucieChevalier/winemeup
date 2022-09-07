@@ -2,11 +2,13 @@
 
 puts "Destroying existing seeds"
 
+
 Message.destroy_all
 Chatroom.destroy_all
 Bottle.destroy_all
 Booking.destroy_all
 Event.destroy_all
+Survey.destroy_all
 User.destroy_all
 
 puts "Creating users..."
@@ -19,7 +21,7 @@ user1 = User.create!(
   address: '49 quai Émile Cormerais',
   level: 'Expert',
   postal_code: '44800',
-  city: 'Saint-Herblain'
+  city: 'Saint-Herblain',
 )
 
 file = URI.open("https://avatars.githubusercontent.com/u/106144925")
