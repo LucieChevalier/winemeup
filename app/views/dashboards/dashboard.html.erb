@@ -25,20 +25,95 @@
   <div class="text-center">
     <ul class="nav nav-pills d-inline-flex text-center border-0 rounded-nav" id="myTab" role="tablist">
       <li class="nav-item flex-fill" role="presentation">
-        <button class="nav-link active" id="events-tab" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab">Évènements</button>
+        <button class="nav-link active" id="events-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Profil</button>
       </li>
       <li class="nav-item flex-fill" role="presentation">
-        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Profil</button>
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab">Évènements</button>
       </li>
     </ul>
   </div>
 
   <div class="tab-content" id="pills-tabContent">
 
+    <%# PROFILE %>
+    <br>
+    <div class="tab-pane active" id="profile" role="tabpanel">
+
+        <br>
+
+        <h2 class="titre-profile">Recommendations</h2>
+        <br>
+        <% @recommendations.each do | recommendation | %>
+          <%= render 'recommendation', recommendation: recommendation %>
+        <% end %>
+          <br>
+        <div class="button">
+          <%= link_to "survey", new_user_survey_path(user_id: current_user), class: "bouton-rouge" %>
+        </div>
+        <br>
+
+        <hr class="mb-4 mt-4">
+        <br>
+
+        <h2 class="titre-profile">Mon profil</h2>
+
+        <br>
+        <div class="fullname-profile">
+          <div class="firstname-profile">
+            <strong><p>Prénom</p></strong>
+            <div class="prenom-profile">
+              <%= current_user.first_name ? current_user.first_name : "Vous n'avez pas renseigné votre prénom" %>
+            </div>
+          </div>
+
+          <div class="familly-profile">
+            <strong><p>Nom de Famille</p></strong>
+            <div class="familyname-profile">
+            <%= current_user.last_name ? current_user.last_name : "Vous n'avez pas renseigné votre nom" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="fulladdress-profile">
+          <div class="rue-profile">
+            <strong><p>Rue</p></strong>
+            <div class="rue-profileuni">
+              <%= current_user.address ? current_user.address : "Vous n'avez pas renseigné votre adresse" %>
+            </div>
+          </div>
+
+          <div class="postalcode-profile">
+            <strong><p>Code Postal</p></strong>
+            <div class="postalcodeuni">
+              <%= current_user.postal_code ? current_user.postal_code : "Vous n'avez pas renseigné votre code postal" %>
+            </div>
+          </div>
+
+          <div class="city-profile">
+            <strong><p>Ville</p></strong>
+            <div class="villeprofile">
+              <%= current_user.city ? current_user.city : "Vous n'avez pas renseigné votre ville" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="niveau-profile">
+          <strong><p>Niveau actuel</p></strong>
+          <div class="level-profile">
+            <%= current_user.level ? current_user.level : "Vous n'avez pas renseigné votre niveau" %>
+          </div>
+        </div>
+
+        <div class="button">
+          <%= link_to "Modifier", edit_user_path(current_user), class: "bouton-rouge mt-4 mb-4" %>
+        </div>
+    </div>
+
+  </div>
 
     <%# EVENTS %>
 
-    <div class="tab-pane active" id="events" role="tabpanel">
+    <div class="tab-pane" id="events" role="tabpanel">
 
     <br>
     <br>
@@ -125,80 +200,4 @@
 
     </div>
 
-    <%# PROFILE %>
-    <br>
-    <div class="tab-pane" id="profile" role="tabpanel">
-
-        <br>
-
-        <h2 class="titre-profile">Recommendations</h2>
-        <br>
-        <h3 class="sous-tritre-profile">Partez à la découverte des régions viticoles suivantes :</h3>
-        <% @recommendations.each do | recommendation | %>
-          <%= render 'recommendation', recommendation: recommendation %>
-        <% end %>
-          <br>
-        <div class="button">
-          <%= link_to "survey", new_user_survey_path(user_id: current_user), class: "bouton-rouge" %>
-        </div>
-        <br>
-
-        <hr class="mb-4 mt-4">
-        <br>
-
-        <h2 class="titre-profile">Mon profil</h2>
-
-        <br>
-        <div class="fullname-profile">
-          <div class="firstname-profile">
-            <strong><p>Prénom</p></strong>
-            <div class="prenom-profile">
-              <%= current_user.first_name ? current_user.first_name : "Vous n'avez pas renseigné votre prénom" %>
-            </div>
-          </div>
-
-          <div class="familly-profile">
-            <strong><p>Nom de Famille</p></strong>
-            <div class="familyname-profile">
-            <%= current_user.last_name ? current_user.last_name : "Vous n'avez pas renseigné votre nom" %>
-            </div>
-          </div>
-        </div>
-
-        <div class="fulladdress-profile">
-          <div class="rue-profile">
-            <strong><p>Rue</p></strong>
-            <div class="rue-profileuni">
-              <%= current_user.address ? current_user.address : "Vous n'avez pas renseigné votre adresse" %>
-            </div>
-          </div>
-
-          <div class="postalcode-profile">
-            <strong><p>Code Postal</p></strong>
-            <div class="postalcodeuni">
-              <%= current_user.postal_code ? current_user.postal_code : "Vous n'avez pas renseigné votre code postal" %>
-            </div>
-          </div>
-
-          <div class="city-profile">
-            <strong><p>Ville</p></strong>
-            <div class="villeprofile">
-              <%= current_user.city ? current_user.city : "Vous n'avez pas renseigné votre ville" %>
-            </div>
-          </div>
-        </div>
-
-        <div class="niveau-profile">
-          <strong><p>Niveau actuel</p></strong>
-          <div class="level-profile">
-            <%= current_user.level ? current_user.level : "Vous n'avez pas renseigné votre niveau" %>
-          </div>
-        </div>
-
-        <div class="button">
-          <%= link_to "Modifier", edit_user_path(current_user), class: "bouton-rouge mt-4 mb-4" %>
-        </div>
-    </div>
-
-  </div>
 </div>
