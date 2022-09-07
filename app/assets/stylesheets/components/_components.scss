@@ -116,6 +116,7 @@
       font-weight: 600;
       font-size: 12px;
       margin-left: 5px;
+      align-items: baseline; // Lucie
     }
   }
 
@@ -142,6 +143,7 @@
 
   .icon-price {
     display: flex;
+    justify-content: space-between; // Lucie
     align-items: center;
     margin-left: 6px;
 

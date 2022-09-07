@@ -14,16 +14,19 @@
           <p class="text-category-index"><%= event.category%></p>
           <p class="text-date-index"><%= event.date.to_fs(:rfc822) %></p>
         </div>
-        <p class="text-name-event-index"><%= event.name.capitalize %></p>
+        <p class="text-name-event-index"><%= event.name %></p>
 
         <div class="icon-address">
           <i class="fa-solid fa-house"></i>
-          <p class="text-city-index"><%= event.address.capitalize %></p>
+          <p class="text-city-index"><%= event.address %> <%= event.postal_code %> <%= event.city %></p>
         </div>
 
         <div class="icon-price">
-          <i class="fa-solid fa-wine-bottle"></i>
-          <p class="text-price-index"><%= event.min_price %>€ à <%= event.max_price %>€</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <i class="fa-solid fa-wine-bottle"></i>
+            <p class="text-price-index"><%= event.min_price %> € à <%= event.max_price %> €</p>
+          </div>
+            <div class="text-price-index"><i class="fa-solid fa-bullseye"></i> <%= event.level %></div>
         </div>
 
       </div>

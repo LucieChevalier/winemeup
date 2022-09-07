@@ -1,19 +1,24 @@
 .button {
   .bouton-rouge {
-    color: #F3EED9;
+    border: solid 1px $redwine;
+    color: white;
     background: #FF6163;
-    padding: 16px 14px;
+    padding: 6px;
     border-radius: 16px;
     text-decoration: none;
     width: 100%;
     text-align: center;
     display: inline-block;
+
+    a {
+      font-size: 14px;
+    }
   }
 
   .bouton-rouge:hover {
-    color: white;
-    background-color: #f54649;
-    font-weight: bold;
+    color: $redwine;
+    background-color: white;
+    // border: solid 1px $redwine
   }
 
 

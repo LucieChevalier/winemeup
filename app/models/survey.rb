@@ -38,11 +38,11 @@ class Survey < ApplicationRecord
 
   def sommelier(answer_2, answer_3)
     if answer_2 == 'Finesse'
-      return TERROIR_FRAIS if answer_3 == 'Fraicheur'
+      return TERROIR_FRAIS if answer_3 == 'Fraîcheur'
 
       TERROIR_MEDDITERRANEEN
     else
-      return TERROIR_FINESSE if answer_3 == 'Fraicheur'
+      return TERROIR_FINESSE if answer_3 == 'Fraîcheur'
 
       TERROIR_PUISSANCE
     end

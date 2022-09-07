@@ -18,6 +18,13 @@ class BookingsController < ApplicationController
     redirect_to event_path(@event)
   end
 
+  def destroy
+    @event = Event.find(params[:id])
+    @booking = Booking.find_by(event: @event)
+    @booking.destroy
+    redirect_to event_path, status: :see_other
+  end
+
   private
 
   def booking_params

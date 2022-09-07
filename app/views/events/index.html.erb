@@ -3,7 +3,7 @@
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: "Trouver l'évènement de votre choix",
+      placeholder: "Chercher un évènement",
       data: { action: "keyup->search-events#update", search_events_target: "input" }
     %>
     <%= submit_tag "Chercher", class: "btn btn-primary" %>
