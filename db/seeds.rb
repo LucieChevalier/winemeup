@@ -200,7 +200,7 @@ puts "Creating events..."
 
 
 bourgogne3 = Event.create!(
-  name: 'Les Bourgognes du Sud : Mâconnais & côtes Chalonnaise',
+  name: 'Les Bourgognes du Sud : le Mâconnais',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -251,7 +251,7 @@ bourgogne1 = Event.create!(
 )
 
 bourgogne = Event.create!(
-  name: 'Nuit blanche au côte de nuits',
+  name: 'Nuit blanche au Côte de nuits',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -268,7 +268,7 @@ bourgogne = Event.create!(
 )
 
 provence5 = Event.create!(
-  name: 'Les 3 couleurs de la Provence : Blanc, Rosé, Rouge',
+  name: 'Les 3 couleurs de la Provence',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -302,7 +302,7 @@ provence4 = Event.create!(
 )
 
 provence3 = Event.create!(
-  name: 'Le tour des massifs provençaux en pinards',
+  name: 'Les massifs provençaux en pinards',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -336,7 +336,7 @@ provence2 = Event.create!(
 )
 
 provence1 = Event.create!(
-  name: 'Pique-nique arrosé aux vins de provence',
+  name: 'Pique-nique au rosé de provence',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -353,7 +353,7 @@ provence1 = Event.create!(
 )
 
 provence = Event.create!(
-  name: 'Pique-nique arrosé aux vins de provence',
+  name: 'Pique-nique au rosé de provence',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -371,7 +371,7 @@ provence = Event.create!(
 
 
 beaujolais3 = Event.create!(
-  name: 'Le Beaujolais entre Bourgogne & Lyonnais',
+  name: 'Beaujolais ou Lyonnais ?',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -388,7 +388,7 @@ beaujolais3 = Event.create!(
 )
 
 beaujolais2 = Event.create!(
-  name: 'Pinard ou nectar? Les 2 visages du Beaujolais villages',
+  name: 'Les 2 visages du Beaujolais villages',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -440,7 +440,7 @@ beaujolais = Event.create!(
 
 
 alsace_lorraine3 = Event.create!(
-  name: "MTM-Meuse Toul et Maine : les oubliés de Lorraine",
+  name: "Meuse et Maine : les oubliés de Lorraine",
   description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -457,7 +457,7 @@ alsace_lorraine3 = Event.create!(
 )
 
 alsace_lorraine2 = Event.create!(
-  name: "Rieslings & Gewurztraminer du Bas-Rhin (67)",
+  name: "Rieslings & Gewurztraminer du Bas-Rhin",
   description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -509,7 +509,7 @@ alsace_lorraine = Event.create!(
 
 
 champagne3 = Event.create!(
-  name: "Vallée de la Marne & Montagne de Reims",
+  name: "La Montagne de Reims",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
@@ -526,7 +526,7 @@ champagne3 = Event.create!(
 )
 
 champagne2 = Event.create!(
-  name: "Les 3 côtes de Champagne : Blancs, Sézanne & Bars",
+  name: "Les 3 côtes de Champagne",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
@@ -543,7 +543,7 @@ champagne2 = Event.create!(
 )
 
 champagne1 = Event.create!(
-  name: "Les meilleurs pinards de Champagne hors les bulles",
+  name: "Les pinards sans bulle de Champagne",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
@@ -560,7 +560,7 @@ champagne1 = Event.create!(
 )
 
 champagne = Event.create!(
-  name: "Avant-Saint-Sylvestre aux 8 champagnes",
+  name: "8 champagnes avant les fêtes",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
@@ -579,7 +579,7 @@ champagne = Event.create!(
 
 loire2 = Event.create!(
 
-  name: "Les Vins de rois d'Anjou et du Saumurois",
+  name: "Les Vins de rois du Saumurois",
   description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais",
   postal_code: '44800',
@@ -615,7 +615,7 @@ loire3 = Event.create!(
 
 loire4 = Event.create!(
 
-  name: "Orléans, capitale du vinaigre, mais pas que...",
+  name: "Orléans, pas capitale que du vinaigre!",
   description: "Soyez les bienvenus dans mon jardin, sous le pont de Cheviré pour une descente de la loire par ses pinards : du Saint-Pourçain d'Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais",
   postal_code: '44800',
@@ -633,7 +633,7 @@ loire4 = Event.create!(
 
 loire5 = Event.create!(
 
-  name: "Tout en amont, les vins d'Auvergne",
+  name: "la loire commence en Auvergne",
   description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais",
   postal_code: '44800',
@@ -650,8 +650,6 @@ loire5 = Event.create!(
 )
 
 loire = Event.create!(
-
-
   name: 'Toute la loire en pinards',
   description: "Soyez les bienvenus dans mon jardin, sous le pont de Cheviré pour une descente de la Loire par ses pinards : du Saint-Pourçain d'Auvergne (dont je me charge) jusqu'à notre Muscadet local, en passant par ceux que vous apporterez...",
   address: "49 quai Émile Cormerais",
@@ -668,7 +666,7 @@ loire = Event.create!(
   host: user1
 )
 
-sud_ouest1 = Event.create!(
+sud_ouest5 = Event.create!(
   name: "Wine-Up de rentrée",
   description: "Déjà une semaine qu'on est rentrés! Et si on ressortait notre vin préféré de cet été! Pour moi c'était l'Irouléguy du pays basque. Et vous ?",
   address: 'Passage de la Poule Noire',
@@ -686,7 +684,7 @@ sud_ouest1 = Event.create!(
 )
 
 vallee_du_rhone1 = Event.create!(
-  name: 'Rouges et blancs de la vallée du Rhône septentrionale',
+  name: 'Les Rouges du Rhône septentrional',
   description: '',
   address: '21 rue de Cahors',
   postal_code: '44100',
@@ -703,7 +701,7 @@ vallee_du_rhone1 = Event.create!(
 )
 
 vallee_du_rhone2 = Event.create!(
-  name: 'Vallée du rhône méridonale et charcuterie',
+  name: 'Rhône méridonal et charcuterie',
   description: 'Rouges et blancs de la vallée du Rhône méridionale',
   address: '21 rue de Cahors',
   postal_code: '44100',
@@ -790,7 +788,7 @@ languedoc_roussillon1 = Event.create!(
 )
 
 sud_ouest1 = Event.create!(
-  name: 'Petits vins des Pyrénées',
+  name: 'Petits vins Pyrénéens',
   description: '',
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -843,7 +841,7 @@ bordeaux1 = Event.create!(
 
 
 bordeaux2 = Event.create!(
-  name: "Bordeaux rive-droite : Blayais & Libournais",
+  name: "Bordeaux rive-droite : le Libournais",
   description: '',
   address: '33 rue Saint-Léonard',
   postal_code: '44000',
@@ -863,7 +861,7 @@ bordeaux2 = Event.create!(
 # PASSES
 
 vallee_du_rhone = Event.create!(
-  name: 'Vallée du rhône méridonale et charcuterie',
+  name: 'Vallée du rhône méridonal ',
   description: '',
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -880,7 +878,7 @@ vallee_du_rhone = Event.create!(
 )
 
 corse = Event.create!(
-  name: 'Vins corsés et fromages qui fouettent',
+  name: 'Vins corsés et fromages forts',
   description:  '',
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -1335,13 +1333,13 @@ booking_19 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user6,
-  event: sud-ouest1
+  event: sud_ouest5
 )
 
 booking_19 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user7,
-  event: sud-ouest1
+  event: sud_ouest5
 )
 puts "Finished"
