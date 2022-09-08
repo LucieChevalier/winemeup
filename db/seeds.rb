@@ -453,7 +453,7 @@ alsace_lorraine3 = Event.create!(
   max_number_guest: 6,
   min_price: 9,
   max_price: 13,
-  host: user1
+  host: user2
 )
 
 alsace_lorraine2 = Event.create!(
@@ -470,7 +470,7 @@ alsace_lorraine2 = Event.create!(
   max_number_guest: 6,
   min_price: 9,
   max_price: 13,
-  host: user1
+  host: user2
 )
 
 alsace_lorraine1 = Event.create!(
@@ -487,7 +487,7 @@ alsace_lorraine1 = Event.create!(
   max_number_guest: 6,
   min_price: 9,
   max_price: 13,
-  host: user1
+  host: user2
 )
 
 alsace_lorraine = Event.create!(
@@ -504,7 +504,7 @@ alsace_lorraine = Event.create!(
   max_number_guest: 6,
   min_price: 9,
   max_price: 13,
-  host: user1
+  host: user2
 )
 
 
@@ -565,7 +565,7 @@ champagne = Event.create!(
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
   city: 'Nantes',
-  date: Date.parse('30th Sep 2022'),
+  date: Date.parse('15th Sep 2022'),
   time: Time.parse('21:00'),
   category: "Champagne",
   level: 'Novice',
@@ -592,7 +592,7 @@ loire2 = Event.create!(
   max_number_guest: 7,
   min_price: 8,
   max_price: 12,
-  host: user1
+  host: user2
 )
 
 loire3 = Event.create!(
@@ -610,13 +610,13 @@ loire3 = Event.create!(
   max_number_guest: 7,
   min_price: 8,
   max_price: 12,
-  host: user1
+  host: user3
 )
 
 loire4 = Event.create!(
 
   name: "Orléans, capitale du vinaigre, mais pas que...",
-  description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de Cheviré pour une descente de la loire par ses pinards : du Saint-Pourçain d'Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais",
   postal_code: '44800',
   city: 'Saint-Herblain',
@@ -628,7 +628,7 @@ loire4 = Event.create!(
   max_number_guest: 7,
   min_price: 8,
   max_price: 12,
-  host: user1
+  host: user3
 )
 
 loire5 = Event.create!(
@@ -646,7 +646,7 @@ loire5 = Event.create!(
   max_number_guest: 7,
   min_price: 8,
   max_price: 12,
-  host: user1
+  host: user3
 )
 
 loire = Event.create!(
@@ -665,6 +665,23 @@ loire = Event.create!(
   max_number_guest: 7,
   min_price: 8,
   max_price: 12,
+  host: user1
+)
+
+sud_ouest = Event.create!(
+  name: "Wine-Up de rentrée",
+  description: "Déjà une semaine qu'on est rentrés! Et si on ressortait notre vin préféré de cet été! Pour moi c'était l'Irouléguy du pays basque. Et vous ?",
+  address: 'Passage de la Poule Noire',
+  postal_code: '44000',
+  city: 'Nantes',
+  date: Date.parse('9th Sep 2022'),
+  time: Time.parse('19:30'),
+  category: "Sud-Ouest",
+  level: 'Novice',
+  host_request: 'Le vin de ton été !',
+  max_number_guest: 14,
+  min_price: 5,
+  max_price: 10,
   host: user1
 )
 
@@ -786,7 +803,7 @@ sud_ouest1 = Event.create!(
   max_number_guest: 11,
   min_price: 9,
   max_price: 13,
-  host: user1
+  host: user3
 )
 
 sud_ouest2 = Event.create!(
@@ -803,7 +820,7 @@ sud_ouest2 = Event.create!(
   max_number_guest: 11,
   min_price: 9,
   max_price: 13,
-  host: user1
+  host: user3
 )
 
 
@@ -848,8 +865,8 @@ bordeaux2 = Event.create!(
 vallee_du_rhone = Event.create!(
   name: 'Vallée du rhône méridonale et charcuterie',
   description: '',
-  address: '21 rue de Cahors',
-  postal_code: '44100',
+  address: '49 quai Émile Cormerais',
+  postal_code: '44800',
   city: 'Saint-Herblain',
   date: Date.parse('1st Sep 2022'),
   time: Time.parse('17:30'),
@@ -859,16 +876,16 @@ vallee_du_rhone = Event.create!(
   max_number_guest: 6,
   min_price: 9,
   max_price: 15,
-  host: user3
+  host: user1
 )
 
 corse = Event.create!(
-  name: 'Vins corsés et fromages qui puent',
+  name: 'Vins corsés et fromages qui fouettent',
   description:  '',
-  address: '21 rue de Cahors',
-  postal_code: '44100',
+  address: '49 quai Émile Cormerais',
+  postal_code: '44800',
   city: 'Saint-Herblain',
-  date: Date.parse('4th Sep 2022'),
+  date: Date.parse('4th May 2022'),
   time: Time.parse('18:30'),
   category: "Corse",
   level: 'Novice',
@@ -876,7 +893,7 @@ corse = Event.create!(
   max_number_guest: 6,
   min_price: 10,
   max_price: 14,
-  host: user3
+  host: user1
 )
 
 jura_savoie_bugey = Event.create!(
@@ -899,9 +916,9 @@ jura_savoie_bugey = Event.create!(
 languedoc_roussillon = Event.create!(
   name: 'Dégustation de nos vins du Roussillon',
   description: '',
-  address: '33 rue Saint-Léonard',
-  postal_code: '44000',
-  city: 'Nantes',
+  address: '49 quai Émile Cormerais',
+  postal_code: '44800',
+  city: 'Saint-Herblain',
   date: Date.parse('4th Sep 2022'),
   time: Time.parse('18:30'),
   category: "Languedoc-Roussillon",
@@ -910,7 +927,7 @@ languedoc_roussillon = Event.create!(
   max_number_guest: 7,
   min_price: 5,
   max_price: 10,
-  host: user4
+  host: user1
 )
 
 jura_savoie_bugey = Event.create!(
@@ -947,22 +964,6 @@ languedoc_roussillon = Event.create!(
   host: user4
 )
 
-sud_ouest = Event.create!(
-  name: 'Garden party et vins de notre pays basque',
-  description: '',
-  address: '49 quai Émile Cormerais',
-  postal_code: '44800',
-  city: 'Saint-Herblain',
-  date: Date.parse('25th Aug 2022'),
-  time: Time.parse('17:00'),
-  category: "Sud-Ouest",
-  level: 'Intermédiaire',
-  host_request: '',
-  max_number_guest: 11,
-  min_price: 9,
-  max_price: 13,
-  host: user1
-)
 
 bordeaux = Event.create!(
   name: "Dégustation premium d'Entre-deux-mers",
@@ -981,6 +982,23 @@ bordeaux = Event.create!(
   host: user4
 )
 
+
+champagne3 = Event.create!(
+  name: "Vallée de la Marne & Montagne de Reims",
+  description:'Et si on essayait ensemble 8 champagnes? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
+  address: '49 quai Émile Cormerais',
+  postal_code: '44800',
+  city: 'Nantes',
+  date: Date.parse('17th Jul 2022'),
+  time: Time.parse('21:00'),
+  category: "Champagne",
+  level: 'Novice',
+  host_request: '',
+  max_number_guest: 7,
+  min_price: 16,
+  max_price: 20,
+  host: user1
+)
 puts "Creating bottles..."
 
 cote_roannaise = Bottle.create!(
