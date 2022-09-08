@@ -1,4 +1,6 @@
 .button {
+  display: flex;
+  justify-content: center;
   .bouton-rouge {
     border: solid 1px $redwine;
     color: white;
@@ -8,7 +10,10 @@
     text-decoration: none;
     width: 100%;
     text-align: center;
-    display: inline-block;
+    // display: inline-block;
+    margin-left: 24px;
+    margin-right: 24px;
+
 
     a {
       font-size: 14px;
