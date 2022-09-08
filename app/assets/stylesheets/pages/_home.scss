@@ -513,6 +513,8 @@ html, body {
   transition: 1s;
   // border: 1px solid #e3e3e3;
   // border-radius: 16px;
+  gap: 10px;
+  align-items: center;
 }
 
 .contentcd>p {
@@ -529,12 +531,16 @@ html, body {
   transition: 1s;
   // border: 1px solid #e3e3e3;
   // border-radius: 16px;
+  gap: 10px;
+  align-items: center;
 }
 
 .contentcd>i {
   margin-right: 10px;
   margin-left: 10px;
   display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .contentcd>img {
@@ -544,8 +550,12 @@ html, body {
   transition: 1s;
   // border: 1px solid #e3e3e3;
   // border-radius: 16px;
+  gap: 10px;
+  align-items: center;
 }
 // fin code scroll 4you
+
+
 
 // debut testimonials
 
