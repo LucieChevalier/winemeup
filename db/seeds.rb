@@ -2,7 +2,6 @@
 
 puts "Destroying existing seeds"
 
-
 Message.destroy_all
 Chatroom.destroy_all
 Bottle.destroy_all
@@ -21,7 +20,7 @@ user1 = User.create!(
   address: '49 quai Émile Cormerais',
   level: 'Expert',
   postal_code: '44800',
-  city: 'Saint-Herblain',
+  city: 'Saint-Herblain'
 )
 
 file = URI.open("https://avatars.githubusercontent.com/u/106144925")
@@ -76,7 +75,7 @@ user4.save
 user5 = User.create!(
   first_name: 'Jordan',
   last_name: 'Barreix',
-  email: 'jordan.barreix@free.fr',
+  email: 'jordan.barreix@gmail.com',
   password: '123456',
   address: '2 place Aristide Briand',
   level: 'Intermédiaire',
@@ -303,12 +302,12 @@ provence4 = Event.create!(
 )
 
 provence3 = Event.create!(
-  name: 'La Provence pas rosée : les Blancs',
+  name: 'Le tour des massifs provençaux en pinards',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
   city: 'Nantes',
-  date: Date.parse('23rd Sep 2022'),
+  date: Date.parse('24th Sep 2022'),
   time: Time.parse('12:00'),
   category: "Provence",
   level: 'Novice',
@@ -389,12 +388,12 @@ beaujolais3 = Event.create!(
 )
 
 beaujolais2 = Event.create!(
-  name: 'Les Beaujolais villages',
+  name: 'Pinard ou nectar? Les 2 visages du Beaujolais villages',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
   city: 'Nantes',
-  date: Date.parse('24th Sep 2022'),
+  date: Date.parse('23rd Sep 2022'),
   time: Time.parse('18:00'),
   category: "Beaujolais",
   level: 'Novice',
@@ -544,7 +543,7 @@ champagne2 = Event.create!(
 )
 
 champagne1 = Event.create!(
-  name: "Champagnes & Coteaux champenois de Vitry-le-François",
+  name: "Les meilleurs pinards de Champagne hors les bulles",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
@@ -653,7 +652,7 @@ loire5 = Event.create!(
 loire = Event.create!(
 
 
-  name: 'toute la loire en pinards',
+  name: 'Toute la loire en pinards',
   description: "Soyez les bienvenus dans mon jardin, sous le pont de Cheviré pour une descente de la Loire par ses pinards : du Côte Roannaise d'Auvergne (dont je me charge) jusqu'à notre Muscadet local, en passant par ceux que vous apporterez...",
   address: "49 quai Émile Cormerais",
   postal_code: '44800',
