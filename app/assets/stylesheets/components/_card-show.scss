@@ -290,6 +290,8 @@
       border: solid 1px $redwine;
       border-radius: 16px !important;
       margin-bottom: 16px;
+    
+
 
       &:hover {
         background: $redwine;
@@ -321,6 +323,7 @@
     .btn-interesse-show {
       display: flex;
       justify-content: space-evenly;
+
     }
   }
 }
