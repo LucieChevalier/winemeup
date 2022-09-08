@@ -653,7 +653,7 @@ loire = Event.create!(
 
 
   name: 'Toute la loire en pinards',
-  description: "Soyez les bienvenus dans mon jardin, sous le pont de Cheviré pour une descente de la Loire par ses pinards : du Côte Roannaise d'Auvergne (dont je me charge) jusqu'à notre Muscadet local, en passant par ceux que vous apporterez...",
+  description: "Soyez les bienvenus dans mon jardin, sous le pont de Cheviré pour une descente de la Loire par ses pinards : du Saint-Pourçain d'Auvergne (dont je me charge) jusqu'à notre Muscadet local, en passant par ceux que vous apporterez...",
   address: "49 quai Émile Cormerais",
   postal_code: '44800',
   city: 'Saint-Herblain',
@@ -668,7 +668,7 @@ loire = Event.create!(
   host: user1
 )
 
-sud_ouest = Event.create!(
+sud_ouest1 = Event.create!(
   name: "Wine-Up de rentrée",
   description: "Déjà une semaine qu'on est rentrés! Et si on ressortait notre vin préféré de cet été! Pour moi c'était l'Irouléguy du pays basque. Et vous ?",
   address: 'Passage de la Poule Noire',
@@ -1331,4 +1331,17 @@ booking_19 = Booking.create!(
   event: bordeaux
 )
 
+booking_19 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user6,
+  event: sud-ouest1
+)
+
+booking_19 = Booking.create!(
+  status: 'Upcoming',
+  comment: '',
+  guest: user7,
+  event: sud-ouest1
+)
 puts "Finished"
