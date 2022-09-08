@@ -1,4 +1,4 @@
-<div class="search-bar" data-controller="search-events">
+<div class="search-bar" data-controller="search-events" style="margin-bottom: 5rem">
   <%= form_with url: events_path, method: :get, class: "d-flex search-bar-index", data: { search_events_target: "form" } do %>
     <%= text_field_tag :query,
       params[:query],
