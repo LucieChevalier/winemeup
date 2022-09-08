@@ -59,7 +59,9 @@
     </div>
     <div class="ms-3">
       <p><%= @event.description %></p>
-      <p><strong>Demande :</strong> <%= @event.host_request %></p>
+      <% unless @event.host_request == "" %>
+        <p><strong>Demande :</strong> <%= @event.host_request %></p>
+      <% end %>
 
     </div>
 
