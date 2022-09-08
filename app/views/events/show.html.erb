@@ -55,10 +55,12 @@
 
     <p class= "titre-participant-bold pt-0 pb-0 mb-O text-center" style="color: #FF6163; font-size: 20px"><%= @event.name %></p>
     <div class="ms-5">
-      <p><em><%= @event.city %>, le <%= @event.date.strftime("%d %b %y")%> à <%= @event.time.strftime("%Hh%M") %></em><p>
+      <p><em><%= @event.city %>, <span style="color: #FF6163; font-weight: bold">le <%= @event.date.strftime("%d %b %Y")%> à <%= @event.time.strftime("%Hh%M") %></span></em><p>
     </div>
     <div class="ms-3">
       <p><%= @event.description %></p>
+      <p><strong>Demande :</strong> <%= @event.host_request %></p>
+
     </div>
 
   <%= link_to "Login", new_user_session_path, class: "button-index-create" unless user_signed_in? %>
