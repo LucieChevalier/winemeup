@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @event = Event.find(params[:id])
-    @booking = Booking.find_by(event: @event)
+    @booking = Booking.find_by(event: @event, guest: current_user)
     @booking.destroy
     redirect_to event_path, status: :see_other
   end
