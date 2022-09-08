@@ -14,14 +14,12 @@
           </div>
       </div>
     </div>
-
     <%# </div> %>
   </div>
 </div>
 
 
-
-<div class="container" data-controller="scroll-animation" data-action="scroll@window->scroll-animation#animText">
+<%# <div class="container" data-controller="scroll-animation" data-action="scroll@window->scroll-animation#animText">
   <div class="container container-snapscroll" >
     <br>
       <div class="snapscrollcards">
@@ -35,12 +33,25 @@
     <br>
   </div>
   <br>
+</div> %>
+
+
+<%# début du stimulus reveal  %>
+
+<div class="container">
+  <div data-controller="scroll-reveal">
+    <div data-scroll-reveal-target="item" class="reveal" data-delay="250ms" style="transition-delay: 250ms;">
+      <p class="titre-com">Que vous soyez novice ou expert, une dégustation reste une avenure personnelle qui fait appel à votre propre expérience</p>
+    </div>
+  </div>
 </div>
+
+
+<%# fin du stimulus reveal  %>
 
 
 <%# début du carouser   %>
 
-<%# <div class="container carousel-container"> %>
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -71,7 +82,6 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-<%# </div> %>
 
 <%# fin du carousel   %>
 
@@ -113,9 +123,23 @@
   </div>
 </div>
 
+<%# début du stimulus reveal  %>
+
+<%# <div class="container">
+  <h2 class="sous-titre-landing titre-second-screen">Les étapes pour rejoindre votre premier évènement</h2>
+
+  <div data-controller="scroll-reveal">
+  <p data-scroll-reveal-target="item" class="reveal text-carousel" data-delay="250ms" style="transition-delay: 250ms;"><i class="fa-solid fa-check"></i>Consulte les évènements près de chez toi</p>
+  <p data-scroll-reveal-target="item" class="reveal text-carousel"  data-delay="500ms" style="transition-delay: 500ms;"><i class="fa-solid fa-check"></i>Crée ton compte et obtiens ton profil œnologique</p>
+  <p data-scroll-reveal-target="item" class="reveal text-carousel"  data-delay="750ms" style="transition-delay: 750ms;"><i class="fa-solid fa-check"></i>Organise ou inscris-toi à un évènement</p>
+  <p data-scroll-reveal-target="item" class="reveal text-carousel"  data-delay="1000ms" style="transition-delay: 1000ms;"><i class="fa-solid fa-check"></i>Apporte ta bouteille selon le thème</p>
+  </div>
+</div> %>
+<%# fin du stimulus reveal  %>
+
+
+
   <div class="border-bottom"></div>
-
-
 
 <div class="container">
 <div class="container container-testimonial">
@@ -135,7 +159,7 @@
                     <div class="face back-face">
                         <span class="fas fa-quote-left"></span>
                         <div class="testimonial">
-                            J’ai participé hier à mon premier « Wine-Up » autour des « Côtes de Nuit ». Goûter 10 flacons d’exception en n’en payant qu’un seul, cela bat toutes les promotions ! Merci à « Wine-me-Up » d’avoir inventé la foire aux vins perpétuelle !
+                            J’ai participé hier à mon premier « Wine-Up » autour des « Côtes de Nuit ». Goûté 10 bouteilles d’exception en n’en payant qu’une seule, cela bat toutes les promotions ! Merci à « Wine-me-Up » d’avoir inventé la foire aux vins perpétuelle !
                         </div>
                         <span class="fas fa-quote-right"></span>
                     </div>
@@ -212,28 +236,3 @@
     </div>
   </div>
 </div>
-
-
-<script>
-
-// début scrollsnap 4you
-
-
-        // var elements = document.getElementsByClassName('itemscard');
-        // window.onscroll = function() {
-        //     for (let i = 0; i < elements.length; i++) {
-        //         if (elements[i].getBoundingClientRect().y <= 650) {
-        //             elements[i].children[0].children[1].style.transform = "translateY(0px)";
-        //             elements[i].children[0].children[1].style.opacity = 1;
-        //         } else {
-        //             elements[i].children[0].children[1].style.transform = "translateY(50px)";
-        //             elements[i].children[0].children[1].style.opacity = 0;
-        //         }
-        //     }
-        // }
-
-
-
-// fin scrollsnap 4you
-</script>
-d
