@@ -668,7 +668,7 @@ loire = Event.create!(
   host: user1
 )
 
-sud_ouest1 = Event.create!(
+sud_ouest5 = Event.create!(
   name: "Wine-Up de rentrée",
   description: "Déjà une semaine qu'on est rentrés! Et si on ressortait notre vin préféré de cet été! Pour moi c'était l'Irouléguy du pays basque. Et vous ?",
   address: 'Passage de la Poule Noire',
@@ -1335,13 +1335,13 @@ booking_19 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user6,
-  event: sud-ouest1
+  event: sud_ouest5
 )
 
 booking_19 = Booking.create!(
   status: 'Upcoming',
   comment: '',
   guest: user7,
-  event: sud-ouest1
+  event: sud_ouest5
 )
 puts "Finished"
