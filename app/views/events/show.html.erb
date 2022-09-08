@@ -167,11 +167,11 @@
               <div class="form-login">
                 <%= f.input :comment,
                             label: false,
-                            input_html: { placeholder: "Dis nous le nectar de ton choix" }%>
+                            input_html: { placeholder: "Dis-nous le nectar de ton choix" } %>
               </div>
               <div class="btn-interesse-show">
                 <%= f.submit "Participer", class: "btn" %>
-                <p data-action="click->edit#undisplayForm">Retour</p>
+                <%# <p data-action="click->edit#undisplayForm">Retour</p> %>
               </div>
             <% end %>
           </div>
