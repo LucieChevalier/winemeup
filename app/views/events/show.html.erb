@@ -107,6 +107,7 @@
       <% end %>
     </div>
 
+<% if @event.host == current_user || @event.guests.include?(current_user) %>
 
   <div class="border-bottom"></div>
 
@@ -126,6 +127,8 @@
       </div>
     </div>
   </div>
+
+<% end %>
 
   <div class="js-fun">
     <%# Si on est host, on voit un bouton Modifier %>
