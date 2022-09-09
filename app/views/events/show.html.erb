@@ -77,7 +77,8 @@
     <%# Display if the event is full, empty or how many tickets left %>
     <% if @bookings == [] %>
       <p class= "text-center ms-3"><em>Personne ne s'est encore inscrit</em></p>
-    <% elsif @bookings.count <= @event.max_number_guest %>
+    <% elsif @bookings.count >= @event.max_number_guest %>
+    <% raise %>
       <p class= "text-center ms-3"><em>Cet évènement est complet</em></p>
     <% else %>
       <p class= "text-center ms-3"><em>Il reste <%= @event.max_number_guest - @bookings.count %> place(s)</em></p>
@@ -150,7 +151,7 @@
     <% else %>
 
       <%# Si l'event est full, on n'affiche pas de bouton permettant de s'inscrire %>
-      <% if @bookings.count <= @event.max_number_guest %>
+      <% if @bookings.count >= @event.max_number_guest %>
         <%# On n'affiche rien ici %>
       <% else %>
         <div class="participer-show" data-controller="edit">
