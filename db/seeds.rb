@@ -194,6 +194,167 @@ file = URI.open("https://thumbs.dreamstime.com/b/homme-barbu-bel-buvant-du-vin-r
 user12.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user12.save
 
+
+user13 = User.create!(
+  first_name: 'Vinny',
+  last_name: 'Algaron',
+  email: 'vinny@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Bouguenais'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/108010616")
+user13.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user13.save
+
+
+user14 = User.create!(
+  first_name: 'Jean',
+  last_name: 'Avocat',
+  email: 'jean@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'La Montagne'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/86103386")
+user14.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user14.save
+
+
+user15 = User.create!(
+  first_name: 'Marwan',
+  last_name: 'Belhora',
+  email: 'marwan@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Intermédiaire',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/107486579")
+user15.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user15.save
+
+
+user16 = User.create!(
+  first_name: 'Benoit',
+  last_name: 'Brandt',
+  email: 'benoit@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/104198121")
+user16.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user16.save
+
+
+
+user17 = User.create!(
+  first_name: 'Melvin',
+  last_name: 'Darvieux',
+  email: 'melvin@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/105221230")
+user17.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user17.save
+
+
+user18 = User.create!(
+  first_name: 'Alfred',
+  last_name: 'Gaudin',
+  email: 'alfred@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Intermédiaire',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/107422134")
+user18.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user18.save
+
+
+user19 = User.create!(
+  first_name: 'Raphaël',
+  last_name: 'Hamou',
+  email: 'raphaël@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/107106167")
+user19.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user19.save
+
+user20 = User.create!(
+  first_name: 'Thomas',
+  last_name: 'Perez',
+  email: 'thomas@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/108613428")
+user20.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user20.save
+
+
+user21 = User.create!(
+  first_name: 'Sylvain ',
+  last_name: 'Vandermeersch',
+  email: 'sylvain@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Intermédiaire',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/106041442")
+user21.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user21.save
+
+
+user22 = User.create!(
+  first_name: 'Marguerite',
+  last_name: 'Choyer',
+  email: 'marguerite@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Intermédiaire',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/107570946")
+user22.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user22.save
+
+
 puts "Creating events..."
 
 # A VENIR
@@ -1331,15 +1492,96 @@ booking_19 = Booking.create!(
 
 booking_19 = Booking.create!(
   status: 'Upcoming',
-  comment: '',
+  comment: 'Gaillac 2019',
   guest: user6,
   event: sud_ouest5
 )
 
 booking_19 = Booking.create!(
   status: 'Upcoming',
-  comment: '',
+  comment: '1 Jurançon 2021',
   guest: user7,
   event: sud_ouest5
 )
+
+booking_20 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 madiran',
+  guest: user13,
+  event: sud_ouest5
+)
+
+booking_21 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 Irouléguy',
+  guest: user14,
+  event: sud_ouest5
+)
+
+booking_22 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 bergerac 2018',
+  guest: user15,
+  event: sud_ouest5
+)
+
+booking_23 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 Marcillac',
+  guest: user16,
+  event: sud_ouest5
+)
+
+booking_24 = Booking.create!(
+  status: 'Upcoming',
+  comment: 'Cahors 2020',
+  guest: user17,
+  event: sud_ouest5
+)
+
+booking_25 = Booking.create!(
+  status: 'Upcoming',
+  comment: 'un Fronton',
+  guest: user18,
+  event: sud_ouest5
+)
+
+
+booking_26 = Booking.create!(
+    status: 'Upcoming',
+    comment: '1 pécharmant, pour le nom',
+    guest: user19,
+    event: sud_ouest5
+)
+
+booking_27 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 buzet 2020',
+  guest: user20,
+  event: sud_ouest5
+)
+
+booking_28 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 Haut-Montravel 2021',
+  guest: user21,
+  event: sud_ouest5,
+)
+
+booking_29 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 Tursan 2017',
+  guest: user22,
+  event: sud_ouest5,
+)
+
+booking_30 = Booking.create!(
+  status: 'Upcoming',
+  comment: 'Saussignac 2018',
+  guest: user5,
+  event: sud_ouest5,
+)
+
+
+
 puts "Finished"
