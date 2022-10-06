@@ -109,7 +109,7 @@ user7 = User.create!(
   password: '123456',
   address: '12 rue Paul Bellamy',
   level: 'Intermédiaire',
-  postal_code: '44200',
+  postal_code: '44000',
   city: 'Nantes'
 
 )
@@ -194,13 +194,174 @@ file = URI.open("https://thumbs.dreamstime.com/b/homme-barbu-bel-buvant-du-vin-r
 user12.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
 user12.save
 
+
+user13 = User.create!(
+  first_name: 'Vinny',
+  last_name: 'Algaron',
+  email: 'vinny@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Bouguenais'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/108010616")
+user13.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user13.save
+
+
+user14 = User.create!(
+  first_name: 'Jean',
+  last_name: 'Avocat',
+  email: 'jean@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'La Montagne'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/86103386")
+user14.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user14.save
+
+
+user15 = User.create!(
+  first_name: 'Marwan',
+  last_name: 'Belhora',
+  email: 'marwan@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Intermédiaire',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/107486579")
+user15.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user15.save
+
+
+user16 = User.create!(
+  first_name: 'Benoit',
+  last_name: 'Brandt',
+  email: 'benoit@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/104198121")
+user16.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user16.save
+
+
+
+user17 = User.create!(
+  first_name: 'Melvin',
+  last_name: 'Darvieux',
+  email: 'melvin@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/105221230")
+user17.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user17.save
+
+
+user18 = User.create!(
+  first_name: 'Alfred',
+  last_name: 'Gaudin',
+  email: 'alfred@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Intermédiaire',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/107422134")
+user18.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user18.save
+
+
+user19 = User.create!(
+  first_name: 'Raphaël',
+  last_name: 'Hamou',
+  email: 'raphaël@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/107106167")
+user19.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user19.save
+
+user20 = User.create!(
+  first_name: 'Thomas',
+  last_name: 'Perez',
+  email: 'thomas@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Novice',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/108613428")
+user20.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user20.save
+
+
+user21 = User.create!(
+  first_name: 'Sylvain ',
+  last_name: 'Vandermeersch',
+  email: 'sylvain@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Intermédiaire',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/106041442")
+user21.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user21.save
+
+
+user22 = User.create!(
+  first_name: 'Marguerite',
+  last_name: 'Choyer',
+  email: 'marguerite@gmail.com',
+  password: '123456',
+  address: "60 rue de la Pais",
+  level: 'Intermédiaire',
+  postal_code: '44340',
+  city: 'Nantes'
+
+)
+file = URI.open("https://avatars.githubusercontent.com/u/107570946")
+user22.photo.attach(io: file, filename: "costume-1.jpg", content_type: "image/jpg")
+user22.save
+
+
 puts "Creating events..."
 
 # A VENIR
 
 
 bourgogne3 = Event.create!(
-  name: 'Les Bourgognes du Sud : Mâconnais & côtes Chalonnaise',
+  name: 'Les Bourgognes du Sud : le Mâconnais',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -251,7 +412,7 @@ bourgogne1 = Event.create!(
 )
 
 bourgogne = Event.create!(
-  name: 'Nuit blanche au côte de nuits',
+  name: 'Nuit blanche au Côte de nuits',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -268,7 +429,7 @@ bourgogne = Event.create!(
 )
 
 provence5 = Event.create!(
-  name: 'Les 3 couleurs de la Provence : Blanc, Rosé, Rouge',
+  name: 'Les 3 couleurs de la Provence',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -302,7 +463,7 @@ provence4 = Event.create!(
 )
 
 provence3 = Event.create!(
-  name: 'Le tour des massifs provençaux en pinards',
+  name: 'Les massifs provençaux en pinards',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -336,7 +497,7 @@ provence2 = Event.create!(
 )
 
 provence1 = Event.create!(
-  name: 'Pique-nique arrosé aux vins de provence',
+  name: 'Pique-nique au rosé de provence',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -353,7 +514,7 @@ provence1 = Event.create!(
 )
 
 provence = Event.create!(
-  name: 'Pique-nique arrosé aux vins de provence',
+  name: 'Pique-nique au rosé de provence',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -371,7 +532,7 @@ provence = Event.create!(
 
 
 beaujolais3 = Event.create!(
-  name: 'Le Beaujolais entre Bourgogne & Lyonnais',
+  name: 'Beaujolais ou Lyonnais ?',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -388,7 +549,7 @@ beaujolais3 = Event.create!(
 )
 
 beaujolais2 = Event.create!(
-  name: 'Pinard ou nectar? Les 2 visages du Beaujolais villages',
+  name: 'Les 2 visages du Beaujolais villages',
   description: '',
   address: '6 passage de la Poule Noire',
   postal_code: '44000',
@@ -440,7 +601,7 @@ beaujolais = Event.create!(
 
 
 alsace_lorraine3 = Event.create!(
-  name: "MTM-Meuse Toul et Maine : les oubliés de Lorraine",
+  name: "Meuse et Maine : les oubliés de Lorraine",
   description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -457,7 +618,7 @@ alsace_lorraine3 = Event.create!(
 )
 
 alsace_lorraine2 = Event.create!(
-  name: "Rieslings & Gewurztraminer du Bas-Rhin (67)",
+  name: "Rieslings & Gewurztraminer du Bas-Rhin",
   description: "Je vais faire la route des vins en Alsace le 17 septembre et serai ravi de vous faire un retour d'expérience à domicile le samedi suivant",
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -509,7 +670,7 @@ alsace_lorraine = Event.create!(
 
 
 champagne3 = Event.create!(
-  name: "Vallée de la Marne & Montagne de Reims",
+  name: "La Montagne de Reims",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
@@ -526,7 +687,7 @@ champagne3 = Event.create!(
 )
 
 champagne2 = Event.create!(
-  name: "Les 3 côtes de Champagne : Blancs, Sézanne & Bars",
+  name: "Les 3 côtes de Champagne",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
@@ -543,7 +704,7 @@ champagne2 = Event.create!(
 )
 
 champagne1 = Event.create!(
-  name: "Les meilleurs pinards de Champagne hors les bulles",
+  name: "Les pinards sans bulle de Champagne",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
@@ -560,7 +721,7 @@ champagne1 = Event.create!(
 )
 
 champagne = Event.create!(
-  name: "Avant-Saint-Sylvestre aux 8 champagnes",
+  name: "8 champagnes avant les fêtes",
   description:'Et si on essayait ensemble 8 champagnes le 30 septembre? Une sorte de warming-up 3 mois avant le réveillon et le meilleur moyen de bien choisir sa bouteille pour le jour J ',
   address:'33 rue Saint-Léonard',
   postal_code: '44000',
@@ -579,7 +740,7 @@ champagne = Event.create!(
 
 loire2 = Event.create!(
 
-  name: "Les Vins de rois d'Anjou et du Saumurois",
+  name: "Les Vins de rois du Saumurois",
   description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais",
   postal_code: '44800',
@@ -615,7 +776,7 @@ loire3 = Event.create!(
 
 loire4 = Event.create!(
 
-  name: "Orléans, capitale du vinaigre, mais pas que...",
+  name: "Orléans, pas capitale que du vinaigre!",
   description: "Soyez les bienvenus dans mon jardin, sous le pont de Cheviré pour une descente de la loire par ses pinards : du Saint-Pourçain d'Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais",
   postal_code: '44800',
@@ -633,7 +794,7 @@ loire4 = Event.create!(
 
 loire5 = Event.create!(
 
-  name: "Tout en amont, les vins d'Auvergne",
+  name: "la loire commence en Auvergne",
   description: "Soyez les bienvenus dans mon jardin, sous le pont de cheviré pour une descente de la loire par ses pinards : du Côte Roannaise en Auvergne jusqu'à notre Muscadet local",
   address: "49 quai Émile Cormerais",
   postal_code: '44800',
@@ -650,8 +811,6 @@ loire5 = Event.create!(
 )
 
 loire = Event.create!(
-
-
   name: 'Toute la loire en pinards',
   description: "Soyez les bienvenus dans mon jardin, sous le pont de Cheviré pour une descente de la Loire par ses pinards : du Saint-Pourçain d'Auvergne (dont je me charge) jusqu'à notre Muscadet local, en passant par ceux que vous apporterez...",
   address: "49 quai Émile Cormerais",
@@ -668,7 +827,7 @@ loire = Event.create!(
   host: user1
 )
 
-sud_ouest1 = Event.create!(
+sud_ouest5 = Event.create!(
   name: "Wine-Up de rentrée",
   description: "Déjà une semaine qu'on est rentrés! Et si on ressortait notre vin préféré de cet été! Pour moi c'était l'Irouléguy du pays basque. Et vous ?",
   address: 'Passage de la Poule Noire',
@@ -686,10 +845,10 @@ sud_ouest1 = Event.create!(
 )
 
 vallee_du_rhone1 = Event.create!(
-  name: 'Rouges et blancs de la vallée du Rhône septentrionale',
+  name: 'Les Rouges du Rhône septentrional',
   description: '',
   address: '21 rue de Cahors',
-  postal_code: '44100',
+  postal_code: '44800',
   city: 'Saint-Herblain',
   date: Date.parse('15th Sep 2023'),
   time: Time.parse('17:30'),
@@ -703,10 +862,10 @@ vallee_du_rhone1 = Event.create!(
 )
 
 vallee_du_rhone2 = Event.create!(
-  name: 'Vallée du rhône méridonale et charcuterie',
+  name: 'Rhône méridonal et charcuterie',
   description: 'Rouges et blancs de la vallée du Rhône méridionale',
   address: '21 rue de Cahors',
-  postal_code: '44100',
+  postal_code: '44800',
   city: 'Saint-Herblain',
   date: Date.parse('27th Sep 2023'),
   time: Time.parse('18:30'),
@@ -724,7 +883,7 @@ corse1 = Event.create!(
   name: 'Le GR vins',
   description:  '',
   address: '21 rue de Cahors',
-  postal_code: '44100',
+  postal_code: '44800',
   city: 'Saint-Herblain',
   date: Date.parse('14th Sep 2023'),
   time: Time.parse('18:30'),
@@ -741,7 +900,7 @@ corse2 = Event.create!(
   name: 'La Corse par le Sud',
   description:  '',
   address: '21 rue de Cahors',
-  postal_code: '44100',
+  postal_code: '44800',
   city: 'Saint-Herblain',
   date: Date.parse('26th Sep 2023'),
   time: Time.parse('18:30'),
@@ -758,7 +917,7 @@ jura_savoie_bugey1 = Event.create!(
   name: 'Dégustation des vins de nos montagnes',
   description: '',
   address: '21 rue de Cahors',
-  postal_code: '44100',
+  postal_code: '44800',
   city: 'Saint-Herblain',
   date: Date.parse('15th Sep 2023'),
   time: Time.parse('12:00'),
@@ -790,7 +949,7 @@ languedoc_roussillon1 = Event.create!(
 )
 
 sud_ouest1 = Event.create!(
-  name: 'Petits vins des Pyrénées',
+  name: 'Petits vins Pyrénéens',
   description: '',
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -843,7 +1002,7 @@ bordeaux1 = Event.create!(
 
 
 bordeaux2 = Event.create!(
-  name: "Bordeaux rive-droite : Blayais & Libournais",
+  name: "Bordeaux rive-droite : le Libournais",
   description: '',
   address: '33 rue Saint-Léonard',
   postal_code: '44000',
@@ -863,7 +1022,7 @@ bordeaux2 = Event.create!(
 # PASSES
 
 vallee_du_rhone = Event.create!(
-  name: 'Vallée du rhône méridonale et charcuterie',
+  name: 'Vallée du rhône méridonal ',
   description: '',
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -880,7 +1039,7 @@ vallee_du_rhone = Event.create!(
 )
 
 corse = Event.create!(
-  name: 'Vins corsés et fromages qui fouettent',
+  name: 'Vins corsés et fromages forts',
   description:  '',
   address: '49 quai Émile Cormerais',
   postal_code: '44800',
@@ -900,7 +1059,7 @@ jura_savoie_bugey = Event.create!(
   name: 'Dégustation des vins de nos montagnes',
   description: '',
   address: '21 rue de Cahors',
-  postal_code: '44100',
+  postal_code: '44800',
   city: 'Saint-Herblain',
   date: Date.parse('5th Sep 2023'),
   time: Time.parse('12:00'),
@@ -934,7 +1093,7 @@ jura_savoie_bugey = Event.create!(
   name: 'Dégustation des vins de nos montagnes',
   description: '',
   address: '21 rue de Cahors',
-  postal_code: '44100',
+  postal_code: '44800',
   city: 'Saint-Herblain',
   date: Date.parse('3rd sep 2023'),
   time: Time.parse('12:00'),
@@ -1331,17 +1490,98 @@ booking_19 = Booking.create!(
   event: bordeaux
 )
 
-# booking_19 = Booking.create!(
-#   status: 'Upcoming',
-#   comment: '',
-#   guest: user6,
-#   event: sud-ouest1
-# )
 
-# booking_19 = Booking.create!(
-#   status: 'Upcoming',
-#   comment: '',
-#   guest: user7,
-#   event: sud-ouest1
-# )
+booking_19 = Booking.create!(
+  status: 'Upcoming',
+  comment: 'Gaillac 2019',
+  guest: user6,
+  event: sud_ouest5
+)
+
+booking_19 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 Jurançon 2021',
+  guest: user7,
+  event: sud_ouest5
+)
+
+booking_20 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 madiran',
+  guest: user13,
+  event: sud_ouest5
+)
+
+booking_21 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 Irouléguy',
+  guest: user14,
+  event: sud_ouest5
+)
+
+booking_22 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 bergerac 2018',
+  guest: user15,
+  event: sud_ouest5
+)
+
+booking_23 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 Marcillac',
+  guest: user16,
+  event: sud_ouest5
+)
+
+booking_24 = Booking.create!(
+  status: 'Upcoming',
+  comment: 'Cahors 2020',
+  guest: user17,
+  event: sud_ouest5
+)
+
+booking_25 = Booking.create!(
+  status: 'Upcoming',
+  comment: 'un Fronton',
+  guest: user18,
+  event: sud_ouest5
+)
+
+
+booking_26 = Booking.create!(
+    status: 'Upcoming',
+    comment: '1 pécharmant, pour le nom',
+    guest: user19,
+    event: sud_ouest5
+)
+
+booking_27 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 buzet 2020',
+  guest: user20,
+  event: sud_ouest5
+)
+
+booking_28 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 Haut-Montravel 2021',
+  guest: user21,
+  event: sud_ouest5,
+)
+
+booking_29 = Booking.create!(
+  status: 'Upcoming',
+  comment: '1 Tursan 2017',
+  guest: user22,
+  event: sud_ouest5,
+)
+
+booking_30 = Booking.create!(
+  status: 'Upcoming',
+  comment: 'Saussignac 2018',
+  guest: user5,
+  event: sud_ouest5,
+)
+
+
 puts "Finished"

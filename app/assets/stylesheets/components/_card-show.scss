@@ -291,6 +291,8 @@
       border-radius: 16px !important;
       margin-bottom: 16px;
 
+
+
       &:hover {
         background: $redwine;
         color: white;
@@ -321,6 +323,7 @@
     .btn-interesse-show {
       display: flex;
       justify-content: space-evenly;
+
     }
   }
 }
@@ -333,6 +336,8 @@
     border-radius: 12px;
     border-color: #D9D9D9;
     font-size: 12px;
+
+
   }
 
   :focus {
